@@ -1,0 +1,538 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"requ",
+				"requests"
+			],
+			[
+				"re",
+				"request"
+			],
+			[
+				"for",
+				"foreach\tforeach …"
+			],
+			[
+				"Fi",
+				"findFirst〔function〕"
+			],
+			[
+				"met",
+				"method\tAttr"
+			],
+			[
+				"el",
+				"else"
+			],
+			[
+				"mess",
+				"messages"
+			],
+			[
+				"is_n",
+				"is_numeric〔function〕"
+			],
+			[
+				"stri",
+				"striptags"
+			],
+			[
+				"ph",
+				"php"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"vi",
+				"view"
+			],
+			[
+				"get",
+				"getPost"
+			],
+			[
+				"is",
+				"isPost"
+			],
+			[
+				"req",
+				"request"
+			],
+			[
+				"ass",
+				"assets"
+			],
+			[
+				"ht",
+				"htmlspecialchars"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"i",
+				"img/"
+			],
+			[
+				"fge",
+				"fgets〔function〕"
+			],
+			[
+				"text",
+				"textarea\tTag"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"sublime merge",
+				"Sublime Merge: Open Repository"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/www/gphoto"
+	],
+	"file_history":
+	[
+		"/home/www/photo/app/views/specialist/list.volt",
+		"/home/www/photo/app/views/events/create_event.volt",
+		"/home/www/photo/app/views/profile/see.volt",
+		"/home/www/photo/app/controllers/ProjectsController.php",
+		"/home/www/photo/app/controllers/MessagesController.php",
+		"/home/www/photo/app/controllers/EventsController.php",
+		"/home/www/photo/app/views/index/index.volt",
+		"/home/www/photo/app/views/profile/add_photo.volt",
+		"/home/www/photo/app/controllers/ErrorsController.php",
+		"/home/www/photo/app/views/index/listspec.volt",
+		"/home/www/photo/app/views/messages/create.volt",
+		"/home/www/photo/app/controllers/RecordsController.php",
+		"/home/www/photo/app/views/index/header.volt",
+		"/home/www/photo/app/views/projects/project.volt",
+		"/home/www/photo/app/views/profile/video.volt",
+		"/home/www/photo/app/views/profile/edit.volt",
+		"/home/www/photo/app/views/projects/index.volt",
+		"/home/www/photo/app/controllers/RegisterController.php",
+		"/home/www/photo/app/views/profile/photo.volt",
+		"/home/www/photo/app/views/profile/my.volt",
+		"/home/www/photo/app/views/messages/see.volt",
+		"/home/www/photo/app/views/projects/list.volt",
+		"/home/www/photo/app/controllers/FriendsController.php",
+		"/home/www/photo/app/views/favorites/index.volt",
+		"/home/www/photo/app/controllers/ProfileController.php",
+		"/home/www/photo/app/views/profile/index.volt",
+		"/home/www/photo/app/views/index/profile/profile_menu.volt",
+		"/home/www/photo/app/views/projects/request_form.volt",
+		"/home/www/photo/app/views/register/registration.volt",
+		"/home/www/photo/app/views/events/list.volt",
+		"/home/www/photo/app/views/events/index.volt",
+		"/home/www/photo/app/views/events/see.volt",
+		"/home/www/photo/app/views/projects/lisst.volt",
+		"/home/www/photo/app/controllers/IndexController.php",
+		"/home/www/photo/app/views/profile/seephoto.volt",
+		"/home/www/photo/app/views/messages/index.volt",
+		"/home/www/photo/app/views/events/comments.volt",
+		"/home/www/photo/app/views/index/header_na.volt_",
+		"/home/www/photo/app/views/index/header_na.volt",
+		"/home/www/photo/app/views/layouts/register.volt",
+		"/home/www/photo/app/controllers/FavoritesController.php",
+		"/home/www/photo/app/controllers/LoginController.php",
+		"/home/www/photo/app/views/index/register.volt",
+		"/home/www/photo/app/views/index/profile/header.volt",
+		"/home/www/photo/app/views/index/profile/mobile_menu_left.volt",
+		"/home/www/photo/app/views/records/commented.volt",
+		"/home/www/photo/app/views/index/footer.volt",
+		"/home/www/photo/app/controllers/NprofileController.php",
+		"/home/www/photo/app/views/index.volt",
+		"/home/www/photo/app/views/index/header_.volt",
+		"/home/www/photo/app/views/friends/index.volt",
+		"/home/www/photo/app/views/profile/repost_form.volt",
+		"/home/www/photo/app/views/index/repopst_form.volt",
+		"/home/www/photo/app/views/index/events_filter.volt",
+		"/home/www/photo/app/views/events/add_adress.volt",
+		"/home/www/photo/app/views/projects/create.volt",
+		"/home/www/photo/app/views/events/create.volt",
+		"/home/www/photo/app/views/projects/edit.volt",
+		"/home/www/photo/app/views/project/see.volt",
+		"/home/www/photo/app/controllers/ProjectController.php",
+		"/home/www/photo/app/views/layouts/guest.volt",
+		"/home/www/photo/app/views/profile/add_video.volt",
+		"/home/www/photo/app/controllers/ControllerBase.php",
+		"/home/www/photo/app/controllers/ErrorController.php",
+		"/home/www/photo/app/messages/ru_arrays.php",
+		"/home/www/photo/app/controllers/MessageController.php",
+		"/home/www/photo/app/controllers/NewsController.php",
+		"/home/www/photo/app/views/profile/guest.volt",
+		"/home/www/photo/app/messages/ru_category.php",
+		"/home/www/photo/app/controllers/SearchController.php",
+		"/home/www/photo/app/views/login/index.volt",
+		"/home/www/photo/app/plugins/SecurityPlugin.php",
+		"/home/www/photo/app/views/index/profile/profile_menu_nospec.volt",
+		"/home/www/photo/app/views/nprofile/edit.volt",
+		"/home/www/tom/ankete.php",
+		"/home/www/tom/index.php",
+		"/home/www/tom/mail.php",
+		"/home/www/photo/app/views/nprofile/index.volt",
+		"/home/www/tom/config.php",
+		"/home/www/tom/list.php",
+		"/home/www/tom/css/form.css",
+		"/home/www/tom/mysql.sql",
+		"/home/www/tom/css/style.css",
+		"/home/www/photo/app/views/project/index.volt",
+		"/home/www/photo/app/config/services.php",
+		"/home/www/photo/app/views/error/show404.volt",
+		"/home/www/photo/app/views/profille/edit.volt",
+		"/home/www/photo/app/views/error/error404.volt",
+		"/home/www/photo/app/controllers/ProfilleController.php",
+		"/home/www/photo/app/views/profile/albumsee.volt",
+		"/home/www/photo/app/views/profille/index.volt",
+		"/home/www/photo/app/views/index/head.volt",
+		"/home/www/photo/app/views/profile/createalbum_popup.volt",
+		"/home/www/photo/app/views/index/profile/head.volt",
+		"/home/www/photo/app/views/profile/createalbum.volt",
+		"/home/www/photo/app/config/config.php",
+		"/home/www/photo/app/views/profile/base.volt",
+		"/home/www/photo/app/_html/markup/templates/profile-foto.html",
+		"/home/www/photo/app/views/profile/foto.volt",
+		"/home/www/photo/app/views/profile/fotos.volt",
+		"/home/www/wl/app/controllers/ProfileController.php",
+		"/home/www/wl/public/cur.html",
+		"/home/www/wl/app/controllers/ControllerBase.php",
+		"/home/www/wl/app/views/index.volt",
+		"/home/www/wl/app/views/index/index.volt",
+		"/home/www/wl/app/controllers/SessionController.php_",
+		"/home/www/wl/app/views/layouts/home.volt",
+		"/home/www/notez.js",
+		"/home/www/index.html",
+		"/home/dimaz/Nextcloud/Documents/Руни/test1/parse1.php",
+		"/home/dimaz/Nextcloud/Documents/_site/_work/ola/new_.sql",
+		"/home/dimaz/Nextcloud/Documents/Руни/test1/parse2.php",
+		"/home/www/notez.css",
+		"/home/dimaz/Desktop/Корисне",
+		"/home/www/rune/rune.sublime-workspace",
+		"/home/dimaz/.cache/kioexec/krun/2356_0/functions.php",
+		"/home/www/1.html",
+		"/home/www/vue/examples/tree/tree.js",
+		"/home/www/dimaz.js",
+		"/home/www/1.js",
+		"/home/www/1.css"
+	],
+	"find":
+	{
+		"height": 31.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Введите",
+			"seeA",
+			"album",
+			"tabs-content album",
+			" seeA",
+			"albums",
+			"description",
+			"forw",
+			"photoA",
+			"seeA",
+			"proje",
+			"$age",
+			"project_request_write",
+			"5826",
+			"project_request",
+			"заявки",
+			"db",
+			"<div class=\"bookmarks-content active tab-item actTab\">",
+			"projectA",
+			"seeA",
+			" ////",
+			"register",
+			"requestA",
+			"projectA",
+			"favorites",
+			"messages-item",
+			"../img/event.jpg",
+			"edit",
+			"message2",
+			"photos",
+			"photoA",
+			"photoActio",
+			"checkTextarea",
+			"',\n",
+			"message",
+			"messagesA",
+			"messages/crea",
+			"seeA",
+			"друз",
+			"Pro",
+			"seeA",
+			"со",
+			"profile_write_message",
+			"сообщени",
+			"events-car",
+			"profile.css",
+			"userInfo",
+			"<i class=\"icon-icon10\"></i>",
+			"icon-icon3",
+			" \n",
+			"home.css",
+			"home.c",
+			"Ближайшие события",
+			"avata",
+			"sign",
+			"Вход",
+			"Pro",
+			"seeA",
+			"address",
+			"img",
+			"-3.4.1.js",
+			"/img/projects_page/avatar.png",
+			"События",
+			"event_date",
+			"titl",
+			"Скачать все",
+			"3",
+			"avatar",
+			"Напишите комментарий",
+			"Комментарии",
+			"Добавить в закладки",
+			"sess",
+			"mkd",
+			"move",
+			"avata",
+			"icon26",
+			"add",
+			"хуй",
+			"like",
+			"dele",
+			"forwa",
+			"checkTextarea",
+			"sess",
+			"isPos",
+			"index",
+			"crumbs",
+			"');\n",
+			"indexA",
+			"Регистра",
+			".css",
+			"events.h",
+			"event'",
+			"profile_menu",
+			"x",
+			">\n",
+			"\"></script>",
+			"<script src=\"..",
+			"События",
+			"pass",
+			"passw",
+			"genera",
+			"recor",
+			"config",
+			"open-creatingAlbum",
+			"class=\"open-creatingAlbum\"",
+			"photoA",
+			"style.css",
+			"add_vide",
+			"data-tab",
+			"albums",
+			"creatingAlbum.min.js",
+			"video",
+			"page_profile_title",
+			"albums",
+			"videos|",
+			"Все сообщение",
+			"uploadim",
+			"photoA",
+			"SELECT",
+			" ac.id = fr.user_",
+			"<div class=\"profile-friends\">\n                <div class=\"projects-nav\">",
+			"x",
+			"findfi",
+			"5826",
+			"{#%",
+			"for ",
+			"title",
+			"gettr"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"');",
+			"$this->assets->addJs('",
+			"",
+			"http://",
+			"http://olamumloa.co.il/olamumloa.co.il/mobil"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 61.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": ".sublime",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 282.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
