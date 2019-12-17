@@ -41,6 +41,16 @@
                     <a href="personal-area.html" class="office"><i class="icon-icon31"></i><strong>Личный кабинет</strong></a>
                     <a href="basket.html" class="basket"><i class="icon-icon11"></i><strong>Корзина</strong><span>5</span></a>
                     <ul class="transfer">
+                    <li>
+                    @foreach ($langs as $lang)
+                	<li style="text-transform: capitalize;">
+                	<a href="javascript:void(0)"><img src="{{asset('images/'.$lang->locale.'.png') }}" alt="">{{ $lang->locale}}</a>
+                	</li>
+            	    @endforeach
+            	    </li>
+                    </ul>
+<!--
+                    <ul class="transfer">
                         <li>
                             <a href="javascript:void(0)"><img src="../img/transfer-img1.png" alt=""> Ru</a>
                             <ul>
@@ -59,6 +69,7 @@
                             </ul>
                         </li>
                     </ul>
+-->
                 </div>
             </div>
         </header>

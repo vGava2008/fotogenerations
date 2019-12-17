@@ -140,10 +140,14 @@ return back();
     return redirect()->back(); 
 });*/
 
-
+/*
 Route::get('/', function () {
     return view('index');
 });
+*/
+
+Route::get('/', 'IndexController@index')->name('index');
+
 
 Auth::routes();
 
