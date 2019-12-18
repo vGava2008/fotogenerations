@@ -18,7 +18,6 @@
       <th style="width:30%">Изображение</th>
       <th>Наименование</th>
       <th>Статус публикации</th>
-      <th>Язык</th>
       <th class="text-right">Действие</th>
     </thead>
     <tbody>
@@ -31,7 +30,7 @@
           @endif 
           <td>{{$category->title}}</td>
           <td>@if ($category->published == 1) Опубликовано @else Не опубликовано @endif</td>
-          <td>@include('admin.categories.partials.language', ['languages' => $languages])</td>
+          
           <td class="text-right">
           	<form onsubmit="if(confirm('Удалить?')){ return true }else{ return false }" action="{{route('admin.category.destroy', $category)}}" method="post">
           		<input type="hidden" name="_method" value="DELETE">
