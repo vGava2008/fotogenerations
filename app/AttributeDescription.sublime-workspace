@@ -1,0 +1,375 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ProductOptio",
+				"ProductOptionValue"
+			],
+			[
+				"в",
+				"Вес"
+			],
+			[
+				"input",
+				"input_option"
+			],
+			[
+				"get",
+				"getOptions"
+			],
+			[
+				"Prod",
+				"ProductController"
+			],
+			[
+				"latest",
+				"latest_ID"
+			],
+			[
+				"int",
+				"integer"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"product_attribute",
+				"product_attribute_description"
+			],
+			[
+				"q",
+				"question"
+			],
+			[
+				"language",
+				"language_id"
+			],
+			[
+				"you",
+				"your"
+			],
+			[
+				"Has",
+				"Hasher"
+			],
+			[
+				"Co",
+				"Country"
+			],
+			[
+				"dropdown",
+				"dropdown-toggle"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"remo",
+				"git: remote add"
+			],
+			[
+				"git i",
+				"git: init"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"git",
+				"Package Control: Install Package"
+			],
+			[
+				"install package",
+				"Install Package Control"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 256.0,
+		"history":
+		[
+			"D/OpenServer/OpenServer/domains/first.laravel.plemya-demo.ru/php artisan make:controller --help",
+			"D/OpenServer/OpenServer/domains/first.laravel.plemya-demo.ru/",
+			"D:/OpenServer/OpenServer/domains/first.laravel.plemya-demo.ru/"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/user/AppData/Roaming/Sublime Text 3/Packages/GitSavvy/GitSavvy.sublime-settings",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/user_managment/users/partials/user_tag.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/user_filters/index.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/Http/Controllers/Admin/UserFilterController.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/user_filters/partials/form.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/User.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/user_managment/users/partials/form.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/user_managment/users/partials/language.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/config/mail.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/.env",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/auth/register.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/Http/Controllers/Admin/UserManagment/UserController.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/database/migrations/2019_12_11_152931_create_product_option_values_table.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/user_tags/index.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/user_managment/users/partials/customer_group.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/Http/Controllers/Admin/UserTagController.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/user_tags/partials/form.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/user_filters/edit.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/user_filters/create.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/UserTag.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/UserFilter.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/database/migrations/2019_11_21_132854_create_user_filters_table.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/routes/web.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/Http/Controllers/Admin/CustomerGroupController.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/user_tags/create.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/user_tags/edit.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/database/migrations/2019_11_21_130455_create_user_tags_table.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/CustomerGroup.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/customer_groups/index.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/customer_groups/create.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/Http/Controllers/Admin/ProductAttribute/AttributeController.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/attributes/partials/form.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/options/index.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/products/index.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/options/partials/form.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/Option.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/Http/Controllers/Admin/OptionController.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/customer_groups/partials/form.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/products/edit.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/products/create.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/customer_groups/edit.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/database/migrations/2019_11_20_104431_create_product_specials_table.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/ProductDiscount.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/ProductSpecial.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/database/migrations/2019_11_18_134215_create_product_discounts_table.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/database/migrations/2019_11_18_135714_create_customer_groups_table.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/OptionDescription.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/OptionValueDescription.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/database/migrations/2019_11_13_134221_create_option_value_descriptions_table.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/database/migrations/2019_11_13_133650_create_option_values_table.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/OptionValue.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/config/app.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/attributes/partials/attributes.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/Category.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/AttributeDescription.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/options/edit.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/options/create.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/Http/Controllers/Admin/DashboardController.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/Http/Controllers/Admin/ProductAttribute/AttributeGroupController.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/ProductImage.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/Http/Controllers/Admin/CategoryController.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/vendor/laravel/framework/src/Illuminate/Auth/Console/stubs/make/views/layouts/app.stub",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/products/partials/attributes.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/database/migrations/2019_11_07_124255_create_product_images_table.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/AttributeGroup.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/Attribute.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/attributes/index.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/attributes/create.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/attributes/edit.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/attribute_groups/edit.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/Manufacturer.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/attribute_groups/partials/form.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/attribute_groups/index.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/attribute_groups/create.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/products/partials/form.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/products/partials/manufacturers.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/Http/Controllers/Admin/ManufacturerController.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/ProductAttribute.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/database/migrations/2019_10_28_132900_create_product_attributes_table.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/database/migrations/2019_10_28_135213_create_attribute_groups_table.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/database/migrations/2019_10_28_135632_create_attribute_group_descriptions_table.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/AttributeGroupDescription.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/database/migrations/2019_10_28_135007_create_attribute_descriptions_table.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/database/migrations/2019_10_28_134053_create_attributes_table.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/ideas/partials/form.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/manufacturers/index.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/manufacturers/partials/form.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/Http/Controllers/Admin/IdeaController.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/manufacturers/edit.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/Http/Controllers/Admin/ProductController.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/manufacturers/create.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/database/migrations/2019_10_25_131505_create_manufacturers_table.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/database/migrations/ok/2019_05_29_083322_create_categories_table.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/dashboard.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/layouts/app_admin.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/products/partials/categories.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/product_options/index.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/Product.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/ProductDescription.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/product_connections/index.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/product_connections/get_category.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/Http/Controllers/Admin/ProductConnectionController.php",
+		"/D/Programming_Work/Фирмы/Мутки/Aqua-Home (Work)/20.10/БД 20.10 - 10 часов 29 мин/mysql_aquahome_db.2019-10-20.sql",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/ProductConnection.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/database/migrations/2019_10_23_134804_create_product_connections_table.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/Http/Middleware/VerifyCsrfToken.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/layouts/app.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/database/migrations/2019_10_22_121011_create_product_descriptions_table.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/database/migrations/2019_10_21_132452_create_products_table.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/Http/Controllers/Admin/BlogController.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/Idea.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/option_descriptions/index.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/database/migrations/2019_10_17_132129_create_option_descriptions_table.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/ideas/index.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/database/migrations/2019_10_15_130207_create_options_table.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/Http/Controllers/Admin/OptionDescriptionController.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/Http/Controllers/Admin/ProductOptionController.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/app/ProductOption.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/database/migrations/2019_10_15_123146_create_product_options_table.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/blogs/partials/form.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/ideas/create.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/blogs/create.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/blogs/edit.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/ideas/partials/language.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/ideas/partials/categories.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/ideas/edit.blade.php",
+		"/D/OpenServer/OpenServer/domains/fotogenerations.com/resources/views/admin/blogs/partials/categories.blade.php"
+	],
+	"find":
+	{
+		"height": 32.0
+	},
+	"find_in_files":
+	{
+		"height": 119.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 44.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "AttributeDescription.sublime-project",
+	"replace":
+	{
+		"height": 60.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 313.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
