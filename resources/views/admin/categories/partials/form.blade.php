@@ -22,13 +22,39 @@
 <input type="hidden" name="language{{$lang_select->id}}" value="{{$lang_select->id}}">
 
 <input type="text" class="form-control" name="title{{$lang_select->id}}" placeholder="Заголовок категории для {{$lang_select->name}}" 
+
 @if (isset($category->id)) 
 @foreach ($choose_category as $category_select)
 @if ($lang_select->id == $category_select->language_id)
 value="{{$category_select->title}}"
 @endif
-@endforeach @else value="" @endif required>
+@endforeach 
+@else value="" 
+@endif required>
 
+<label for="">Подзаголовок для <strong>{{$lang_select->name}}</strong></label>
+<input type="text" class="form-control" name="sub_title{{$lang_select->id}}" placeholder="Подзаголовок категории для {{$lang_select->name}}" 
+
+@if (isset($category->id)) 
+@foreach ($choose_category as $category_select)
+@if ($lang_select->id == $category_select->language_id)
+value="{{$category_select->sub_title}}"
+@endif
+@endforeach 
+@else value="" 
+@endif required>
+
+<label for="">Описание для <strong>{{$lang_select->name}}</strong></label>
+<input type="text" class="form-control" name="description{{$lang_select->id}}" placeholder="Описание категории для {{$lang_select->name}}" 
+
+@if (isset($category->id)) 
+@foreach ($choose_category as $category_select)
+@if ($lang_select->id == $category_select->language_id)
+value="{{$category_select->description}}"
+@endif
+@endforeach 
+@else value="" 
+@endif required>
 
 
 @endforeach

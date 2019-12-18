@@ -57,6 +57,8 @@ class CategoryController extends Controller
         {
             //Вынимаем значения с переданных данных, а именно с titlte 1-5
             $data_title = $request->get('title'.$i);
+            $data_sub_title = $request->get('sub_title'.$i);
+            $data_description = $request->get('description'.$i);
             $image_upload = $request->file('image')->store('uploads', 'public');
             //Проверка на заполненные поля
             //Берем ID нашей новой категории и исключаем поле seo_link, но прежде чем будет исключение, он проверит остальные записи и скажет о том что такое поле уже существует 
@@ -81,6 +83,8 @@ class CategoryController extends Controller
                 'id' => $latest_ID,
                 'image' => $image_upload,
                 'title' => $data_title,
+                'sub_title' => $data_sub_title,
+                'description' => $data_description,
                 'seo_link' => $request['seo_link'],
                 'parent_id' => $request['parent_id'],
                 'published' => $request['published'],
@@ -162,6 +166,8 @@ class CategoryController extends Controller
         {
             //Вынимаем значения с переданных данных, а именно с titlte 1-5 и с languages 1-5
             $data_title = $request->get('title'.$i);
+            $data_sub_title = $request->get('sub_title'.$i);
+            $data_description = $request->get('description'.$i);
             $data_language = $request->get('language'.$i);
             //$image_upload;
             //dd($request);
@@ -186,6 +192,8 @@ class CategoryController extends Controller
             if(isset($image_upload))
             {
                 Category::where(['id'=>$request['category_id'], 'language_id'=>$data_language])->update(['image' => $image_upload, 'title' => $data_title,
+                    'sub_title' => $data_sub_title,
+                    'description' => $data_description,
                     'seo_link' => $request['seo_link'],
                     'parent_id' => $request['parent_id'],
                     'published' => $request['published'],
@@ -195,6 +203,8 @@ class CategoryController extends Controller
             else
             {
                 Category::where(['id'=>$request['category_id'], 'language_id'=>$data_language])->update(['title' => $data_title,
+                    'sub_title' => $data_sub_title,
+                    'description' => $data_description,
                     'seo_link' => $request['seo_link'],
                     'parent_id' => $request['parent_id'],
                     'published' => $request['published'],

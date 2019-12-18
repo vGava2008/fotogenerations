@@ -7,7 +7,7 @@ use Illuminate\Support\Str;
 class Category extends Model
 {
     // Mass assigned
-    protected $fillable = ['id', 'image', 'image_show', 'title', 'seo_link', 'parent_id', 'language_id', 'published',];
+    protected $fillable = ['id', 'image', 'image_show', 'title', 'sub_title', 'description', 'seo_link', 'parent_id', 'language_id', 'published',];
     // Mutators
   
 
