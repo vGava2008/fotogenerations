@@ -17,6 +17,7 @@ use App\Product;
 use App\Manufacturer;
 use App\AttributeGroup;
 use App\Attribute;
+use App\Banner;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -39,12 +40,13 @@ class DashboardController extends Controller
         $product_options_count = ProductOption::count();
         $options_count = OptionDescription::where(['language_id'=>1])->count();
         $option_descriptions_count = OptionDescription::count();
+        $banners_count = Banner::count();
     	$products_count = Product::count();
         $manufacturers_count = Manufacturer::count();
         $attributes_group = AttributeGroup::count();
         $attributes = Attribute::count();
     	return view('admin.dashboard', [
-            'users_count' => $users_count, 'categories_count' => $categories_count, 'questions_count' => $questions_count, 'countries_count' => $countries_count, 'langs_count' => $langs_count, 'regions_count' => $regions_count, 'blogs_count' => $blogs_count, 'ideas_count' => $ideas_count, 'product_options_count' => $product_options_count, 'options_count' => $options_count, 'option_descriptions_count' => $option_descriptions_count, 'products_count' => $products_count, 'manufacturers_count' => $manufacturers_count, 'attributes_group' => $attributes_group, 'attributes' => $attributes
+            'users_count' => $users_count, 'categories_count' => $categories_count, 'questions_count' => $questions_count, 'countries_count' => $countries_count, 'langs_count' => $langs_count, 'regions_count' => $regions_count, 'blogs_count' => $blogs_count, 'ideas_count' => $ideas_count, 'product_options_count' => $product_options_count, 'options_count' => $options_count, 'option_descriptions_count' => $option_descriptions_count, 'products_count' => $products_count, 'manufacturers_count' => $manufacturers_count, 'attributes_group' => $attributes_group, 'attributes' => $attributes, 'banners_count' => $banners_count,
         ]);
     }
 }

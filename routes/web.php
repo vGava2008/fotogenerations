@@ -27,6 +27,7 @@ Route::resource('/question', 'QuestionController', ['as'=>'admin']);
 Route::resource('/country', 'CountryController', ['as'=>'admin']);
 Route::resource('/region', 'RegionController', ['as'=>'admin']);
 Route::resource('/blog', 'BlogController', ['as'=>'admin']);
+Route::resource('/banner', 'BannerController', ['as'=>'admin']);
 Route::resource('/idea', 'IdeaController', ['as'=>'admin']);
 Route::resource('/product_option', 'ProductOptionController', ['as'=>'admin']);
 Route::resource('/option', 'OptionController', ['as'=>'admin']);

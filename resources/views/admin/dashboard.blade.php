@@ -49,6 +49,13 @@
 		</a>
 		<div class="col-xs-12" style="text-align: center; font-weight: bold; font-size: 29px;">Каталог</div>
 		<div class="col-xs-12"><hr></div>
+		<a href="{{route('admin.banner.index')}}">
+		<div class="col-sm-3">
+			<div class="jumbotron">
+				<p><span class="label label-primary">Баннеры - {{$banners_count}}</span></p>
+			</div>
+		</div>
+		</a>
 		<a href="{{route('admin.product.index')}}">
 		<div class="col-sm-3">
 			<div class="jumbotron">
@@ -84,14 +91,14 @@
 			</div>
 		</div>
 		</a>
-		
+		<!--
 		<a href="{{route('admin.product_option.index')}}">
 			<div class="col-sm-3">
 				<div class="jumbotron">
 					<p><span class="label label-primary">Опции (для товара) - {{$product_options_count}}</span></p>
 				</div>
 			</div>
-		</a>
+		</a>-->
 		<a href="{{route('admin.option.index')}}">
 			<div class="col-sm-3">
 				<div class="jumbotron">
