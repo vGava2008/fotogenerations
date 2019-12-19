@@ -50,6 +50,36 @@ class BlogController extends Controller
     public function store(Request $request)
     {
         //dd();
+        if($request->file('main_image') != null)
+        {
+            //$image_upload = $request->file('main_image')->store('uploads', 'public');
+            $request->file('main_image')->move(public_path('images/blog'), 
+            $image_upload = $request->file('main_image')->getClientOriginalName()); 
+        }
+        else
+        {
+           //Ничего не делаем
+        }
+        if($request->file('second_image') != null)
+        {
+            //$image_upload2 = $request->file('second_image')->store('uploads', 'public');
+            $request->file('second_image')->move(public_path('images/blog'), 
+            $image_upload2 = $request->file('second_image')->getClientOriginalName()); 
+        }
+        else
+        {
+           //Ничего не делаем
+        }
+        if($request->file('third_center_image') != null)
+        {
+            //$image_upload3 = $request->file('third_center_image')->store('uploads', 'public');
+            $request->file('third_center_image')->move(public_path('images/blog'), 
+            $image_upload3 = $request->file('third_center_image')->getClientOriginalName());
+        }
+        else
+        {
+           //Ничего не делаем
+        }
         //Узнаём поледнее ID записи в таблице "Категорий"
         $latest = Blog::latest()->first();
         $latest_ID = $latest['id'];
@@ -64,27 +94,27 @@ class BlogController extends Controller
         {
             //Вынимаем значения с переданных данных, а именно с titlte 1-5
             $data_title = $request->get('title'.$i);
-            $image_upload = $request->file('main_image')->store('uploads', 'public');
-            $image_upload->move(public_path() . '/images/blog','main_image');
-            $image_upload2 = $request->file('second_image')->store('uploads', 'public');
+            //$image_upload = $request->file('main_image')->store('uploads', 'public');
+            //$image_upload->move(public_path() . '/images/blog','main_image');
+            //$image_upload2 = $request->file('second_image')->store('uploads', 'public');
             $data_title_second_image = $request->get('title_second_image'.$i);
             $data_title_second_level = $request->get('title_second_level'.$i);
             $data_text_left = $request->get('text_left'.$i);
             $data_text_right = $request->get('text_right'.$i);
-            $image_upload3 = $request->file('third_center_image')->store('uploads', 'public');
+            //$image_upload3 = $request->file('third_center_image')->store('uploads', 'public');
             $data_title_third_center_image = $request->get('title_third_center_image'.$i);
             $data_text_centr = $request->get('text_centr'.$i);
             //Проверка на заполненные поля
             //Берем ID нашей новой категории и исключаем поле seo_link, но прежде чем будет исключение, он проверит остальные записи и скажет о том что такое поле уже существует 
             $rules = [
                 'title'.$i => 'required|string|max:255',
-                //'main_image' => 'required',
-                //'second_image' => 'required',
+                'main_image' => 'required',
+                'second_image' => 'required',
                 'title_second_image'.$i => 'required|string|max:255',
                 'title_second_level'.$i => 'required|string|max:255',
                 'text_left'.$i => 'required|string',
                 'text_right'.$i => 'required|string',
-                //'third_center_image' => 'required',
+                'third_center_image' => 'required',
                 'title_third_center_image'.$i => 'string|max:255',
                 'text_centr'.$i => 'string',
                 'seo_link' => [
@@ -103,6 +133,7 @@ class BlogController extends Controller
             ];
             $this->validate($request, $rules, $customMessages);
             //Записываем в БД
+
             Blog::create([
                 'id' => $latest_ID,
                 'title' => $data_title,
