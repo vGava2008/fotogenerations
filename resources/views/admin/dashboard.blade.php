@@ -114,13 +114,13 @@
 				</div>
 			</div>
 		</a>
-		<a href="{{route('admin.idea.index')}}">
+		<!--<a href="{{route('admin.idea.index')}}">
 			<div class="col-sm-3">
 				<div class="jumbotron">
 					<p><span class="label label-primary">Идеи (Блог) - {{$ideas_count}}</span></p>
 				</div>
 			</div>
-		</a>
+		</a>-->
 		<a href="{{route('admin.question.index')}}">
 			<div class="col-sm-3">
 				<div class="jumbotron">

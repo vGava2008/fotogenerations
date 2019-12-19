@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Blog extends Model
 {
     // Mass assigned
-    protected $fillable = ['id', 'title', 'main_image', 'second_image', 'title_second_image', 'title_second_level', 'text_left','text_right','third_center_image','title_third_center_image','text_centr','seo_link', 'category_id', 'language_id', 'published', 'created_by', 'modified_by', 'updated_at', 'created_at',];
+    protected $fillable = ['id', 'title', 'main_image', 'second_image', 'title_second_image', 'title_second_level', 'text_left','text_right','third_center_image','title_third_center_image','text_centr','seo_link', 'category_id', 'language_id', 'published', 'status', 'created_by', 'modified_by', 'updated_at', 'created_at',];
     // Mutators
   
 

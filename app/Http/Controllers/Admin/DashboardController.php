@@ -34,7 +34,7 @@ class DashboardController extends Controller
     	$countries_count = Country::count();
     	$langs_count = Langs::count();
     	$regions_count = Region::count();
-        $blogs_count = Blog::count();
+        $blogs_count = Blog::where(['language_id'=>1])->count();
         $ideas_count = Idea::count();
         $product_options_count = ProductOption::count();
         $options_count = OptionDescription::where(['language_id'=>1])->count();

@@ -18,4 +18,9 @@ class Category extends Model
     public function children() {
       return $this->hasMany(self::class, 'parent_id');
     }
+
+    public function articles()
+    {
+        return $this->morphedByMany('App\Category', 'categoryable');
+    }
 }

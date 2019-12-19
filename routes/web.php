@@ -18,6 +18,7 @@ use App\Product;
 use App\Option;
 use Illuminate\Http\RedirectResponse;
 
+/**********************ADMIN***********************/
 
 Route::group(['prefix'=>'admin', 'namespace'=>'Admin', 'middleware'=>['auth']], function(){
 Route::get('/', 'DashboardController@dashboard')->name('admin.index');
@@ -223,9 +224,9 @@ Route::get('/user_managment/user/blabla', 'UserManagment\UserController@blabla')
 	});
 });
 
+/********************END: ADMIN*********************/
 
-
-
+/*********************FRONTEND**********************/
 Route::get('lang/{locale}/', function ($locale) { 
 $cookie = null;
 //array_search
@@ -243,10 +244,6 @@ return back();
 
 });
 
-
-
-
-
 /*Route::get('lang/{locale}/', 
 	function ($locale) { 
     if (in_array($locale, \Config::get('app.locales'))) { 
@@ -256,12 +253,17 @@ return back();
     return redirect()->back(); 
 });*/
 
-/*
 Route::get('/', function () {
-    return view('welcome');
-});*/
+    return view('home');
+});
 
-Route::get('/', 'IndexController@index')->name('index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'IndexController@index')->name('index');
+//Blog 18.12.2019
+Route::get('/blog/category/{seo_link?}', 'BlogController@category')->name('category');
+Route::get('/blog/article/{seo_link?}', 'BlogController@article')->name('article');
+//END: Blog 18.12.2019
+
+/*******************END: FRONTEND********************/

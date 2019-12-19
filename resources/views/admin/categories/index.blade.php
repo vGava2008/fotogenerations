@@ -27,6 +27,7 @@
             <td><img style="width:30%" src="{{asset('/storage/uploads/' . 'no-image.png')}}" alt="{{$category->title}}"></td>
           @else
             <td><img style="width:30%" src="{{asset('/storage/' . $category->image)}}" alt="{{$category->title}}"></td>
+            <td><img style="width:30%" src="{{asset('/img/admin/' . $category->image)}}" alt="{{$category->title}}"></td>
           @endif 
           <td>{{$category->title}}</td>
           <td>@if ($category->published == 1) Опубликовано @else Не опубликовано @endif</td>

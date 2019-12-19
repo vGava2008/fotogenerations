@@ -6,7 +6,7 @@
  		@endforeach
 
  	</ul>
- </div>
+ </div> 
 @endif
 
 <div class="tab-content">

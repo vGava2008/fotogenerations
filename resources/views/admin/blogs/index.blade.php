@@ -19,7 +19,7 @@
       <th style="width:30%">Главное изображение</th>
       <th>Краткое содержание</th>
       <th>Статус публикации</th>
-      <th>Язык</th>
+      <th>Новость или Идея</th>
       <th class="text-right">Действие</th>
     </thead>
     <tbody>
@@ -27,13 +27,13 @@
         <tr>
             <td>{{$blog->title}}</td>
           @if ($blog->main_image == null)
-            <td><img style="width:30%" src="{{asset('/storage/uploads/' . 'no-image.png')}}" alt="{{$blog->title}}"></td>
+            <td><img style="width:30%" src="{{asset('/images/blog/' . 'no-image.png')}}" alt="{{$blog->title}}"></td>
           @else
-            <td><img style="width:30%" src="{{asset('/storage/' . $blog->main_image)}}" alt="{{$blog->title}}"></td>
+            <td><img style="width:30%" src="{{asset('/images/blog/' . $blog->main_image)}}" alt="{{$blog->title}}"></td>
           @endif 
          <td>{{ str_limit($blog->text_left, $limit = 30, $end = '...') }}</td>
           <td>@if ($blog->published == 1) Опубликовано @else Не опубликовано @endif</td>
-          <td>@include('admin.blogs.partials.language', ['languages' => $languages])</td>
+          <td>@if ($blog->status == 1) Идея @else Новость @endif</td>
           <td class="text-right">
             <form onsubmit="if(confirm('Удалить?')){ return true }else{ return false }" action="{{route('admin.blog.destroy', $blog)}}" method="post">
               <input type="hidden" name="_method" value="DELETE">
@@ -53,7 +53,7 @@
     </tbody>
     <tfoot>
       <tr>
-        <td colspan="3">
+        <td colspan="5">
           <ul class="pagination pull-right">
             {{$blogs->links()}}
           </ul>

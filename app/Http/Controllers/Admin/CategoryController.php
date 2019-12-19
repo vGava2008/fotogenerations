@@ -52,6 +52,8 @@ class CategoryController extends Controller
         $langs_count = Langs::count();
         //$rules = ['slug' => 'required|string|max:255|unique:categories',];
         
+
+    
         //Запускаем цикл не превышающий кол-ва языков
         for($i=1; $i<=$langs_count; $i++)
         {
