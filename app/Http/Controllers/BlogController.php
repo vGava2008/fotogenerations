@@ -22,4 +22,19 @@ class BlogController extends Controller
     		'ideas' => Blog::where(['published'=>1, 'status'=>1, 'language_id'=>$id_Locale->id])->paginate(100),
     	]);
     }
+
+    public function article($seo_link)
+    {
+        $locale = App::getLocale();
+        $id_Locale = Langs::where('locale', mb_strtolower($locale))->first();
+        //print_r($id_Locale);
+        //$category = Category::where('seo_link', $seo_link)->first();
+        return view('blog.article', [
+            'langs' => Langs::all(),
+            //'category' => $category,
+            'article' => Blog::where(['seo_link'=>$seo_link, 'language_id'=>$id_Locale->id])->first(),
+            //'ideas' => Blog::where(['published'=>1, 'status'=>1, 'language_id'=>$id_Locale->id])->paginate(100),
+        ]);
+    }
+    
 }
