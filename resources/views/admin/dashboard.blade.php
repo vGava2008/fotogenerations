@@ -56,6 +56,20 @@
 			</div>
 		</div>
 		</a>
+		<a href="{{route('admin.top_menu.index')}}">
+		<div class="col-sm-3">
+			<div class="jumbotron">
+				<p><span class="label label-primary">Меню Header - {{$top_menus}}</span></p>
+			</div>
+		</div>
+		</a>
+		<a href="{{route('admin.bottom_menu.index')}}">
+		<div class="col-sm-3">
+			<div class="jumbotron">
+				<p><span class="label label-primary">Меню Footer - {{$bottom_menus}}</span></p>
+			</div>
+		</div>
+		</a>
 		<a href="{{route('admin.product.index')}}">
 		<div class="col-sm-3">
 			<div class="jumbotron">

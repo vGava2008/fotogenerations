@@ -21,7 +21,7 @@ class BannerController extends Controller
             'languages' => Langs::get(),
         ]);
     }
-
+ 
     /**
      * Show the form for creating a new resource.
      *

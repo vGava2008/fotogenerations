@@ -16,11 +16,13 @@ use App\Category;
 use App\User;
 use App\Product;
 use App\Option;
+use App\TopMenu;
 use Illuminate\Http\RedirectResponse;
 
 /**********************ADMIN***********************/
 
-Route::group(['prefix'=>'admin', 'namespace'=>'Admin', 'middleware'=>['auth']], function(){
+Route::group(['prefix'=>'admin', 'namespace'=>'Admin', 'middleware'=>['auth']], function()
+{
 Route::get('/', 'DashboardController@dashboard')->name('admin.index');
 Route::resource('/category', 'CategoryController', ['as'=>'admin']);
 Route::resource('/question', 'QuestionController', ['as'=>'admin']);
@@ -28,6 +30,8 @@ Route::resource('/country', 'CountryController', ['as'=>'admin']);
 Route::resource('/region', 'RegionController', ['as'=>'admin']);
 Route::resource('/blog', 'BlogController', ['as'=>'admin']);
 Route::resource('/banner', 'BannerController', ['as'=>'admin']);
+Route::resource('/bottom_menu', 'BottomMenuController', ['as'=>'admin']);
+Route::resource('/top_menu', 'TopMenuController', ['as'=>'admin']);
 Route::resource('/idea', 'IdeaController', ['as'=>'admin']);
 Route::resource('/product_option', 'ProductOptionController', ['as'=>'admin']);
 Route::resource('/option', 'OptionController', ['as'=>'admin']);
