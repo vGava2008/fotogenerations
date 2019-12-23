@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Дек 19 2019 г., 19:01
+-- Время создания: Дек 23 2019 г., 17:15
 -- Версия сервера: 5.5.53
 -- Версия PHP: 7.0.14
 
@@ -285,6 +285,36 @@ INSERT INTO `blogs` (`current_id`, `id`, `title`, `main_image`, `second_image`, 
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `bottom_menu`
+--
+
+CREATE TABLE `bottom_menu` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `bottom_menu_id` int(11) NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `url` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `column` int(11) NOT NULL,
+  `status` int(11) NOT NULL,
+  `sort_order` int(11) NOT NULL,
+  `language_id` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `bottom_menu`
+--
+
+INSERT INTO `bottom_menu` (`id`, `bottom_menu_id`, `name`, `url`, `column`, `status`, `sort_order`, `language_id`, `created_at`, `updated_at`) VALUES
+(1, 1, 'YouTube', 'https://www.youtube.com/', 2, 1, 1, 1, '2019-12-23 12:10:11', '2019-12-23 12:12:23'),
+(2, 1, 'YouTube2', 'https://www.youtube.com/', 2, 1, 1, 2, '2019-12-23 12:10:11', '2019-12-23 12:12:23'),
+(3, 1, 'YouTube3', 'https://www.youtube.com/', 2, 1, 1, 3, '2019-12-23 12:10:11', '2019-12-23 12:12:23'),
+(4, 1, 'YouTube4', 'https://www.youtube.com/', 2, 1, 1, 4, '2019-12-23 12:10:11', '2019-12-23 12:12:23'),
+(5, 1, 'YouTube5', 'https://www.youtube.com/', 2, 1, 1, 5, '2019-12-23 12:10:11', '2019-12-23 12:12:23');
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `categories`
 --
 
@@ -517,7 +547,10 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (20, '2019_11_21_132854_create_user_filters_table', 15),
 (21, '2014_10_12_100000_create_password_resets_table', 16),
 (22, '2019_12_11_152931_create_product_option_values_table', 17),
-(23, '2019_12_19_150949_create_banners_table', 18);
+(23, '2019_12_19_150949_create_banners_table', 18),
+(24, '2019_12_20_140700_create_menu_footers_table', 19),
+(25, '2019_12_23_132024_create_top_menus_table', 20),
+(26, '2019_12_23_135431_create_bottom_menus_table', 21);
 
 -- --------------------------------------------------------
 
@@ -976,6 +1009,36 @@ INSERT INTO `regions` (`id`, `region_name`, `language_id`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `top_menu`
+--
+
+CREATE TABLE `top_menu` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `top_menu_id` int(11) NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `url` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `column` int(11) NOT NULL,
+  `status` int(11) NOT NULL,
+  `sort_order` int(11) NOT NULL,
+  `language_id` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `top_menu`
+--
+
+INSERT INTO `top_menu` (`id`, `top_menu_id`, `name`, `url`, `column`, `status`, `sort_order`, `language_id`, `created_at`, `updated_at`) VALUES
+(1, 1, 'YouTube', 'https://www.youtube.com/', 0, 1, 1, 1, '2019-12-23 11:35:11', '2019-12-23 11:52:03'),
+(2, 1, 'YouTube2', 'https://www.youtube.com/', 0, 1, 1, 2, '2019-12-23 11:35:11', '2019-12-23 11:52:03'),
+(3, 1, 'YouTube3', 'https://www.youtube.com/', 0, 1, 1, 3, '2019-12-23 11:35:11', '2019-12-23 11:52:03'),
+(4, 1, 'YouTube4', 'https://www.youtube.com/', 0, 1, 1, 4, '2019-12-23 11:35:11', '2019-12-23 11:52:03'),
+(5, 1, 'YouTube5', 'https://www.youtube.com/', 0, 1, 1, 5, '2019-12-23 11:35:11', '2019-12-23 11:52:03');
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `users`
 --
 
@@ -1075,6 +1138,12 @@ ALTER TABLE `blogs`
   ADD PRIMARY KEY (`current_id`);
 
 --
+-- Индексы таблицы `bottom_menu`
+--
+ALTER TABLE `bottom_menu`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `countries`
 --
 ALTER TABLE `countries`
@@ -1171,6 +1240,12 @@ ALTER TABLE `regions`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `top_menu`
+--
+ALTER TABLE `top_menu`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `users`
 --
 ALTER TABLE `users`
@@ -1203,6 +1278,11 @@ ALTER TABLE `banners`
 ALTER TABLE `blogs`
   MODIFY `current_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
 --
+-- AUTO_INCREMENT для таблицы `bottom_menu`
+--
+ALTER TABLE `bottom_menu`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
 -- AUTO_INCREMENT для таблицы `countries`
 --
 ALTER TABLE `countries`
@@ -1221,7 +1301,7 @@ ALTER TABLE `languages`
 -- AUTO_INCREMENT для таблицы `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 --
 -- AUTO_INCREMENT для таблицы `option`
 --
@@ -1277,6 +1357,11 @@ ALTER TABLE `product_special`
 --
 ALTER TABLE `regions`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT для таблицы `top_menu`
+--
+ALTER TABLE `top_menu`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT для таблицы `users`
 --
