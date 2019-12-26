@@ -61,7 +61,8 @@ class CategoryController extends Controller
             $data_title = $request->get('title'.$i);
             $data_sub_title = $request->get('sub_title'.$i);
             $data_description = $request->get('description'.$i);
-            $image_upload = $request->file('image')->store('uploads', 'public');
+            $request->file('image')->move(public_path('images/category'), 
+            $image_upload = $request->file('image')->getClientOriginalName()); 
             //Проверка на заполненные поля
             //Берем ID нашей новой категории и исключаем поле seo_link, но прежде чем будет исключение, он проверит остальные записи и скажет о том что такое поле уже существует 
             $rules = [
@@ -90,6 +91,7 @@ class CategoryController extends Controller
                 'seo_link' => $request['seo_link'],
                 'parent_id' => $request['parent_id'],
                 'published' => $request['published'],
+                'show_page' => $request['show_page'],
                 'language_id' => $i,
             ]);
         }
@@ -155,7 +157,8 @@ class CategoryController extends Controller
         //dd ( $request->file('image'));
         if($request->file('image') != null)
         {
-            $image_upload = $request->file('image')->store('uploads', 'public');
+            $request->file('image')->move(public_path('images/category'), 
+            $image_upload = $request->file('image')->getClientOriginalName());
         }
         else
         {
@@ -199,6 +202,7 @@ class CategoryController extends Controller
                     'seo_link' => $request['seo_link'],
                     'parent_id' => $request['parent_id'],
                     'published' => $request['published'],
+                    'show_page' => $request['show_page'],
                 ]);
 
             }
@@ -210,6 +214,7 @@ class CategoryController extends Controller
                     'seo_link' => $request['seo_link'],
                     'parent_id' => $request['parent_id'],
                     'published' => $request['published'],
+                    'show_page' => $request['show_page'],
                 ]);
                 
             }
@@ -228,6 +233,8 @@ class CategoryController extends Controller
     public function destroy(Category $category)
     {
         $category->delete();
+        //Category::where('id', $category['category_id'])->delete();
+
         return redirect()->route('admin.category.index');
     }
 }

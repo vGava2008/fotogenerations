@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 
 class TopMenuController extends Controller
 {
-    /**
+    /** 
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -182,7 +182,7 @@ class TopMenuController extends Controller
      */
     public function destroy(TopMenu $topMenu)
     {
-        $topMenu->delete();
+        TopMenu::where('top_menu_id', $topMenu['top_menu_id'])->delete();
         return redirect()->route('admin.top_menu.index');
     }
 }

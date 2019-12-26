@@ -1,16 +1,9 @@
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-
-    <title>@yield('title')</title>
-    <meta name="keywords" content="@yield('meta_keyword')">
-    <meta name="description" content="@yield('meta_description')">
-
-
+    <title>{{ config('app.name', 'VIAR') }}</title>
     <meta name="cmsmagazine" content="5a7189a28fb3dc68238dbdb44c9ea99c" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&display=swap" rel="stylesheet">

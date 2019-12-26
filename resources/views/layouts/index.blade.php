@@ -1,4 +1,4 @@
-    @include('layouts.head') 
+    @include('layouts.head')
 
 <body>
 

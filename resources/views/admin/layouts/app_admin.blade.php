@@ -14,6 +14,14 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+
+<script src="{{ asset('/js/ckeditor/ckeditor.js') }}"
+type="text/javascript" charset="utf-8" ></script>
+<!--<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.4/summernote.css" rel="stylesheet">-->
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+
     <!--<link href="{{ asset('js/datetimepicker/bootstrap-datetimepicker.min.css') }}" rel="stylesheet">
     <link href="{{ asset('js/datetimepicker/bootstrap-datetimepicker.min.js') }}" rel="preload">
     <script type="text/javascript" src="{{ asset('js/datetimepicker/bootstrap-datetimepicker.min.js') }}"></script>-->
@@ -29,9 +37,13 @@
     <!--<link href="{{ asset('css/admin/stylesheet.css') }}" type="text/css" rel="stylesheet" media="screen">-->
 
     <!--<link type="text/css" href="view/stylesheet/stylesheet.css" rel="stylesheet" media="screen" />-->
-    <script type="text/javascript" src="{{ asset('js/admin/common.js') }}"></script>
+    <!--<script type="text/javascript" src="{{ asset('js/admin/common.js') }}"></script>-->
+    <!--<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js"></script>-->
 
    
+
+
 
 
     

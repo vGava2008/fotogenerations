@@ -18,20 +18,21 @@
       <th style="width:30%">Изображение</th>
       <th>Наименование</th>
       <th>Статус публикации</th>
+      <th>Отображение на странице</th>
       <th class="text-right">Действие</th>
     </thead>
     <tbody>
       @forelse ($categories as $category)
         <tr>
           @if ($category->image == null)
-            <td><img style="width:30%" src="{{asset('/storage/uploads/' . 'no-image.png')}}" alt="{{$category->title}}"></td>
+            <td><img style="width:30%" src="{{asset('/images/' . 'no-image.png')}}" alt="{{$category->title}}"></td>
           @else
-            <td><img style="width:30%" src="{{asset('/storage/' . $category->image)}}" alt="{{$category->title}}"></td>
-            <td><img style="width:30%" src="{{asset('/img/admin/' . $category->image)}}" alt="{{$category->title}}"></td>
+            <td><img style="width:30%" src="{{asset('/images/category/' . $category->image)}}" alt="{{$category->title}}"></td>
+            
           @endif 
           <td>{{$category->title}}</td>
           <td>@if ($category->published == 1) Опубликовано @else Не опубликовано @endif</td>
-          
+          <td>@if ($category->show_page == 1) Да @else Нет @endif</td>
           <td class="text-right">
           	<form onsubmit="if(confirm('Удалить?')){ return true }else{ return false }" action="{{route('admin.category.destroy', $category)}}" method="post">
           		<input type="hidden" name="_method" value="DELETE">

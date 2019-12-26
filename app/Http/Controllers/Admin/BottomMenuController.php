@@ -181,7 +181,7 @@ class BottomMenuController extends Controller
      */
     public function destroy(BottomMenu $bottomMenu)
     {
-        $bottomMenu->delete();
+        BottomMenu::where('bottom_menu_id', $bottomMenu['bottom_menu_id'])->delete();
         return redirect()->route('admin.bottom_menu.index');
     }
 }

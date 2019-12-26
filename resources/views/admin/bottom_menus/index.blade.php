@@ -24,8 +24,7 @@
     <tbody>
       @forelse ($bottom_menus as $bottom_menu)
         <tr>
-          <td>{{$bottom_menu->id}}</td>
-          <td>{{$bottom_menu->bottom_menu_id}}</td>
+          
           <td>{{$bottom_menu->name}}</td>
           <td>{{$bottom_menu->url}}</td>
           <td>@if ($bottom_menu->status == 1) Опубликовано @else Не опубликовано @endif</td>

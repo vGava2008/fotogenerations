@@ -3,6 +3,18 @@
 @section('content')
 <div class="container">
 	<div class="row">
+ 
+
+	<h1>Добавляем поддержку CKEditor</h1>
+            <div class="row">
+                    <div class="col-md-12">
+                           <textarea name="editor1" id="editor1">
+                           </textarea>
+                   </div>
+           </div>
+
+
+
 		<div class="col-xs-12" style="text-align: center; font-weight: bold; font-size: 29px;">Клиенты / Пользователи</div>
 		<div class="col-xs-12"><hr></div>
 		<a href="{{route('admin.user_managment.user.index')}}">
@@ -67,6 +79,13 @@
 		<div class="col-sm-3">
 			<div class="jumbotron">
 				<p><span class="label label-primary">Меню Footer - {{$bottom_menus}}</span></p>
+			</div>
+		</div>
+		</a>
+		<a href="{{route('admin.static_page.index')}}">
+		<div class="col-sm-3">
+			<div class="jumbotron">
+				<p><span class="label label-primary">Страницы - {{-- $banners_count --}}</span></p>
 			</div>
 		</div>
 		</a>
@@ -180,4 +199,37 @@
 		</div>
 	</div>-->
 </div>
+
+
+
+          <script>
+    	/*window.onload = function()
+		{
+
+      $('#summernote').summernote({
+        placeholder: 'Hello stand alone ui',
+        tabsize: 2,
+        height: 100
+      });
+  	}*/
+/*
+  	$(document).ready(function() {
+
+           $('#technig').summernote({
+
+             height:300,
+
+           });
+
+       });*/
+    </script>
+    <script>
+        //var editor = CKEDITOR.replace( 'editor1' );
+
+setTimeout(function(){
+    //$('#editor1').ckeditor();
+    var editor = CKEDITOR.replace( 'editor1' );
+},100);
+
+</script>
 @endsection
