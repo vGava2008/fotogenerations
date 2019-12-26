@@ -19,7 +19,7 @@ class BlogController extends Controller
     {
 
         return view('admin.blogs.index', [
-            'blogs' => Blog::paginate(10),
+            'blogs' => Blog::where(['language_id'=>1])->paginate(10),
             'languages' => Langs::get(),
         ]);
 
@@ -49,6 +49,37 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
+        //dd();
+        if($request->file('main_image') != null)
+        {
+            //$image_upload = $request->file('main_image')->store('uploads', 'public');
+            $request->file('main_image')->move(public_path('images/blog'), 
+            $image_upload = $request->file('main_image')->getClientOriginalName()); 
+        }
+        else
+        {
+           //Ничего не делаем
+        }
+        if($request->file('second_image') != null)
+        {
+            //$image_upload2 = $request->file('second_image')->store('uploads', 'public');
+            $request->file('second_image')->move(public_path('images/blog'), 
+            $image_upload2 = $request->file('second_image')->getClientOriginalName()); 
+        }
+        else
+        {
+           //Ничего не делаем
+        }
+        if($request->file('third_center_image') != null)
+        {
+            //$image_upload3 = $request->file('third_center_image')->store('uploads', 'public');
+            $request->file('third_center_image')->move(public_path('images/blog'), 
+            $image_upload3 = $request->file('third_center_image')->getClientOriginalName());
+        }
+        else
+        {
+           //Ничего не делаем
+        }
         //Узнаём поледнее ID записи в таблице "Категорий"
         $latest = Blog::latest()->first();
         $latest_ID = $latest['id'];
@@ -63,13 +94,14 @@ class BlogController extends Controller
         {
             //Вынимаем значения с переданных данных, а именно с titlte 1-5
             $data_title = $request->get('title'.$i);
-            $image_upload = $request->file('main_image')->store('uploads', 'public');
-            $image_upload2 = $request->file('second_image')->store('uploads', 'public');
+            //$image_upload = $request->file('main_image')->store('uploads', 'public');
+            //$image_upload->move(public_path() . '/images/blog','main_image');
+            //$image_upload2 = $request->file('second_image')->store('uploads', 'public');
             $data_title_second_image = $request->get('title_second_image'.$i);
             $data_title_second_level = $request->get('title_second_level'.$i);
             $data_text_left = $request->get('text_left'.$i);
             $data_text_right = $request->get('text_right'.$i);
-            $image_upload3 = $request->file('third_center_image')->store('uploads', 'public');
+            //$image_upload3 = $request->file('third_center_image')->store('uploads', 'public');
             $data_title_third_center_image = $request->get('title_third_center_image'.$i);
             $data_text_centr = $request->get('text_centr'.$i);
             //Проверка на заполненные поля
@@ -92,6 +124,7 @@ class BlogController extends Controller
                 \Illuminate\Validation\Rule::unique('blogs')->ignore($latest_ID),],
                 //'categoey_id' => 'required|integer|max:11',
                 'published' => 'required|integer|max:11',
+                'status' => 'required|integer|max:11',
                 //'language_id' => 'required|integer|max:11',
             ];
             $customMessages = [
@@ -100,6 +133,7 @@ class BlogController extends Controller
             ];
             $this->validate($request, $rules, $customMessages);
             //Записываем в БД
+
             Blog::create([
                 'id' => $latest_ID,
                 'title' => $data_title,
@@ -115,6 +149,7 @@ class BlogController extends Controller
                 'seo_link' => $request['seo_link'],
                 'category_id' => $request['category_id'],
                 'published' => $request['published'],
+                'status' => $request['status'],
                 'language_id' => $i,
             ]);
         }
@@ -173,11 +208,13 @@ class BlogController extends Controller
         /*echo "---------------Category---------------";           
         dd($blog);
         echo "---------------END: Category---------------";*/
-         //dd ( $request);
+        //dd ( $request);
         //dd ( $request->file('image'));
         if($request->file('main_image') != null)
         {
-            $image_upload = $request->file('main_image')->store('uploads', 'public');
+            //$image_upload = $request->file('main_image')->store('uploads', 'public');
+            $request->file('main_image')->move(public_path('images/blog'), 
+            $image_upload = $request->file('main_image')->getClientOriginalName()); 
         }
         else
         {
@@ -185,7 +222,9 @@ class BlogController extends Controller
         }
         if($request->file('second_image') != null)
         {
-            $image_upload = $request->file('second_image')->store('uploads', 'public');
+            //$image_upload2 = $request->file('second_image')->store('uploads', 'public');
+            $request->file('second_image')->move(public_path('images/blog'), 
+            $image_upload2 = $request->file('second_image')->getClientOriginalName()); 
         }
         else
         {
@@ -193,7 +232,9 @@ class BlogController extends Controller
         }
         if($request->file('third_center_image') != null)
         {
-            $image_upload = $request->file('third_center_image')->store('uploads', 'public');
+            //$image_upload3 = $request->file('third_center_image')->store('uploads', 'public');
+            $request->file('third_center_image')->move(public_path('images/blog'), 
+            $image_upload3 = $request->file('third_center_image')->getClientOriginalName());
         }
         else
         {
@@ -225,13 +266,13 @@ class BlogController extends Controller
             {
                 $rules = [
                     'title'.$i => 'required|string|max:255',
-                    'main_image' => 'required',
-                    'second_image' => 'required',
+                    //'main_image' => 'required',
+                    //'second_image' => 'required',
                     'title_second_image'.$i => 'required|string|max:255',
                     'title_second_level'.$i => 'required|string|max:255',
                     'text_left'.$i => 'required|string',
                     'text_right'.$i => 'required|string',
-                    'third_center_image' => 'required',
+                    //'third_center_image' => 'required',
                     'title_third_center_image'.$i => 'string|max:255',
                     'text_centr'.$i => 'string',
                     'seo_link' => [
@@ -265,6 +306,7 @@ class BlogController extends Controller
                     \Illuminate\Validation\Rule::unique('blogs')->ignore($blog->id),],
                     //'categoey_id' => 'required|integer|max:11',
                     'published' => 'required|integer|max:11',
+                    'status' => 'required|integer|max:11',
                     //'language_id' => 'required|integer|max:11',
                 ];
                 $customMessages = [
@@ -275,22 +317,39 @@ class BlogController extends Controller
             
             $this->validate($request, $rules, $customMessages);
             //Записываем в БД
-            if(isset($image_upload))
+            if(isset($image_upload) || isset($image_upload2) || isset($image_upload3))
             {
+                if(isset($image_upload))
+                {
+                    Blog::where(['id'=>$request['blog_id'], 'language_id'=>$data_language])->update([
+                    'main_image' => $image_upload,
+                    ]);
+                }
+                if(isset($image_upload2))
+                {
+                    Blog::where(['id'=>$request['blog_id'], 'language_id'=>$data_language])->update([
+                    'second_image' => $image_upload2,
+                    ]);
+                }
+                if(isset($image_upload3))
+                {
+                    Blog::where(['id'=>$request['blog_id'], 'language_id'=>$data_language])->update([
+                    'third_center_image' => $image_upload3,
+                    ]);
+                }
+
                 Blog::where(['id'=>$request['blog_id'], 'language_id'=>$data_language])->update([
                     'title' => $data_title,
-                    'main_image' => $image_upload,
-                    'second_image' => $image_upload2,
                     'title_second_image' => $data_title_second_image,
                     'title_second_level' => $data_title_second_level,
                     'text_left' => $data_text_left,
                     'text_right' => $data_text_right,
-                    'third_center_image' => $image_upload3,
                     'title_third_center_image' => $data_title_third_center_image,
                     'text_centr' => $data_text_centr,
                     'seo_link' => $request['seo_link'],
                     'category_id' => $request['category_id'],
                     'published' => $request['published'],
+                    'status' => $request['status'],
                 ]);
 
             }
@@ -307,6 +366,7 @@ class BlogController extends Controller
                     'seo_link' => $request['seo_link'],
                     'category_id' => $request['category_id'],
                     'published' => $request['published'],
+                    'status' => $request['status'],
                 ]);
                 
             }

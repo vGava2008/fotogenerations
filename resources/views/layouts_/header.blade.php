@@ -15,7 +15,7 @@
 
                                 @if ($menu->status != 'gallery')
 
-                                    <li><a href="{{asset($menu->url)}}">{{ $menu->name }}</a></li>
+                                    <li><a href="{{asset($menu->url)}}">{{ $top_menu->name }}</a></li>
                                     @endif
                                 @endforeach
 

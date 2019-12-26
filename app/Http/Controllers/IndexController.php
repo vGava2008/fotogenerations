@@ -1,18 +1,18 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 //use App\Languages;
 use App\Category;
 use App\Langs;
+use App;
+use App\Banner;
+use App\TopMenu;
+use App\BottomMenu;
 //use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use DB; 
-
-
 class IndexController extends Controller
 {
     /**
@@ -24,7 +24,6 @@ class IndexController extends Controller
     {
         $this->middleware('auth');
     }
-
     /**
      * Show the application dashboard.
      *
@@ -32,10 +31,26 @@ class IndexController extends Controller
      */
     public function index()
     {
-    $lang = Langs::all();
-//    $cats = Category::where();
+       /* $lang = Langs::all();
+//      $cats = Category::where();
         return view('index')->with([
-  'langs' => $lang,
-]);
+        'langs' => $lang,
+        ]);*/
+        $lang = Langs::all();
+        $banners = Banner::all();
+        $language = Langs::where(['locale' => App::getLocale()])->first();
+        $top_menu = TopMenu::where(['status' => 1 , 'language_id' => $language->id])->get();
+        $bottom_menu = BottomMenu::where(['status' => 1 , 'language_id' => $language->id])->get();
+        $category = Category::where(['published' => 1 , 'language_id' => $language->id])->get();
+        //    $menu_foother = Menu_Foother::where(['status' => 1])->get();
+        return view('index')->with([
+          'langs' => $lang,
+          'banners' => $banners,
+          'top_menu' => $top_menu,
+          'categories' => $category,
+          'lang' => $language->id,
+          //
+          'menu_f' => $bottom_menu,
+        ]);
     }
 }

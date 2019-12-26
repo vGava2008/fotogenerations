@@ -10,14 +10,14 @@ use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use DB; 
 
-class CategoryController extends Controller
+class MenuController extends Controller
 {
     //Отображение списка
     public function index()
     {
         //
         return view('admin.categories.index', [
-            'categories' => Category::where('language_id', '1')->paginate(10),
+            'menu' => Menu::paginate(10),
             'languages' => Langs::get(),
         ]);
     }
@@ -30,9 +30,9 @@ class CategoryController extends Controller
     //Открытие формы создания категорий
     public function create()
     {
-        return view('admin.categories.create', [
-          'category'   => [],
-          'categories' => Category::with('children')->where('parent_id', '0')->get(),
+        return view('admin.menu.create', [
+          'menu'   => [],
+          'menu' => Menu::with('children')->where('parent_id', '0')->get(),
           'languages' => Langs::get(),
           'delimiter'  => ''
         ]);
@@ -43,7 +43,7 @@ class CategoryController extends Controller
     {
 
         //Узнаём поледнее ID записи в таблице "Категорий"
-        $latest = Category::latest()->first();
+        $latest = Menu::latest()->first();
         $latest_ID = $latest['id'];
         //Повышаем его на единицу
         $latest_ID++;
@@ -52,15 +52,13 @@ class CategoryController extends Controller
         $langs_count = Langs::count();
         //$rules = ['slug' => 'required|string|max:255|unique:categories',];
         
-
-    
         //Запускаем цикл не превышающий кол-ва языков
         for($i=1; $i<=$langs_count; $i++)
         {
             //Вынимаем значения с переданных данных, а именно с titlte 1-5
             $data_title = $request->get('title'.$i);
-            $data_sub_title = $request->get('sub_title'.$i);
             $data_description = $request->get('description'.$i);
+
             $image_upload = $request->file('image')->store('uploads', 'public');
             //Проверка на заполненные поля
             //Берем ID нашей новой категории и исключаем поле seo_link, но прежде чем будет исключение, он проверит остальные записи и скажет о том что такое поле уже существует 
@@ -85,8 +83,8 @@ class CategoryController extends Controller
                 'id' => $latest_ID,
                 'image' => $image_upload,
                 'title' => $data_title,
-                'sub_title' => $data_sub_title,
                 'description' => $data_description,
+
                 'seo_link' => $request['seo_link'],
                 'parent_id' => $request['parent_id'],
                 'published' => $request['published'],
@@ -168,8 +166,6 @@ class CategoryController extends Controller
         {
             //Вынимаем значения с переданных данных, а именно с titlte 1-5 и с languages 1-5
             $data_title = $request->get('title'.$i);
-            $data_sub_title = $request->get('sub_title'.$i);
-            $data_description = $request->get('description'.$i);
             $data_language = $request->get('language'.$i);
             //$image_upload;
             //dd($request);
@@ -194,8 +190,6 @@ class CategoryController extends Controller
             if(isset($image_upload))
             {
                 Category::where(['id'=>$request['category_id'], 'language_id'=>$data_language])->update(['image' => $image_upload, 'title' => $data_title,
-                    'sub_title' => $data_sub_title,
-                    'description' => $data_description,
                     'seo_link' => $request['seo_link'],
                     'parent_id' => $request['parent_id'],
                     'published' => $request['published'],
@@ -205,8 +199,6 @@ class CategoryController extends Controller
             else
             {
                 Category::where(['id'=>$request['category_id'], 'language_id'=>$data_language])->update(['title' => $data_title,
-                    'sub_title' => $data_sub_title,
-                    'description' => $data_description,
                     'seo_link' => $request['seo_link'],
                     'parent_id' => $request['parent_id'],
                     'published' => $request['published'],

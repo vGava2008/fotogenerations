@@ -1,6 +1,17 @@
-@extends('layouts.index')
+    @include('layouts.head')
+
+<body>
+
+    <div class="wrapper">
+
+    @include('layouts.header')
+
+
+@include('layouts.general')
 
 @section('content')
+
+
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -22,4 +33,4 @@
 @endsection
 </div>
 
-
+    @include('layouts.foother')

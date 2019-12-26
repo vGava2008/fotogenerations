@@ -6,7 +6,6 @@ use App\Product;
 use App\Langs;
 use App\Category;
 use App\Manufacturer;
-use App\Option;
 
 use App\ProductDescription;
 use App\ProductAttribute;
@@ -16,9 +15,6 @@ use App\ProductImage;
 use App\ProductDiscount;
 use App\ProductSpecial;
 use App\CustomerGroup;
-use App\ProductOption;
-use App\ProductOptionValue;
-
 
 
 use Illuminate\Http\Request;
@@ -44,12 +40,11 @@ class ProductController extends Controller
     
 /******************************* ГЛУПОСТЬ АВТОРОВ LARAVEL ************************************/
 
-    public function autocomplete(Request $request)
+    public function autocomplete()
     {
-       /* return view('admin.products.index', [
+        return view('admin.products.index', [
             'products' => Product::paginate(10)
-        ]);*/
-        echo '000';
+        ]);
     }
 /****************/
 
@@ -152,7 +147,7 @@ class ProductController extends Controller
         $count=0;
         return view('admin.products.create', [
           'product'   => [],
-          'product_description'   => [],
+          'product_descriptiom'   => [],
           'product_discount'   => [],
           'product_special'   => [],
           'count' => $count,
@@ -161,9 +156,7 @@ class ProductController extends Controller
           'attribute_descriptions' => AttributeDescription::where(['language_id'=>1])->get(),
           'manufacturers' => Manufacturer::where(['language_id'=>1])->get(),
           'languages' => Langs::get(),
-          'delimiter'  => '',
-          'product_options' => [],
-          'option_values' =>  [],
+          'delimiter'  => ''
         ]);
     }
 
@@ -182,247 +175,6 @@ class ProductController extends Controller
         $latest_ID++;
         //Узнаём колличество языков
         $langs_count = Langs::count();
-
-        /********** Опции **********/
-        //  dd($request);
-
-        $option_row_count = $request->get('option_row_count');
-        $option_value_row_count = $request->get('option_value_row_count');
-        for($i=1; $i<$option_row_count; $i++)
-        {
-            $product_option = $request->get('product_option'.$i);
-            //dd($product_option);
-            $option_active = $product_option['active'];
-            $product_option_id = $product_option['product_option_id'];
-            $option_id = $product_option['option_id'];
-            //1 Только что созданный - create
-            if($option_active == 1)
-            {
-                $option_name = $product_option['name'];
-                $option_type = $product_option['type'];
-                $option_required = $product_option['required'];
-
-                if($option_type == 'text' || $option_type == 'textarea')
-                {
-                    $option_value = $product_option['value'];
-                    ProductOption::create([
-                    'product_id' => $latest_ID,
-                    'option_id' => $option_id,
-                    'option_value' => $option_value,
-                    'required' => $option_required,
-                    ]);
-                }
-                if($option_type == 'select' || $option_type == 'radio' || $option_type == 'checkbox')
-                {
-                    $product_option_value = $product_option['product_option_value'];
-                    ProductOption::create([
-                    'product_id' => $latest_ID,
-                    'option_id' => $option_id,
-                    'required' => $option_required,
-                    ]);
-
-                    for($j=1; $j<$option_value_row_count; $j++)
-                    {
-                        if(isset($product_option_value[''.$j.'']))
-                        {
-                            $option_value_active = $product_option_value[''.$j.'']['active'];
-                            if($option_value_active == 1)
-                            {
-                                $product_option_id_get = ProductOption::where(['product_id' => $latest_ID, 'option_id' => $option_id])->get();
-                                $get_product_option_id;
-                                foreach ($product_option_id_get as $product_option_id_one) {
-                                    $get_product_option_id = $product_option_id_one->product_option_id;
-                                }
-
-                                //dd($product_option_id);
-                                $option_value_id = $product_option_value[''.$j.'']['option_value_id'];
-                                $option_value_quantity = $product_option_value[''.$j.'']['quantity'];
-                                $option_value_subtract = $product_option_value[''.$j.'']['subtract'];
-                                $option_value_price_prefix = $product_option_value[''.$j.'']['price_prefix'];
-                                $option_value_price = $product_option_value[''.$j.'']['price'];
-                                $option_value_points_prefix = $product_option_value[''.$j.'']['points_prefix'];
-                                $option_value_points = $product_option_value[''.$j.'']['points'];
-                                $option_value_weight_prefix = $product_option_value[''.$j.'']['weight_prefix'];
-                                $option_value_weight = $product_option_value[''.$j.'']['weight'];
-                                ProductOptionValue::create([
-                                'product_option_id'=>$get_product_option_id,
-                                'product_id' => $latest_ID,
-                                'option_id' => $option_id,
-                                'option_value_id' => $option_value_id,
-                                'quantity' => $option_value_quantity,
-                                'subtract' => $option_value_subtract,
-                                'price' => $option_value_price,
-                                'price_prefix' => $option_value_price_prefix,
-                                'points' => $option_value_points,
-                                'points_prefix' => $option_value_points_prefix,
-                                'weight' => $option_value_weight,
-                                'weight_prefix' => $option_value_weight_prefix,
-                                ]);
-
-                            }
-                            if($option_value_active == 2)
-                            {
-                                $option_value_id = $product_option_value[''.$j.'']['option_value_id'];
-                                $product_option_value_id = $product_option_value[''.$j.'']['product_option_value_id'];
-                                $option_value_quantity = $product_option_value[''.$j.'']['quantity'];
-                                $option_value_subtract = $product_option_value[''.$j.'']['subtract'];
-                                $option_value_price_prefix = $product_option_value[''.$j.'']['price_prefix'];
-                                $option_value_price = $product_option_value[''.$j.'']['price'];
-                                $option_value_points_prefix = $product_option_value[''.$j.'']['points_prefix'];
-                                $option_value_points = $product_option_value[''.$j.'']['points'];
-                                $option_value_weight_prefix = $product_option_value[''.$j.'']['weight_prefix'];
-                                $option_value_weight = $product_option_value[''.$j.'']['weight'];
-                                ProductOptionValue::where(['product_option_value_id'=>$product_option_value_id, 'product_option_id'=>$product_option_id, 'product_id'=>$latest_ID, 'option_id'=>$option_id, 'option_value_id'=>$option_value_id])->update([
-                                    'quantity' => $option_value_quantity,
-                                    'subtract' => $option_value_subtract,
-                                    'price' => $option_value_price,
-                                    'price_prefix' => $option_value_price_prefix,
-                                    'points' => $option_value_points,
-                                    'points_prefix' => $option_value_points_prefix,
-                                    'weight' => $option_value_weight,
-                                    'weight_prefix' => $option_value_weight_prefix,
-                                ]);
-                            }
-                            if($option_value_active == 3)
-                            {
-                                $product_option_value_id = $product_option_value[''.$j.'']['product_option_value_id'];
-
-                                if (isset($product_option_value_id)) 
-                                {
-                                    ProductOptionValue::where(['product_option_value_id'=>$product_option_value_id, 'product_id'=>$latest_ID, 'product_option_id'=>$product_option_id, 'option_id'=>$option_id])->delete();
-                                }
-                                else{
-                                //print_r('del'); 
-                                }
-                            }
-                        }
-                        else
-                        {
-
-                        }
-                    }
-                }
-            }
-            //2 Отредактирована - update
-            if($option_active == 2)
-            {
-                $option_name = $product_option['name'];
-                $option_type = $product_option['type'];
-                $option_required = $product_option['required'];
-                if($option_type == 'text' || $option_type == 'textarea')
-                {
-                    $option_value = $product_option['value'];
-                    ProductOption::where(['product_id'=>$latest_ID, 'product_option_id'=>$product_option_id, 'option_id'=>$option_id])->update([
-                    'option_value' => $option_value,
-                    'required' => $option_required,
-                ]);
-                }
-                if($option_type == 'select' || $option_type == 'radio' || $option_type == 'checkbox')
-                {
-                    $product_option_value = $product_option['product_option_value'];
-                    ProductOption::where(['product_id'=>$latest_ID, 'product_option_id'=>$product_option_id, 'option_id'=>$option_id])->update([
-                    'required' => $option_required,
-                    ]);
-                    //dd($product_option_value);
-                    for($j=1; $j<$option_value_row_count; $j++)
-                    {
-                        //$product_option_value[''.$i.''];
-                        //dd($product_option_value);
-                        //dd($product_option_value['2']);
-
-
-                        //print_r($j);
-                         //print_r($product_option);
-                        if(isset($product_option_value[''.$j.'']))
-                        {
-                            $option_value_active = $product_option_value[''.$j.'']['active'];
-                            if($option_value_active == 1)
-                            {
-
-                            
-                                $option_value_id = $product_option_value[''.$j.'']['option_value_id'];
-                                $option_value_quantity = $product_option_value[''.$j.'']['quantity'];
-                                $option_value_subtract = $product_option_value[''.$j.'']['subtract'];
-                                $option_value_price_prefix = $product_option_value[''.$j.'']['price_prefix'];
-                                $option_value_price = $product_option_value[''.$j.'']['price'];
-                                $option_value_points_prefix = $product_option_value[''.$j.'']['points_prefix'];
-                                $option_value_points = $product_option_value[''.$j.'']['points'];
-                                $option_value_weight_prefix = $product_option_value[''.$j.'']['weight_prefix'];
-                                $option_value_weight = $product_option_value[''.$j.'']['weight'];
-                                ProductOptionValue::create([
-                                'product_option_id'=>$product_option_id,
-                                'product_id' => $latest_ID,
-                                'option_id' => $option_id,
-                                'option_value_id' => $option_value_id,
-                                'quantity' => $option_value_quantity,
-                                'subtract' => $option_value_subtract,
-                                'price' => $option_value_price,
-                                'price_prefix' => $option_value_price_prefix,
-                                'points' => $option_value_points,
-                                'points_prefix' => $option_value_points_prefix,
-                                'weight' => $option_value_weight,
-                                'weight_prefix' => $option_value_weight_prefix,
-                                ]);
-
-                            }
-                            if($option_value_active == 2)
-                            {
-                                $option_value_id = $product_option_value[''.$j.'']['option_value_id'];
-                                $product_option_value_id = $product_option_value[''.$j.'']['product_option_value_id'];
-                                $option_value_quantity = $product_option_value[''.$j.'']['quantity'];
-                                $option_value_subtract = $product_option_value[''.$j.'']['subtract'];
-                                $option_value_price_prefix = $product_option_value[''.$j.'']['price_prefix'];
-                                $option_value_price = $product_option_value[''.$j.'']['price'];
-                                $option_value_points_prefix = $product_option_value[''.$j.'']['points_prefix'];
-                                $option_value_points = $product_option_value[''.$j.'']['points'];
-                                $option_value_weight_prefix = $product_option_value[''.$j.'']['weight_prefix'];
-                                $option_value_weight = $product_option_value[''.$j.'']['weight'];
-                                ProductOptionValue::where(['product_option_value_id'=>$product_option_value_id, 'product_option_id'=>$product_option_id, 'product_id'=>$latest_ID, 'option_id'=>$option_id, 'option_value_id'=>$option_value_id])->update([
-                                    'quantity' => $option_value_quantity,
-                                    'subtract' => $option_value_subtract,
-                                    'price' => $option_value_price,
-                                    'price_prefix' => $option_value_price_prefix,
-                                    'points' => $option_value_points,
-                                    'points_prefix' => $option_value_points_prefix,
-                                    'weight' => $option_value_weight,
-                                    'weight_prefix' => $option_value_weight_prefix,
-                                ]);
-                            }
-                            if($option_value_active == 3)
-                            {
-                                $product_option_value_id = $product_option_value[''.$j.'']['product_option_value_id'];
-
-                                if (isset($product_option_value_id)) 
-                                {
-                                    ProductOptionValue::where(['product_option_value_id'=>$product_option_value_id, 'product_id'=>$latest_ID, 'product_option_id'=>$product_option_id, 'option_id'=>$option_id])->delete();
-                                }
-                                else{
-                                //print_r('del'); 
-                                }
-                            }
-                        }
-                        else
-                        {
-
-                        }
-                    }
-                }
-            }
-            //3 Удалена - delete
-            if($option_active == 3)
-            {
-                //Если есть id скидки
-                if (isset($product_option['product_option_id'])) 
-                {
-                    ProductOption::where(['product_id'=>$latest_ID, 'product_option_id'=>$product_option_id, 'option_id'=>$option_id])->delete();
-                }
-                else{
-                    //print_r('del'); 
-                }
-            }
-            //dd($product_option_value);
-        }
-        /********** END: Опции **********/
 
         /********** Скидки **********/
         $discount_row_count = $request->get('discount_row_count');
@@ -817,19 +569,7 @@ class ProductController extends Controller
         //$choose_product_attributes
         $choose_product_description = ProductDescription::where('product_id', $product['product_id'])->get();
 
-        //$choose_product_description = ProductDescription::where(['product_id' => $product['product_id']])->get();
-        $data['product_options'] = Product::getProductOptions($product['product_id']);
-        //dd($ee);
-
-
-        $data['option_values'] = array();
-        foreach ($data['product_options'] as $product_option) {
-            if ($product_option['type'] == 'select' || $product_option['type'] == 'radio' || $product_option['type'] == 'checkbox') {
-                if (!isset($data['option_values'][$product_option['option_id']])) {
-                    $data['option_values'][$product_option['option_id']] = Option::getOptionValues($product_option['option_id']);
-                }
-            }
-        }
+       // $choose_product_description = ProductDescription::where(['product_id' => $product['product_id']])->get();
 
         return view('admin.products.edit', [
           'product'   => $product,
@@ -849,10 +589,6 @@ class ProductController extends Controller
           'choose_product_attributes' => ProductAttribute::where(['product_id'=>$product['product_id'], 'language_id'=>1])->get(),
           'product_images' => ProductImage::where(['product_id'=>$product['product_id']])->get(),
           //'products' => Product::with('children')->where(['parent_id'=>0, 'language_id'=>1])->get(),
-          'product_options' => Product::getProductOptions($product['product_id']),
-          'option_values' =>  $data['option_values'],
-
-          
           'languages' => Langs::get(),
           'delimiter'  => ''
         ]);
@@ -867,246 +603,8 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        /********** Опции **********/
-        //  dd($request);
-
-        $option_row_count = $request->get('option_row_count');
-        $option_value_row_count = $request->get('option_value_row_count');
-        for($i=1; $i<$option_row_count; $i++)
-        {
-            $product_option = $request->get('product_option'.$i);
-            //dd($product_option);
-            $option_active = $product_option['active'];
-            $product_option_id = $product_option['product_option_id'];
-            $option_id = $product_option['option_id'];
-            //1 Только что созданный - create
-            if($option_active == 1)
-            {
-                $option_name = $product_option['name'];
-                $option_type = $product_option['type'];
-                $option_required = $product_option['required'];
-
-                if($option_type == 'text' || $option_type == 'textarea')
-                {
-                    $option_value = $product_option['value'];
-                    ProductOption::create([
-                    'product_id' => $request['product_id'],
-                    'option_id' => $option_id,
-                    'option_value' => $option_value,
-                    'required' => $option_required,
-                    ]);
-                }
-                if($option_type == 'select' || $option_type == 'radio' || $option_type == 'checkbox')
-                {
-                    $product_option_value = $product_option['product_option_value'];
-                    ProductOption::create([
-                    'product_id' => $request['product_id'],
-                    'option_id' => $option_id,
-                    'required' => $option_required,
-                    ]);
-
-                    for($j=1; $j<$option_value_row_count; $j++)
-                    {
-                        if(isset($product_option_value[''.$j.'']))
-                        {
-                            $option_value_active = $product_option_value[''.$j.'']['active'];
-                            if($option_value_active == 1)
-                            {
-                                $product_option_id_get = ProductOption::where(['product_id' => $request['product_id'], 'option_id' => $option_id])->get();
-                                $get_product_option_id;
-                                foreach ($product_option_id_get as $product_option_id_one) {
-                                    $get_product_option_id = $product_option_id_one->product_option_id;
-                                }
-
-                                //dd($product_option_id);
-                                $option_value_id = $product_option_value[''.$j.'']['option_value_id'];
-                                $option_value_quantity = $product_option_value[''.$j.'']['quantity'];
-                                $option_value_subtract = $product_option_value[''.$j.'']['subtract'];
-                                $option_value_price_prefix = $product_option_value[''.$j.'']['price_prefix'];
-                                $option_value_price = $product_option_value[''.$j.'']['price'];
-                                $option_value_points_prefix = $product_option_value[''.$j.'']['points_prefix'];
-                                $option_value_points = $product_option_value[''.$j.'']['points'];
-                                $option_value_weight_prefix = $product_option_value[''.$j.'']['weight_prefix'];
-                                $option_value_weight = $product_option_value[''.$j.'']['weight'];
-                                ProductOptionValue::create([
-                                'product_option_id'=>$get_product_option_id,
-                                'product_id' => $request['product_id'],
-                                'option_id' => $option_id,
-                                'option_value_id' => $option_value_id,
-                                'quantity' => $option_value_quantity,
-                                'subtract' => $option_value_subtract,
-                                'price' => $option_value_price,
-                                'price_prefix' => $option_value_price_prefix,
-                                'points' => $option_value_points,
-                                'points_prefix' => $option_value_points_prefix,
-                                'weight' => $option_value_weight,
-                                'weight_prefix' => $option_value_weight_prefix,
-                                ]);
-
-                            }
-                            if($option_value_active == 2)
-                            {
-                                $option_value_id = $product_option_value[''.$j.'']['option_value_id'];
-                                $product_option_value_id = $product_option_value[''.$j.'']['product_option_value_id'];
-                                $option_value_quantity = $product_option_value[''.$j.'']['quantity'];
-                                $option_value_subtract = $product_option_value[''.$j.'']['subtract'];
-                                $option_value_price_prefix = $product_option_value[''.$j.'']['price_prefix'];
-                                $option_value_price = $product_option_value[''.$j.'']['price'];
-                                $option_value_points_prefix = $product_option_value[''.$j.'']['points_prefix'];
-                                $option_value_points = $product_option_value[''.$j.'']['points'];
-                                $option_value_weight_prefix = $product_option_value[''.$j.'']['weight_prefix'];
-                                $option_value_weight = $product_option_value[''.$j.'']['weight'];
-                                ProductOptionValue::where(['product_option_value_id'=>$product_option_value_id, 'product_option_id'=>$product_option_id, 'product_id'=>$request['product_id'], 'option_id'=>$option_id, 'option_value_id'=>$option_value_id])->update([
-                                    'quantity' => $option_value_quantity,
-                                    'subtract' => $option_value_subtract,
-                                    'price' => $option_value_price,
-                                    'price_prefix' => $option_value_price_prefix,
-                                    'points' => $option_value_points,
-                                    'points_prefix' => $option_value_points_prefix,
-                                    'weight' => $option_value_weight,
-                                    'weight_prefix' => $option_value_weight_prefix,
-                                ]);
-                            }
-                            if($option_value_active == 3)
-                            {
-                                $product_option_value_id = $product_option_value[''.$j.'']['product_option_value_id'];
-
-                                if (isset($product_option_value_id)) 
-                                {
-                                    ProductOptionValue::where(['product_option_value_id'=>$product_option_value_id, 'product_id'=>$request['product_id'], 'product_option_id'=>$product_option_id, 'option_id'=>$option_id])->delete();
-                                }
-                                else{
-                                //print_r('del'); 
-                                }
-                            }
-                        }
-                        else
-                        {
-
-                        }
-                    }
-                }
-            }
-            //2 Отредактирована - update
-            if($option_active == 2)
-            {
-                $option_name = $product_option['name'];
-                $option_type = $product_option['type'];
-                $option_required = $product_option['required'];
-                if($option_type == 'text' || $option_type == 'textarea')
-                {
-                    $option_value = $product_option['value'];
-                    ProductOption::where(['product_id'=>$request['product_id'], 'product_option_id'=>$product_option_id, 'option_id'=>$option_id])->update([
-                    'option_value' => $option_value,
-                    'required' => $option_required,
-                ]);
-                }
-                if($option_type == 'select' || $option_type == 'radio' || $option_type == 'checkbox')
-                {
-                    $product_option_value = $product_option['product_option_value'];
-                    ProductOption::where(['product_id'=>$request['product_id'], 'product_option_id'=>$product_option_id, 'option_id'=>$option_id])->update([
-                    'required' => $option_required,
-                    ]);
-                    //dd($product_option_value);
-                    for($j=1; $j<$option_value_row_count; $j++)
-                    {
-                        //$product_option_value[''.$i.''];
-                        //dd($product_option_value);
-                        //dd($product_option_value['2']);
-
-
-                        //print_r($j);
-                         //print_r($product_option);
-                        if(isset($product_option_value[''.$j.'']))
-                        {
-                            $option_value_active = $product_option_value[''.$j.'']['active'];
-                            if($option_value_active == 1)
-                            {
-
-                            
-                                $option_value_id = $product_option_value[''.$j.'']['option_value_id'];
-                                $option_value_quantity = $product_option_value[''.$j.'']['quantity'];
-                                $option_value_subtract = $product_option_value[''.$j.'']['subtract'];
-                                $option_value_price_prefix = $product_option_value[''.$j.'']['price_prefix'];
-                                $option_value_price = $product_option_value[''.$j.'']['price'];
-                                $option_value_points_prefix = $product_option_value[''.$j.'']['points_prefix'];
-                                $option_value_points = $product_option_value[''.$j.'']['points'];
-                                $option_value_weight_prefix = $product_option_value[''.$j.'']['weight_prefix'];
-                                $option_value_weight = $product_option_value[''.$j.'']['weight'];
-                                ProductOptionValue::create([
-                                'product_option_id'=>$product_option_id,
-                                'product_id' => $request['product_id'],
-                                'option_id' => $option_id,
-                                'option_value_id' => $option_value_id,
-                                'quantity' => $option_value_quantity,
-                                'subtract' => $option_value_subtract,
-                                'price' => $option_value_price,
-                                'price_prefix' => $option_value_price_prefix,
-                                'points' => $option_value_points,
-                                'points_prefix' => $option_value_points_prefix,
-                                'weight' => $option_value_weight,
-                                'weight_prefix' => $option_value_weight_prefix,
-                                ]);
-
-                            }
-                            if($option_value_active == 2)
-                            {
-                                $option_value_id = $product_option_value[''.$j.'']['option_value_id'];
-                                $product_option_value_id = $product_option_value[''.$j.'']['product_option_value_id'];
-                                $option_value_quantity = $product_option_value[''.$j.'']['quantity'];
-                                $option_value_subtract = $product_option_value[''.$j.'']['subtract'];
-                                $option_value_price_prefix = $product_option_value[''.$j.'']['price_prefix'];
-                                $option_value_price = $product_option_value[''.$j.'']['price'];
-                                $option_value_points_prefix = $product_option_value[''.$j.'']['points_prefix'];
-                                $option_value_points = $product_option_value[''.$j.'']['points'];
-                                $option_value_weight_prefix = $product_option_value[''.$j.'']['weight_prefix'];
-                                $option_value_weight = $product_option_value[''.$j.'']['weight'];
-                                ProductOptionValue::where(['product_option_value_id'=>$product_option_value_id, 'product_option_id'=>$product_option_id, 'product_id'=>$request['product_id'], 'option_id'=>$option_id, 'option_value_id'=>$option_value_id])->update([
-                                    'quantity' => $option_value_quantity,
-                                    'subtract' => $option_value_subtract,
-                                    'price' => $option_value_price,
-                                    'price_prefix' => $option_value_price_prefix,
-                                    'points' => $option_value_points,
-                                    'points_prefix' => $option_value_points_prefix,
-                                    'weight' => $option_value_weight,
-                                    'weight_prefix' => $option_value_weight_prefix,
-                                ]);
-                            }
-                            if($option_value_active == 3)
-                            {
-                                $product_option_value_id = $product_option_value[''.$j.'']['product_option_value_id'];
-
-                                if (isset($product_option_value_id)) 
-                                {
-                                    ProductOptionValue::where(['product_option_value_id'=>$product_option_value_id, 'product_id'=>$request['product_id'], 'product_option_id'=>$product_option_id, 'option_id'=>$option_id])->delete();
-                                }
-                                else{
-                                //print_r('del'); 
-                                }
-                            }
-                        }
-                        else
-                        {
-
-                        }
-                    }
-                }
-            }
-            //3 Удалена - delete
-            if($option_active == 3)
-            {
-                //Если есть id скидки
-                if (isset($product_option['product_option_id'])) 
-                {
-                    ProductOption::where(['product_id'=>$request['product_id'], 'product_option_id'=>$product_option_id, 'option_id'=>$option_id])->delete();
-                }
-                else{
-                    //print_r('del'); 
-                }
-            }
-            //dd($product_option_value);
-        }
-        /********** END: Опции **********/
+        
+        //dd ( $request);
         /********** Скидки **********/
         $discount_row_count = $request->get('discount_row_count');
         for($i=1; $i<$discount_row_count; $i++)
@@ -1482,10 +980,7 @@ class ProductController extends Controller
         ProductAttribute::where('product_id',$product['product_id'])->delete();
         ProductImage::where('product_id',$product['product_id'])->delete(); 
         ProductSpecial::where('product_id',$product['product_id'])->delete(); 
-        ProductDiscount::where('product_id',$product['product_id'])->delete();
-        ProductOption::where('product_id',$product['product_id'])->delete();
-        ProductOptionValue::where('product_id',$product['product_id'])->delete();
-
+        ProductDiscount::where('product_id',$product['product_id'])->delete(); 
         return redirect()->route('admin.product.index');
     }
 }
