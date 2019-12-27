@@ -1,6 +1,6 @@
 <footer>
     <div class="footer-content clearfix">
-        <a class="logo" href="index.html"><img src="../img/footer-logo.png" alt=""></a>
+        <a class="logo" href="/"><img src="{{asset('img/footer-logo.png')}}" alt=""></a>
         <nav>
             <ul>
                 @foreach ($bottom_menu as $menu)
@@ -24,7 +24,7 @@
         </nav>
         <div class="tel-sosial clearfix">
             <a href="javascript:void(0)" class="discount">
-                <img src="../img/discount-img.png" alt="">
+                <img src="{{asset('img/discount-img.png')}}" alt="">
                 <span><i>%</i></span>
             </a>
             <div class="tel">
@@ -33,7 +33,7 @@
             </div>
             <div class="facebook">
                 <a href="javascript:void(0)"></a>
-                <img src="../img/facebook-banner.png" alt="">
+                <img src="{{asset('img/facebook-banner.png')}}" alt="">
                 <p>
                     {{ trans('general.fb_action') }}
                     <span>{{ trans('general.fb') }}</span>
@@ -41,7 +41,8 @@
             </div>
         </div>
     </div>
-</footer>
+</footer> 
 </div>
+@yield('js_project')
 </body>
 </html>

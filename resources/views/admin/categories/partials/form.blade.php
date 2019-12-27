@@ -9,7 +9,7 @@
  </div>
 @endif
 
-<label>Изображение</label><br>
+<label>Изображение</label><br> 
 
 @if (isset($category->id))
 @if ($category->image != null)
@@ -57,7 +57,7 @@
 		@endif
 		@endforeach 
 		@else value="" 
-		@endif required>
+		@endif>
 
 		<label for="">Описание для <strong>{{$lang_select->name}}</strong></label>
 		<input type="text" class="form-control" name="description{{$lang_select->id}}" placeholder="Описание категории для {{$lang_select->name}}" 
@@ -69,7 +69,7 @@
 		@endif
 		@endforeach 
 		@else value="" 
-		@endif required>
+		@endif>
 
 </div>
 		@endforeach
@@ -101,9 +101,13 @@
   @endif
 </select>
 
+<label for="">Порядок сортировки</label>
+<input type="text" class="form-control" name="sort_order" placeholder="Порядок сортировки" value="{{$category->sort_order or ""}}">
+
+
 <label for="">Уникальное название поля для всех языковых пакетов</label>
 <p><strong>Только маленькими английскими буквами</strong></p>
-<input type="text" class="form-control" name="seo_link" placeholder="Уникальное название поля" value="{{$category->seo_link or ""}}" required>
+<input type="text" class="form-control" name="seo_link" placeholder="Уникальное название поля" value="{{$category->seo_link or ""}}">
 
 <label for="">Родительская категория</label>
 <select class="form-control" name="parent_id">

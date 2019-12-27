@@ -1,11 +1,14 @@
-    @include('layouts.head')
+@include('layouts.head')
 
 <body>
 
     <div class="wrapper">
 
-    @include('layouts.header')
-
+@include('layouts.header')
+@section('title',"VIAR") 
+@section('css')
+{{-- Html::style(asset('css/home.css')) --}}
+@endsection
 
 @include('layouts.general')
 

@@ -1,9 +1,10 @@
+
 @include('blog.head')
 <body>
     <div class="wrapper">
-    @include('blog.header')
+    @include('layouts.header')
 
-@section('title', $category->title . " - VIAR")
+
 
 <!--blog/category.blade-->
 <div class="bread-crumbs">

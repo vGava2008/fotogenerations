@@ -137,21 +137,23 @@ type="text/javascript" charset="utf-8" ></script>
         </nav>
 
         @yield('content')
-    </div>
+    </div> 
 <!-- Footer -->
     <footer class="page-footer font-small blue pt-4">
       <!-- Footer Links -->
       <div class="container-fluid text-center text-md-left">
         <!-- Grid row -->
         <div class="row">
+          
+          <hr class="clearfix w-100 d-md-none pb-3">
+          <!-- Grid column -->
           <!-- Grid column -->
           <div class="col-md-6 mt-md-0 mt-3">
             <!-- Content -->
-            <h5 class="text-uppercase">Footer Content</h5>
-            <p>Здесь вы можете использовать строки и столбцы для организации содержимого нижнего колонтитула.</p>
+            <h5 class="text-uppercase">Админ панель</h5>
+            <a class="logo" href="/admin"><img src="{{asset('img/footer-logo.png')}}" alt=""></a>
+            <p>Находится в разработке и не является готовым продуктом <a target="_blank" href="https://plemyastudio.ru/"> PlemyArt</a></p>
           </div>
-          <!-- Grid column -->
-          <hr class="clearfix w-100 d-md-none pb-3">
           <!-- Grid column -->
           <div class="col-md-3 mb-md-0 mb-3">
             <!-- Links -->

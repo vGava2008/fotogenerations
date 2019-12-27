@@ -7,7 +7,7 @@
 
  	</ul>
  </div>
-@endif
+@endif 
 
 <ul class="nav nav-tabs">
   <li class="active"><a data-toggle="tab" href="#panel1">Русский</a></li>
@@ -39,18 +39,13 @@
 <label>Ссылка</label><br>
 <input type="text" class="form-control" name="url" placeholder="Ссылка" value="{{$top_menu->url or ""}}">
 
-<label for="">Расположение</label>
-<select class="form-control" name="column">
-  @if (isset($top_menu->top_menu_id))
-    <option value="1" @if ($top_menu->column == 1) selected="" @endif>Слева</option>
-    <option value="2" @if ($top_menu->column == 2) selected="" @endif>По центру</option>
-    <option value="3" @if ($top_menu->column == 3) selected="" @endif>Справа</option>
-  @else
-    <option value="1">Слева</option>
-    <option value="2">По центру</option>
-    <option value="3">Справа</option>
-  @endif
+
+<label for="">Родительский пункт меню</label>
+<select class="form-control" name="parent_id">
+  <option value="0">-- не выбрано --</option>
+  @include('admin.top_menus.partials.menus', ['menus' => $menus, 'languages' => $languages])
 </select>
+
 
 <label for="">Статус публикации</label>
 <select class="form-control" name="status">

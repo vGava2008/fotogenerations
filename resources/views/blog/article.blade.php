@@ -1,7 +1,7 @@
 @include('blog.head')
 <body>
     <div class="wrapper">
-    @include('blog.header')
+    @include('layouts.header')
 
 @section('title', $article->title . " - VIAR")
 

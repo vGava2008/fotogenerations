@@ -13,7 +13,7 @@
 use App\ProductConnection;
 use App\AttributeGroupController;
 use App\Category;
-use App\User;
+use App\User; 
 use App\Product;
 use App\Option;
 use App\TopMenu;

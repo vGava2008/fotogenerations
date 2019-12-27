@@ -17,6 +17,7 @@
     <!--<link rel="icon" type="image/png" sizes="16x16" href="../img/favicon.png">-->
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon.png">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    
     <link href="{{ asset('css/blog.css') }}" rel="stylesheet">
     <script src="{{ asset('/js/jquery.min.js') }}"></script>
     <script src="{{ asset('/js/jquery.mask.min.js') }}"></script>

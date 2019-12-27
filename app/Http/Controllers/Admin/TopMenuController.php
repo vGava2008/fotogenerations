@@ -31,7 +31,9 @@ class TopMenuController extends Controller
     {
         return view('admin.top_menus.create', [
           'top_menu'   => [],
+          'menus' => TopMenu::with('children')->where(['parent_id' => 0, 'language_id' => 1] )->get(),
           'languages' => Langs::get(),
+          'delimiter'  => ''
         ]);
     }
 
@@ -60,15 +62,15 @@ class TopMenuController extends Controller
             //Вынимаем значения с переданных данных, а именно с titlte 1-5
             $data_name = $request->get('name'.$i);
             $data_url = $request->get('url');
-            $data_column = $request->get('column');
             $data_status = $request->get('status');
+            $data_parent = $request->get('parent_id');
             $data_sort_order = $request->get('sort_order');
             //Проверка на заполненные поля
             //Берем ID нашей новой категории и исключаем поле seo_link, но прежде чем будет исключение, он проверит остальные записи и скажет о том что такое поле уже существует 
             $rules = [
                 'name'.$i => 'required|string|max:255',
                 'url' => 'string|max:255',
-                'column' => 'required|integer|max:11',
+                
                 'status' => 'required|integer|max:11',
                 'sort_order' => 'required|integer|max:11',
             ];
@@ -83,9 +85,9 @@ class TopMenuController extends Controller
                 'top_menu_id' => $latest_ID,
                 'name' => $data_name,
                 'url' => $data_url,
-                'column' => $data_column,
+                'parent_id' => $data_parent,
                 'status' => $data_status,
-                'sort_order' => $data_sort_order,
+                'sort_order'=>$data_sort_order,
                 'language_id' => $i,
             ]);
         }
@@ -119,7 +121,9 @@ class TopMenuController extends Controller
         return view('admin.top_menus.edit', [
           'top_menu'   => $topMenu,
           'choose_top_menu'   => $choose_top_menu,
+          'menus' => TopMenu::with('children')->where(['parent_id' => 0, 'language_id' => 1] )->get(),
           'languages' => Langs::get(),
+          'delimiter'  => ''
         ]);
     }
 
@@ -144,8 +148,8 @@ class TopMenuController extends Controller
             //Вынимаем значения с переданных данных, а именно с titlte 1-5
             $data_name = $request->get('name'.$i);
             $data_url = $request->get('url');
-            $data_column = $request->get('column');
             $data_status = $request->get('status');
+            $data_parent = $request->get('parent_id');
             $data_sort_order = $request->get('sort_order');
             $data_language = $request->get('language'.$i);
             //Проверка на заполненные поля
@@ -153,7 +157,7 @@ class TopMenuController extends Controller
             $rules = [
                 'name'.$i => 'required|string|max:255',
                 'url' => 'string|max:255',
-                'column' => 'required|integer|max:11',
+                
                 'status' => 'required|integer|max:11',
                 'sort_order' => 'required|integer|max:11',
             ];
@@ -166,8 +170,8 @@ class TopMenuController extends Controller
             TopMenu::where(['top_menu_id'=>$request['top_menu_id'], 'language_id'=>$data_language])->update([
                 'name' => $data_name,
                 'url' => $data_url,
-                'column' => $data_column,
                 'status' => $data_status,
+                'parent_id' => $data_parent,
                 'sort_order' => $data_sort_order,
             ]);
         }

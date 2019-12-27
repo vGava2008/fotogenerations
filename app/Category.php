@@ -7,7 +7,7 @@ use Illuminate\Support\Str;
 class Category extends Model
 {
     // Mass assigned
-    protected $fillable = ['id', 'image', 'image_show', 'title', 'sub_title', 'description', 'seo_link', 'parent_id', 'language_id', 'published',];
+    protected $fillable = ['id', 'image', 'image_show', 'title', 'sub_title', 'description', 'seo_link', 'parent_id', 'sort_order', 'language_id', 'published',];
     // Mutators
   
 
@@ -16,7 +16,7 @@ class Category extends Model
     }*/
     // Get children category
     public function children() {
-      return $this->hasMany(self::class, 'parent_id');
+      return $this->hasMany(self::class, 'parent_id')->where(['language_id' => 1]);
     }
 
     public function articles()

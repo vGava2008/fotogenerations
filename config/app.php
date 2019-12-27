@@ -185,7 +185,8 @@ return [
         /*
          * Application Hashers...
          */
-        
+        Collective\Html\HtmlServiceProvider::class,
+
 
     ],
 
@@ -241,7 +242,8 @@ return [
         'Widget' => Arrilot\Widgets\Facade::class, 
         'AsyncWidget' => Arrilot\Widgets\AsyncFacade::class,
         //END: Для мультиязычности
-
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
     ],
 
 ];

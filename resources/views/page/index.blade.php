@@ -1,7 +1,7 @@
 @include('page.head')
 <body>
     <div class="wrapper">
-    @include('page.header')
+    @include('layouts.header')
 
 @section('title', $page->title . " - VIAR")
 

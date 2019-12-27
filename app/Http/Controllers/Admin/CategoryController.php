@@ -32,7 +32,7 @@ class CategoryController extends Controller
     {
         return view('admin.categories.create', [
           'category'   => [],
-          'categories' => Category::with('children')->where('parent_id', '0')->get(),
+          'categories' => Category::with('children')->where(['parent_id' => '0', 'language_id' => 1])->get(),
           'languages' => Langs::get(),
           'delimiter'  => ''
         ]);
@@ -53,7 +53,8 @@ class CategoryController extends Controller
         //$rules = ['slug' => 'required|string|max:255|unique:categories',];
         
 
-    
+            $request->file('image')->move(public_path('images/category'), 
+            $image_upload = $request->file('image')->getClientOriginalName()); 
         //Запускаем цикл не превышающий кол-ва языков
         for($i=1; $i<=$langs_count; $i++)
         {
@@ -61,8 +62,7 @@ class CategoryController extends Controller
             $data_title = $request->get('title'.$i);
             $data_sub_title = $request->get('sub_title'.$i);
             $data_description = $request->get('description'.$i);
-            $request->file('image')->move(public_path('images/category'), 
-            $image_upload = $request->file('image')->getClientOriginalName()); 
+            
             //Проверка на заполненные поля
             //Берем ID нашей новой категории и исключаем поле seo_link, но прежде чем будет исключение, он проверит остальные записи и скажет о том что такое поле уже существует 
             $rules = [
@@ -89,9 +89,10 @@ class CategoryController extends Controller
                 'sub_title' => $data_sub_title,
                 'description' => $data_description,
                 'seo_link' => $request['seo_link'],
-                'parent_id' => $request['parent_id'],
+                'parent_id' => $request['parent_id'], 
                 'published' => $request['published'],
                 'show_page' => $request['show_page'],
+                'sort_order' => $request['sort_order'],
                 'language_id' => $i,
             ]);
         }
@@ -131,7 +132,7 @@ class CategoryController extends Controller
         return view('admin.categories.edit', [
           'category'   => $category,
           'choose_category'   => $choose_category,
-          'categories' => Category::with('children')->where('parent_id', '0')->get(),
+          'categories' => Category::with('children')->where(['parent_id' => '0', 'language_id' => 1])->get(),
           'languages' => Langs::get(),
           'delimiter'  => ''
         ]);
@@ -203,6 +204,8 @@ class CategoryController extends Controller
                     'parent_id' => $request['parent_id'],
                     'published' => $request['published'],
                     'show_page' => $request['show_page'],
+                    'sort_order' => $request['sort_order'],
+
                 ]);
 
             }
@@ -215,6 +218,8 @@ class CategoryController extends Controller
                     'parent_id' => $request['parent_id'],
                     'published' => $request['published'],
                     'show_page' => $request['show_page'],
+                    'sort_order' => $request['sort_order'],
+
                 ]);
                 
             }

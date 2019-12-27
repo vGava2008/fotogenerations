@@ -156,14 +156,14 @@ if ($i == 11) { $i = 1;}
         </section>
 <?php } ?>
 
-<?php if ($category->sort_order == 1) { ?>
+<?php if ($category->sort_order == 3) { ?>
     
         <section class="pictures clearfix">
             <img src="../img/pictures-content-img1.png" alt="" class="pictures-content-img1">
             <div class="pictures-content clearfix">
                 <div class="pictures-text">
                     <div class="title">
-                        <h2>{{ $category->title }}x</h2>
+                        <h2>{{ $category->title }}</h2>
                         <h4>{{ $category->sub_title}}</h4>
                     </div>
                     <p>* Краткое описание Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
@@ -184,10 +184,10 @@ if ($i == 11) { $i = 1;}
                 <div class="gallery-content clearfix">
                     <div class="gallery-text">
                         <div class="title">
-                            <h2>галерея картин</h2>
-                            <h4>текст подзаголовка</h4>
+                            <h2>{{ $category->title }}</h2>
+                            <h4>{{ $category->sub_title}}</h4>
                         </div>
-                        <p>* Краткое описание Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                        <p>{{ $category->description}}</p>
                         <a href="javascript:void(0)"><span>{{ trans('general.zakazat') }}</span></a>
                     </div>
                 </div>
@@ -203,9 +203,9 @@ if ($i == 11) { $i = 1;}
             <div class="portrait-content clearfix">
                 <div class="portrait-text">
                     <div class="title">
-                        <h2>Графический портрет</h2>
+                        <h2>{{ $category->title }}</h2>
                     </div>
-                    <p>* Краткое описание Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <p>{{ $category->description}}</p>
                     <a href="javascript:void(0)"><span>{{ trans('general.see_catalog') }}</span></a>
                 </div>
             </div>
@@ -221,10 +221,10 @@ if ($i == 11) { $i = 1;}
                 <div class="stylization-content clearfix">
                     <div class="stylization-text">
                         <div class="title">
-                            <h2>Стилизация</h2>
-                            <h4>создай свой образ</h4>
+                            <h2>{{ $category->title }}</h2>
+                            <h4>{{ $category->sub_title}}</h4>
                         </div>
-                        <p>* Краткое описание Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                        <p>{{ $category->description}}</p>
                         <a href="javascript:void(0)"><span>{{ trans('general.see_catalog') }}</span></a>
                     </div>
                 </div>
@@ -241,10 +241,10 @@ if ($i == 11) { $i = 1;}
             <div class="oiled-content clearfix">
                 <div class="oiled-text">
                     <div class="title">
-                        <h2>Картины маслом</h2>
-                        <h4>текст подзаголовка</h4>
+                        <h2>{{ $category->title }}</h2>
+                        <h4>{{ $category->sub_title}}</h4>
                     </div>
-                    <p>* Краткое описание Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <p>{{ $category->description}}</p>
                     <a href="javascript:void(0)"><span>{{ trans('general.zakazat') }}</span></a>
                 </div>
             </div>
@@ -256,16 +256,3 @@ if ($i == 11) { $i = 1;}
 
 
 @endforeach
- <section class="foto clearfix">
-            <img src="../img/foto-content-img1.png" alt="" class="foto-content-img1">
-            <div class="foto-content clearfix">
-                <div class="foto-text">
-                    <div class="title">
-                        <h2>Фото картины и Композиции</h2>
-                    </div>
-                    <p>* Краткое описание Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <a href="javascript:void(0)"><span>Заказать!</span></a>
-                </div>
-            </div>
-            <img src="../img/foto-content-img2.png" alt="" class="foto-content-img2">
-        </section>
