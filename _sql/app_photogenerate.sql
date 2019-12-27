@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Дек 26 2019 г., 17:14
+-- Время создания: Дек 27 2019 г., 17:24
 -- Версия сервера: 5.5.53
 -- Версия PHP: 5.6.29
 
@@ -306,61 +306,61 @@ CREATE TABLE `bottom_menu` (
 --
 
 INSERT INTO `bottom_menu` (`id`, `bottom_menu_id`, `name`, `url`, `column`, `status`, `sort_order`, `language_id`, `created_at`, `updated_at`) VALUES
-(6, 6, 'Фото картины на холсте', '#', 1, 1, 1, 1, '2019-12-26 10:41:45', '2019-12-26 10:41:45'),
-(7, 6, 'Photo paintings on canvas', '#', 1, 1, 1, 2, '2019-12-26 10:41:45', '2019-12-26 10:41:45'),
-(8, 6, 'Photo paintings on canvas', '#', 1, 1, 1, 3, '2019-12-26 10:41:45', '2019-12-26 10:41:45'),
-(9, 6, 'Photo paintings on canvas', '#', 1, 1, 1, 4, '2019-12-26 10:41:45', '2019-12-26 10:41:45'),
-(10, 6, 'Photo paintings on canvas', '#', 1, 1, 1, 5, '2019-12-26 10:41:45', '2019-12-26 10:41:45'),
-(11, 11, 'Коллажи', '#', 1, 1, 2, 1, '2019-12-26 10:42:31', '2019-12-26 10:42:31'),
-(12, 11, 'Collages', '#', 1, 1, 2, 2, '2019-12-26 10:42:31', '2019-12-26 10:42:31'),
-(13, 11, 'Collages', '#', 1, 1, 2, 3, '2019-12-26 10:42:31', '2019-12-26 10:42:31'),
-(14, 11, 'Collages', '#', 1, 1, 2, 4, '2019-12-26 10:42:31', '2019-12-26 10:42:31'),
-(15, 11, 'Collages', '#', 1, 1, 2, 5, '2019-12-26 10:42:31', '2019-12-26 10:42:31'),
-(16, 16, 'Модульные картины', '#', 1, 1, 3, 1, '2019-12-26 10:43:02', '2019-12-26 10:43:02'),
-(17, 16, 'Modular pictures', '#', 1, 1, 3, 2, '2019-12-26 10:43:02', '2019-12-26 10:43:02'),
-(18, 16, 'Modular pictures', '#', 1, 1, 3, 3, '2019-12-26 10:43:02', '2019-12-26 10:43:02'),
-(19, 16, 'Modular pictures', '#', 1, 1, 3, 4, '2019-12-26 10:43:02', '2019-12-26 10:43:02'),
-(20, 16, 'Modular pictures', '#', 1, 1, 3, 5, '2019-12-26 10:43:02', '2019-12-26 10:43:02'),
-(21, 21, 'Галерея', '#', 1, 1, 4, 1, '2019-12-26 10:43:35', '2019-12-26 10:43:35'),
-(22, 21, 'Gallery', '#', 1, 1, 4, 2, '2019-12-26 10:43:35', '2019-12-26 10:43:35'),
-(23, 21, 'Gallery', '#', 1, 1, 4, 3, '2019-12-26 10:43:35', '2019-12-26 10:43:35'),
-(24, 21, 'Gallery', '#', 1, 1, 4, 4, '2019-12-26 10:43:35', '2019-12-26 10:43:35'),
-(25, 21, 'Gallery', '#', 1, 1, 4, 5, '2019-12-26 10:43:35', '2019-12-26 10:43:35'),
-(26, 26, 'Электронная живопись', '#', 1, 1, 5, 1, '2019-12-26 10:45:36', '2019-12-26 10:45:36'),
-(27, 26, 'Electronic painting', '#', 1, 1, 5, 2, '2019-12-26 10:45:36', '2019-12-26 10:45:36'),
-(28, 26, 'Electronic painting', '#', 1, 1, 5, 3, '2019-12-26 10:45:36', '2019-12-26 10:45:36'),
-(29, 26, 'Electronic painting', '#', 1, 1, 5, 4, '2019-12-26 10:45:36', '2019-12-26 10:45:36'),
-(30, 26, 'Electronic painting', '#', 1, 1, 5, 5, '2019-12-26 10:45:36', '2019-12-26 10:45:36'),
+(6, 6, 'Фото картины на холсте', '/', 1, 1, 1, 1, '2019-12-26 10:41:45', '2019-12-27 12:16:55'),
+(7, 6, 'Photo paintings on canvas', '/', 1, 1, 1, 2, '2019-12-26 10:41:45', '2019-12-27 12:16:55'),
+(8, 6, 'Photo paintings on canvas', '/', 1, 1, 1, 3, '2019-12-26 10:41:45', '2019-12-27 12:16:55'),
+(9, 6, 'Photo paintings on canvas', '/', 1, 1, 1, 4, '2019-12-26 10:41:45', '2019-12-27 12:16:55'),
+(10, 6, 'Photo paintings on canvas', '/', 1, 1, 1, 5, '2019-12-26 10:41:45', '2019-12-27 12:16:55'),
+(11, 11, 'Коллажи', '/', 1, 1, 2, 1, '2019-12-26 10:42:31', '2019-12-27 12:16:59'),
+(12, 11, 'Collages', '/', 1, 1, 2, 2, '2019-12-26 10:42:31', '2019-12-27 12:16:59'),
+(13, 11, 'Collages', '/', 1, 1, 2, 3, '2019-12-26 10:42:31', '2019-12-27 12:16:59'),
+(14, 11, 'Collages', '/', 1, 1, 2, 4, '2019-12-26 10:42:31', '2019-12-27 12:16:59'),
+(15, 11, 'Collages', '/', 1, 1, 2, 5, '2019-12-26 10:42:31', '2019-12-27 12:16:59'),
+(16, 16, 'Модульные картины', '/', 1, 1, 3, 1, '2019-12-26 10:43:02', '2019-12-27 12:17:03'),
+(17, 16, 'Modular pictures', '/', 1, 1, 3, 2, '2019-12-26 10:43:02', '2019-12-27 12:17:03'),
+(18, 16, 'Modular pictures', '/', 1, 1, 3, 3, '2019-12-26 10:43:02', '2019-12-27 12:17:03'),
+(19, 16, 'Modular pictures', '/', 1, 1, 3, 4, '2019-12-26 10:43:02', '2019-12-27 12:17:03'),
+(20, 16, 'Modular pictures', '/', 1, 1, 3, 5, '2019-12-26 10:43:02', '2019-12-27 12:17:03'),
+(21, 21, 'Галерея', '/', 1, 1, 4, 1, '2019-12-26 10:43:35', '2019-12-27 12:17:46'),
+(22, 21, 'Gallery', '/', 1, 1, 4, 2, '2019-12-26 10:43:35', '2019-12-27 12:17:46'),
+(23, 21, 'Gallery', '/', 1, 1, 4, 3, '2019-12-26 10:43:35', '2019-12-27 12:17:46'),
+(24, 21, 'Gallery', '/', 1, 1, 4, 4, '2019-12-26 10:43:35', '2019-12-27 12:17:46'),
+(25, 21, 'Gallery', '/', 1, 1, 4, 5, '2019-12-26 10:43:35', '2019-12-27 12:17:46'),
+(26, 26, 'Электронная живопись', '/', 1, 1, 5, 1, '2019-12-26 10:45:36', '2019-12-27 12:17:52'),
+(27, 26, 'Electronic painting', '/', 1, 1, 5, 2, '2019-12-26 10:45:36', '2019-12-27 12:17:52'),
+(28, 26, 'Electronic painting', '/', 1, 1, 5, 3, '2019-12-26 10:45:36', '2019-12-27 12:17:52'),
+(29, 26, 'Electronic painting', '/', 1, 1, 5, 4, '2019-12-26 10:45:36', '2019-12-27 12:17:52'),
+(30, 26, 'Electronic painting', '/', 1, 1, 5, 5, '2019-12-26 10:45:36', '2019-12-27 12:17:52'),
 (31, 31, 'О VIAR ART', '/about', 2, 1, 1, 1, '2019-12-26 10:54:39', '2019-12-26 10:54:39'),
 (32, 31, 'About VIAR ART', '/about', 2, 1, 1, 2, '2019-12-26 10:54:39', '2019-12-26 10:54:39'),
 (33, 31, 'About VIAR ART', '/about', 2, 1, 1, 3, '2019-12-26 10:54:39', '2019-12-26 10:54:39'),
 (34, 31, 'About VIAR ART', '/about', 2, 1, 1, 4, '2019-12-26 10:54:39', '2019-12-26 10:54:39'),
 (35, 31, 'About VIAR ART', '/about', 2, 1, 1, 5, '2019-12-26 10:54:39', '2019-12-26 10:54:39'),
-(36, 36, 'Подарочная карта', '#', 2, 1, 2, 1, '2019-12-26 11:19:19', '2019-12-26 11:19:19'),
-(37, 36, 'Gift card', '#', 2, 1, 2, 2, '2019-12-26 11:19:19', '2019-12-26 11:19:19'),
-(38, 36, 'Gift card', '#', 2, 1, 2, 3, '2019-12-26 11:19:19', '2019-12-26 11:19:19'),
-(39, 36, 'Gift card', '#', 2, 1, 2, 4, '2019-12-26 11:19:19', '2019-12-26 11:19:19'),
-(40, 36, 'Gift card', '#', 2, 1, 2, 5, '2019-12-26 11:19:19', '2019-12-26 11:19:19'),
+(36, 36, 'Подарочная карта', '/', 2, 1, 2, 1, '2019-12-26 11:19:19', '2019-12-27 12:17:57'),
+(37, 36, 'Gift card', '/', 2, 1, 2, 2, '2019-12-26 11:19:19', '2019-12-27 12:17:57'),
+(38, 36, 'Gift card', '/', 2, 1, 2, 3, '2019-12-26 11:19:19', '2019-12-27 12:17:57'),
+(39, 36, 'Gift card', '/', 2, 1, 2, 4, '2019-12-26 11:19:19', '2019-12-27 12:17:57'),
+(40, 36, 'Gift card', '/', 2, 1, 2, 5, '2019-12-26 11:19:19', '2019-12-27 12:17:57'),
 (41, 41, 'Идеи', '/blog/category/news', 2, 1, 3, 1, '2019-12-26 11:22:08', '2019-12-26 11:22:08'),
 (42, 41, 'Ideas', '/blog/category/news', 2, 1, 3, 2, '2019-12-26 11:22:08', '2019-12-26 11:22:08'),
 (43, 41, 'Ideas', '/blog/category/news', 2, 1, 3, 3, '2019-12-26 11:22:08', '2019-12-26 11:22:08'),
 (44, 41, 'Ideas', '/blog/category/news', 2, 1, 3, 4, '2019-12-26 11:22:08', '2019-12-26 11:22:08'),
 (45, 41, 'Ideas', '/blog/category/news', 2, 1, 3, 5, '2019-12-26 11:22:08', '2019-12-26 11:22:08'),
-(46, 46, 'Скидки', '#', 2, 1, 4, 1, '2019-12-26 11:22:58', '2019-12-26 11:23:06'),
-(47, 46, 'Discount', '#', 2, 1, 4, 2, '2019-12-26 11:22:58', '2019-12-26 11:23:06'),
-(48, 46, 'Discount', '#', 2, 1, 4, 3, '2019-12-26 11:22:58', '2019-12-26 11:23:06'),
-(49, 46, 'Discount', '#', 2, 1, 4, 4, '2019-12-26 11:22:58', '2019-12-26 11:23:06'),
-(50, 46, 'Discount', '#', 2, 1, 4, 5, '2019-12-26 11:22:58', '2019-12-26 11:23:06'),
+(46, 46, 'Скидки', '/', 2, 1, 4, 1, '2019-12-26 11:22:58', '2019-12-27 12:18:02'),
+(47, 46, 'Discount', '/', 2, 1, 4, 2, '2019-12-26 11:22:58', '2019-12-27 12:18:02'),
+(48, 46, 'Discount', '/', 2, 1, 4, 3, '2019-12-26 11:22:58', '2019-12-27 12:18:02'),
+(49, 46, 'Discount', '/', 2, 1, 4, 4, '2019-12-26 11:22:58', '2019-12-27 12:18:02'),
+(50, 46, 'Discount', '/', 2, 1, 4, 5, '2019-12-26 11:22:58', '2019-12-27 12:18:02'),
 (51, 51, 'Контакты', '/contacts', 2, 1, 5, 1, '2019-12-26 11:24:09', '2019-12-26 11:24:09'),
 (52, 51, 'Contacts', '/contacts', 2, 1, 5, 2, '2019-12-26 11:24:09', '2019-12-26 11:24:09'),
 (53, 51, 'Contacts', '/contacts', 2, 1, 5, 3, '2019-12-26 11:24:09', '2019-12-26 11:24:09'),
 (54, 51, 'Contacts', '/contacts', 2, 1, 5, 4, '2019-12-26 11:24:09', '2019-12-26 11:24:09'),
 (55, 51, 'Contacts', '/contacts', 2, 1, 5, 5, '2019-12-26 11:24:09', '2019-12-26 11:24:09'),
-(56, 56, 'Реквизиты', '#', 3, 1, 1, 1, '2019-12-26 11:25:29', '2019-12-26 11:25:29'),
-(57, 56, 'Requisites', '#', 3, 1, 1, 2, '2019-12-26 11:25:29', '2019-12-26 11:25:29'),
-(58, 56, 'Requisites', '#', 3, 1, 1, 3, '2019-12-26 11:25:29', '2019-12-26 11:25:29'),
-(59, 56, 'Requisites', '#', 3, 1, 1, 4, '2019-12-26 11:25:29', '2019-12-26 11:25:29'),
-(60, 56, 'Requisites', '#', 3, 1, 1, 5, '2019-12-26 11:25:29', '2019-12-26 11:25:29'),
+(56, 56, 'Реквизиты', '/', 3, 1, 1, 1, '2019-12-26 11:25:29', '2019-12-27 12:21:12'),
+(57, 56, 'Requisites', '/', 3, 1, 1, 2, '2019-12-26 11:25:29', '2019-12-27 12:21:12'),
+(58, 56, 'Requisites', '/', 3, 1, 1, 3, '2019-12-26 11:25:29', '2019-12-27 12:21:12'),
+(59, 56, 'Requisites', '/', 3, 1, 1, 4, '2019-12-26 11:25:29', '2019-12-27 12:21:12'),
+(60, 56, 'Requisites', '/', 3, 1, 1, 5, '2019-12-26 11:25:29', '2019-12-27 12:21:12'),
 (61, 61, 'Условия продажи', '/terms_of_sale', 3, 1, 2, 1, '2019-12-26 11:26:18', '2019-12-26 11:26:18'),
 (62, 61, 'Terms of sale', '/terms_of_sale', 3, 1, 2, 2, '2019-12-26 11:26:18', '2019-12-26 11:26:18'),
 (63, 61, 'Terms of sale', '/terms_of_sale', 3, 1, 2, 3, '2019-12-26 11:26:18', '2019-12-26 11:26:18'),
@@ -376,11 +376,11 @@ INSERT INTO `bottom_menu` (`id`, `bottom_menu_id`, `name`, `url`, `column`, `sta
 (73, 71, 'Partnership', '/partnership', 3, 1, 4, 3, '2019-12-26 11:28:21', '2019-12-26 11:28:21'),
 (74, 71, 'Partnership', '/partnership', 3, 1, 4, 4, '2019-12-26 11:28:21', '2019-12-26 11:28:21'),
 (75, 71, 'Partnership', '/partnership', 3, 1, 4, 5, '2019-12-26 11:28:21', '2019-12-26 11:28:21'),
-(76, 76, 'Благотворительность', '#', 3, 1, 5, 1, '2019-12-26 11:29:00', '2019-12-26 11:29:00'),
-(77, 76, 'Charity', '#', 3, 1, 5, 2, '2019-12-26 11:29:00', '2019-12-26 11:29:00'),
-(78, 76, 'Charity', '#', 3, 1, 5, 3, '2019-12-26 11:29:00', '2019-12-26 11:29:00'),
-(79, 76, 'Charity', '#', 3, 1, 5, 4, '2019-12-26 11:29:00', '2019-12-26 11:29:00'),
-(80, 76, 'Charity', '#', 3, 1, 5, 5, '2019-12-26 11:29:00', '2019-12-26 11:29:00');
+(76, 76, 'Благотворительность', '/', 3, 1, 5, 1, '2019-12-26 11:29:00', '2019-12-27 12:21:15'),
+(77, 76, 'Charity', '/', 3, 1, 5, 2, '2019-12-26 11:29:00', '2019-12-27 12:21:15'),
+(78, 76, 'Charity', '/', 3, 1, 5, 3, '2019-12-26 11:29:00', '2019-12-27 12:21:15'),
+(79, 76, 'Charity', '/', 3, 1, 5, 4, '2019-12-26 11:29:00', '2019-12-27 12:21:15'),
+(80, 76, 'Charity', '/', 3, 1, 5, 5, '2019-12-26 11:29:00', '2019-12-27 12:21:15');
 
 -- --------------------------------------------------------
 
@@ -399,7 +399,8 @@ CREATE TABLE `categories` (
   `seo_link` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `parent_id` int(11) DEFAULT NULL,
   `published` tinyint(4) DEFAULT NULL,
-  `show_page` int(11) NOT NULL DEFAULT '0',
+  `show_page` int(11) DEFAULT NULL,
+  `sort_order` int(11) DEFAULT NULL,
   `language_id` int(10) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -409,22 +410,44 @@ CREATE TABLE `categories` (
 -- Дамп данных таблицы `categories`
 --
 
-INSERT INTO `categories` (`cat_id`, `id`, `image`, `image_show`, `title`, `sub_title`, `description`, `seo_link`, `parent_id`, `published`, `show_page`, `language_id`, `created_at`, `updated_at`) VALUES
-(1, 5, 'image1.png', NULL, 'Фото картины и композиции', 'Фото картины и композиции', 'Фото картины и композицииs', 'photo_picture_compositions', 0, 1, 1, 1, '2019-06-13 14:11:01', '2019-12-26 12:01:10'),
-(2, 5, 'image1.png', NULL, 'Photo picture & compositions', 'Photo picture & compositions', 'Photo picture & compositions', 'photo_picture_compositions', 0, 1, 1, 2, '2019-06-13 14:11:01', '2019-12-26 12:01:10'),
-(3, 5, 'image1.png', NULL, 'Photo paintings and compositions', 'Photo picture & compositions', 'Photo picture & compositions', 'photo_picture_compositions', 0, 1, 1, 3, '2019-06-13 14:11:01', '2019-12-26 12:01:10'),
-(4, 5, 'image1.png', NULL, 'Photo paintings and compositions', 'Photo picture & compositions', 'Photo picture & compositions', 'photo_picture_compositions', 0, 1, 1, 4, '2019-06-13 14:11:01', '2019-12-26 12:01:10'),
-(5, 5, 'image1.png', NULL, 'Photo paintings and compositions', 'Photo picture & compositions', 'Photo picture & compositions', 'photo_picture_compositions', 0, 1, 1, 5, '2019-06-13 14:11:01', '2019-12-26 12:01:10'),
-(11, 8, '', NULL, 'Новости', NULL, NULL, 'news', 0, 1, 0, 1, '2019-10-10 10:26:33', '2019-10-10 10:26:33'),
-(12, 8, '', NULL, 'News', NULL, NULL, 'news', 0, 1, 0, 2, '2019-10-10 10:26:33', '2019-10-10 10:26:33'),
-(13, 8, '', NULL, 'News', NULL, NULL, 'news', 0, 1, 0, 3, '2019-10-10 10:26:33', '2019-10-10 10:26:33'),
-(14, 8, '', NULL, 'News', NULL, NULL, 'news', 0, 1, 0, 4, '2019-10-10 10:26:33', '2019-10-10 10:26:33'),
-(15, 8, '', NULL, 'News', NULL, NULL, 'news', 0, 1, 0, 5, '2019-10-10 10:26:33', '2019-10-10 10:26:33'),
-(16, 9, '', NULL, 'Идеи', NULL, NULL, 'ideas', 0, 1, 0, 1, '2019-10-11 08:28:31', '2019-10-11 08:28:31'),
-(17, 9, '', NULL, 'Ideas', NULL, NULL, 'ideas', 0, 1, 0, 2, '2019-10-11 08:28:31', '2019-10-11 08:28:31'),
-(18, 9, '', NULL, 'Ideas', NULL, NULL, 'ideas', 0, 1, 0, 3, '2019-10-11 08:28:31', '2019-10-11 08:28:31'),
-(19, 9, '', NULL, 'Ideas', NULL, NULL, 'ideas', 0, 1, 0, 4, '2019-10-11 08:28:31', '2019-10-11 08:28:31'),
-(20, 9, '', NULL, 'Ideas', NULL, NULL, 'ideas', 0, 1, 0, 5, '2019-10-11 08:28:31', '2019-10-11 08:28:31');
+INSERT INTO `categories` (`cat_id`, `id`, `image`, `image_show`, `title`, `sub_title`, `description`, `seo_link`, `parent_id`, `published`, `show_page`, `sort_order`, `language_id`, `created_at`, `updated_at`) VALUES
+(1, 5, 'foto-content-img1.png', NULL, 'Фото картины и композиции', 'Фото картины и композиции', 'Фото картины и композицииs', 'photo_picture_compositions', 0, 1, 1, 1, 1, '2019-06-13 14:11:01', '2019-12-27 11:17:07'),
+(2, 5, 'foto-content-img1.png', NULL, 'Photo picture & compositions', 'Photo picture & compositions', 'Photo picture & compositions', 'photo_picture_compositions', 0, 1, 1, 1, 2, '2019-06-13 14:11:01', '2019-12-27 11:17:07'),
+(3, 5, 'foto-content-img1.png', NULL, 'Photo paintings and compositions', 'Photo picture & compositions', 'Photo picture & compositions', 'photo_picture_compositions', 0, 1, 1, 1, 3, '2019-06-13 14:11:01', '2019-12-27 11:17:07'),
+(4, 5, 'foto-content-img1.png', NULL, 'Photo paintings and compositions', 'Photo picture & compositions', 'Photo picture & compositions', 'photo_picture_compositions', 0, 1, 1, 1, 4, '2019-06-13 14:11:01', '2019-12-27 11:17:07'),
+(5, 5, 'foto-content-img1.png', NULL, 'Photo paintings and compositions', 'Photo picture & compositions', 'Photo picture & compositions', 'photo_picture_compositions', 0, 1, 1, 1, 5, '2019-06-13 14:11:01', '2019-12-27 11:17:07'),
+(11, 8, '', NULL, 'Новости', NULL, NULL, 'news', 0, 1, 0, NULL, 1, '2019-10-10 10:26:33', '2019-10-10 10:26:33'),
+(12, 8, '', NULL, 'News', NULL, NULL, 'news', 0, 1, 0, NULL, 2, '2019-10-10 10:26:33', '2019-10-10 10:26:33'),
+(13, 8, '', NULL, 'News', NULL, NULL, 'news', 0, 1, 0, NULL, 3, '2019-10-10 10:26:33', '2019-10-10 10:26:33'),
+(14, 8, '', NULL, 'News', NULL, NULL, 'news', 0, 1, 0, NULL, 4, '2019-10-10 10:26:33', '2019-10-10 10:26:33'),
+(15, 8, '', NULL, 'News', NULL, NULL, 'news', 0, 1, 0, NULL, 5, '2019-10-10 10:26:33', '2019-10-10 10:26:33'),
+(16, 9, '', NULL, 'Идеи', NULL, NULL, 'ideas', 0, 1, 0, NULL, 1, '2019-10-11 08:28:31', '2019-10-11 08:28:31'),
+(17, 9, '', NULL, 'Ideas', NULL, NULL, 'ideas', 0, 1, 0, NULL, 2, '2019-10-11 08:28:31', '2019-10-11 08:28:31'),
+(18, 9, '', NULL, 'Ideas', NULL, NULL, 'ideas', 0, 1, 0, NULL, 3, '2019-10-11 08:28:31', '2019-10-11 08:28:31'),
+(19, 9, '', NULL, 'Ideas', NULL, NULL, 'ideas', 0, 1, 0, NULL, 4, '2019-10-11 08:28:31', '2019-10-11 08:28:31'),
+(20, 9, '', NULL, 'Ideas', NULL, NULL, 'ideas', 0, 1, 0, NULL, 5, '2019-10-11 08:28:31', '2019-10-11 08:28:31'),
+(21, 10, 'collages-content-img1.png', NULL, 'Коллажи', 'создай свое настроение', '* Краткое описание Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'collages', 0, 1, 1, 2, 1, '2019-12-27 11:24:16', '2019-12-27 11:25:48'),
+(22, 11, 'pictures-content-img1.png', NULL, 'Модульные картины', 'текст подзаголовка', '* Краткое описание Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'modular_pictures', 0, 1, 1, 3, 1, '2019-12-27 11:31:42', '2019-12-27 11:34:21'),
+(23, 12, 'gallery-content-img2.png', NULL, 'галерея картин', 'текст подзаголовка', '* Краткое описание Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'gallery_of_paintings', 0, 1, 1, 4, 1, '2019-12-27 11:37:19', '2019-12-27 11:37:44'),
+(24, 12, 'gallery-content-img2.png', NULL, 'gallery of paintings', 'текст подзаголовка', '* Краткое описание Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'gallery_of_paintings', 0, 1, 1, 4, 2, '2019-12-27 11:37:19', '2019-12-27 11:37:44'),
+(25, 12, 'gallery-content-img2.png', NULL, 'gallery of paintings', 'текст подзаголовка', '* Краткое описание Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'gallery_of_paintings', 0, 1, 1, 4, 3, '2019-12-27 11:37:19', '2019-12-27 11:37:44'),
+(26, 12, 'gallery-content-img2.png', NULL, 'gallery of paintings', 'текст подзаголовка', '* Краткое описание Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'gallery_of_paintings', 0, 1, 1, 4, 4, '2019-12-27 11:37:19', '2019-12-27 11:37:44'),
+(27, 12, 'gallery-content-img2.png', NULL, 'gallery of paintings', 'текст подзаголовка', '* Краткое описание Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'gallery_of_paintings', 0, 1, 1, 4, 5, '2019-12-27 11:37:19', '2019-12-27 11:37:44'),
+(28, 13, 'portrait-content-img2.png', NULL, 'Графический портрет', NULL, '* Краткое описание Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'graphic_portrait', 0, 1, 1, 5, 1, '2019-12-27 11:54:22', '2019-12-27 11:55:54'),
+(29, 13, 'portrait-content-img2.png', NULL, 'Graphic portrait', NULL, '* Краткое описание Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'graphic_portrait', 0, 1, 1, 5, 2, '2019-12-27 11:54:22', '2019-12-27 11:55:54'),
+(30, 13, 'portrait-content-img2.png', NULL, 'Graphic portrait', NULL, '* Краткое описание Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'graphic_portrait', 0, 1, 1, 5, 3, '2019-12-27 11:54:22', '2019-12-27 11:55:54'),
+(31, 13, 'portrait-content-img2.png', NULL, 'Graphic portrait', NULL, '* Краткое описание Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'graphic_portrait', 0, 1, 1, 5, 4, '2019-12-27 11:54:22', '2019-12-27 11:55:54'),
+(32, 13, 'portrait-content-img2.png', NULL, 'Graphic portrait', NULL, '* Краткое описание Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'graphic_portrait', 0, 1, 1, 5, 5, '2019-12-27 11:54:22', '2019-12-27 11:55:54'),
+(33, 14, 'stylization-content-img1.png', NULL, 'Стилизация', 'создай свой образ', '* Краткое описание Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'stylization', 0, 1, 1, 6, 1, '2019-12-27 11:58:39', '2019-12-27 12:00:08'),
+(34, 14, 'stylization-content-img1.png', NULL, 'Stylization', 'создай свой образ', '* Краткое описание Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'stylization', 0, 1, 1, 6, 2, '2019-12-27 11:58:39', '2019-12-27 12:00:08'),
+(35, 14, 'stylization-content-img1.png', NULL, 'Stylization', 'создай свой образ', '* Краткое описание Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'stylization', 0, 1, 1, 6, 3, '2019-12-27 11:58:39', '2019-12-27 12:00:08'),
+(36, 14, 'stylization-content-img1.png', NULL, 'Stylization', 'создай свой образ', '* Краткое описание Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'stylization', 0, 1, 1, 6, 4, '2019-12-27 11:58:39', '2019-12-27 12:00:08'),
+(37, 14, 'stylization-content-img1.png', NULL, 'Stylization', 'создай свой образ', '* Краткое описание Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'stylization', 0, 1, 1, 6, 5, '2019-12-27 11:58:39', '2019-12-27 12:00:08'),
+(38, 15, 'oiled-content-img2.png', NULL, 'Картины маслом', 'текст подзаголовка', '* Краткое описание Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'oil_paintings', 0, 1, 1, 7, 1, '2019-12-27 12:03:19', '2019-12-27 12:03:28'),
+(39, 15, 'oiled-content-img2.png', NULL, 'Oil Paintings', 'текст подзаголовка', '* Краткое описание Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'oil_paintings', 0, 1, 1, 7, 2, '2019-12-27 12:03:19', '2019-12-27 12:03:28'),
+(40, 15, 'oiled-content-img2.png', NULL, 'Oil Paintings', 'текст подзаголовка', '* Краткое описание Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'oil_paintings', 0, 1, 1, 7, 3, '2019-12-27 12:03:19', '2019-12-27 12:03:28'),
+(41, 15, 'oiled-content-img2.png', NULL, 'Oil Paintings', 'текст подзаголовка', '* Краткое описание Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'oil_paintings', 0, 1, 1, 7, 4, '2019-12-27 12:03:19', '2019-12-27 12:03:28'),
+(42, 15, 'oiled-content-img2.png', NULL, 'Oil Paintings', 'текст подзаголовка', '* Краткое описание Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'oil_paintings', 0, 1, 1, 7, 5, '2019-12-27 12:03:19', '2019-12-27 12:03:28');
 
 -- --------------------------------------------------------
 
@@ -1131,9 +1154,9 @@ CREATE TABLE `top_menu` (
   `top_menu_id` int(11) NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `url` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `column` int(11) NOT NULL,
+  `parent_id` int(11) DEFAULT '0',
   `status` int(11) NOT NULL,
-  `sort_order` int(11) NOT NULL,
+  `sort_order` int(11) DEFAULT NULL,
   `language_id` int(11) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -1143,12 +1166,82 @@ CREATE TABLE `top_menu` (
 -- Дамп данных таблицы `top_menu`
 --
 
-INSERT INTO `top_menu` (`id`, `top_menu_id`, `name`, `url`, `column`, `status`, `sort_order`, `language_id`, `created_at`, `updated_at`) VALUES
-(1, 1, 'YouTube', 'https://www.youtube.com/', 0, 1, 1, 1, '2019-12-23 11:35:11', '2019-12-23 11:52:03'),
-(2, 1, 'YouTube2', 'https://www.youtube.com/', 0, 1, 1, 2, '2019-12-23 11:35:11', '2019-12-23 11:52:03'),
-(3, 1, 'YouTube3', 'https://www.youtube.com/', 0, 1, 1, 3, '2019-12-23 11:35:11', '2019-12-23 11:52:03'),
-(4, 1, 'YouTube4', 'https://www.youtube.com/', 0, 1, 1, 4, '2019-12-23 11:35:11', '2019-12-23 11:52:03'),
-(5, 1, 'YouTube5', 'https://www.youtube.com/', 0, 1, 1, 5, '2019-12-23 11:35:11', '2019-12-23 11:52:03');
+INSERT INTO `top_menu` (`id`, `top_menu_id`, `name`, `url`, `parent_id`, `status`, `sort_order`, `language_id`, `created_at`, `updated_at`) VALUES
+(1, 1, 'Фото картины и композиции', '/', 6, 1, 1, 1, '2019-12-23 11:35:11', '2019-12-27 12:13:40'),
+(2, 1, 'Photo paintings and compositions', '/', 6, 1, 1, 2, '2019-12-23 11:35:11', '2019-12-27 12:13:40'),
+(3, 1, 'Photo paintings and compositions', '/', 6, 1, 1, 3, '2019-12-23 11:35:11', '2019-12-27 12:13:40'),
+(4, 1, 'Photo paintings and compositions', '/', 6, 1, 1, 4, '2019-12-23 11:35:11', '2019-12-27 12:13:40'),
+(5, 1, 'Photo paintings and compositions', '/', 6, 1, 1, 5, '2019-12-23 11:35:11', '2019-12-27 12:13:40'),
+(6, 6, 'Услуги', '/', 0, 1, 1, 1, '2019-12-27 05:18:27', '2019-12-27 12:13:46'),
+(7, 6, 'Services', '/', 0, 1, 1, 2, '2019-12-27 05:18:27', '2019-12-27 12:13:46'),
+(8, 6, 'Services', '/', 0, 1, 1, 3, '2019-12-27 05:18:27', '2019-12-27 12:13:46'),
+(9, 6, 'Services', '/', 0, 1, 1, 4, '2019-12-27 05:18:27', '2019-12-27 12:13:46'),
+(10, 6, 'Services', '/', 0, 1, 1, 5, '2019-12-27 05:18:27', '2019-12-27 12:13:46'),
+(11, 11, 'Фото Коллажи', '/', 6, 1, 2, 1, '2019-12-27 05:35:13', '2019-12-27 12:13:50'),
+(12, 11, 'Photo Collages', '/', 6, 1, 2, 2, '2019-12-27 05:35:13', '2019-12-27 12:13:50'),
+(13, 11, 'Photo Collages', '/', 6, 1, 2, 3, '2019-12-27 05:35:13', '2019-12-27 12:13:50'),
+(14, 11, 'Photo Collages', '/', 6, 1, 2, 4, '2019-12-27 05:35:13', '2019-12-27 12:13:50'),
+(15, 11, 'Photo Collages', '/', 6, 1, 2, 5, '2019-12-27 05:35:13', '2019-12-27 12:13:50'),
+(16, 16, 'Модульные картины', '/', 6, 1, 3, 1, '2019-12-27 05:47:03', '2019-12-27 12:13:55'),
+(17, 16, 'Modular pictures', '/', 6, 1, 3, 2, '2019-12-27 05:47:04', '2019-12-27 12:13:55'),
+(18, 16, 'Modular pictures', '/', 6, 1, 3, 3, '2019-12-27 05:47:04', '2019-12-27 12:13:55'),
+(19, 16, 'Modular pictures', '/', 6, 1, 3, 4, '2019-12-27 05:47:04', '2019-12-27 12:13:55'),
+(20, 16, 'Modular pictures', '/', 6, 1, 3, 5, '2019-12-27 05:47:04', '2019-12-27 12:13:55'),
+(21, 21, 'Галерея картин', '/', 6, 1, 4, 1, '2019-12-27 05:50:27', '2019-12-27 12:14:01'),
+(22, 21, 'Gallery of paintings', '/', 6, 1, 4, 2, '2019-12-27 05:50:27', '2019-12-27 12:14:01'),
+(23, 21, 'Gallery of paintings', '/', 6, 1, 4, 3, '2019-12-27 05:50:27', '2019-12-27 12:14:01'),
+(24, 21, 'Gallery of paintings', '/', 6, 1, 4, 4, '2019-12-27 05:50:27', '2019-12-27 12:14:01'),
+(25, 21, 'Gallery of paintings', '/', 6, 1, 4, 5, '2019-12-27 05:50:27', '2019-12-27 12:14:01'),
+(26, 26, 'Графический портрет', '/', 6, 1, 5, 1, '2019-12-27 05:51:04', '2019-12-27 12:14:17'),
+(27, 26, 'Graphic portrait', '/', 6, 1, 5, 2, '2019-12-27 05:51:04', '2019-12-27 12:14:17'),
+(28, 26, 'Graphic portrait', '/', 6, 1, 5, 3, '2019-12-27 05:51:04', '2019-12-27 12:14:17'),
+(29, 26, 'Graphic portrait', '/', 6, 1, 5, 4, '2019-12-27 05:51:04', '2019-12-27 12:14:17'),
+(30, 26, 'Graphic portrait', '/', 6, 1, 5, 5, '2019-12-27 05:51:04', '2019-12-27 12:14:17'),
+(31, 31, 'Стилизация', '/', 6, 1, 6, 1, '2019-12-27 05:51:40', '2019-12-27 12:14:35'),
+(32, 31, 'Stylization', '/', 6, 1, 6, 2, '2019-12-27 05:51:40', '2019-12-27 12:14:36'),
+(33, 31, 'Stylization', '/', 6, 1, 6, 3, '2019-12-27 05:51:40', '2019-12-27 12:14:36'),
+(34, 31, 'Stylization', '/', 6, 1, 6, 4, '2019-12-27 05:51:40', '2019-12-27 12:14:36'),
+(35, 31, 'Stylization', '/', 6, 1, 6, 5, '2019-12-27 05:51:40', '2019-12-27 12:14:36'),
+(36, 36, 'Картины маслом', '/', 6, 1, 7, 1, '2019-12-27 05:52:19', '2019-12-27 12:14:46'),
+(37, 36, 'Oil Paintings', '/', 6, 1, 7, 2, '2019-12-27 05:52:19', '2019-12-27 12:14:46'),
+(38, 36, 'Oil Paintings', '/', 6, 1, 7, 3, '2019-12-27 05:52:19', '2019-12-27 12:14:46'),
+(39, 36, 'Oil Paintings', '/', 6, 1, 7, 4, '2019-12-27 05:52:19', '2019-12-27 12:14:46'),
+(40, 36, 'Oil Paintings', '/', 6, 1, 7, 5, '2019-12-27 05:52:19', '2019-12-27 12:14:46'),
+(41, 41, 'Галерея', '/', 0, 1, 2, 1, '2019-12-27 05:53:50', '2019-12-27 12:14:51'),
+(42, 41, 'Gallery', '/', 0, 1, 2, 2, '2019-12-27 05:53:50', '2019-12-27 12:14:51'),
+(43, 41, 'Gallery', '/', 0, 1, 2, 3, '2019-12-27 05:53:50', '2019-12-27 12:14:51'),
+(44, 41, 'Gallery', '/', 0, 1, 2, 4, '2019-12-27 05:53:50', '2019-12-27 12:14:51'),
+(45, 41, 'Gallery', '/', 0, 1, 2, 5, '2019-12-27 05:53:50', '2019-12-27 12:14:51'),
+(46, 46, 'Модульные картины', '/', 41, 1, 1, 1, '2019-12-27 05:56:29', '2019-12-27 12:15:02'),
+(47, 46, 'Modular pictures', '/', 41, 1, 1, 2, '2019-12-27 05:56:29', '2019-12-27 12:15:02'),
+(48, 46, 'Modular pictures', '/', 41, 1, 1, 3, '2019-12-27 05:56:29', '2019-12-27 12:15:02'),
+(49, 46, 'Modular pictures', '/', 41, 1, 1, 4, '2019-12-27 05:56:29', '2019-12-27 12:15:02'),
+(50, 46, 'Modular pictures', '/', 41, 1, 1, 5, '2019-12-27 05:56:29', '2019-12-27 12:15:02'),
+(51, 51, 'Фото картины', '/', 41, 1, 2, 1, '2019-12-27 05:57:12', '2019-12-27 12:15:06'),
+(52, 51, 'Photo Picture', '/', 41, 1, 2, 2, '2019-12-27 05:57:12', '2019-12-27 12:15:06'),
+(53, 51, 'Photo Picture', '/', 41, 1, 2, 3, '2019-12-27 05:57:12', '2019-12-27 12:15:06'),
+(54, 51, 'Photo Picture', '/', 41, 1, 2, 4, '2019-12-27 05:57:12', '2019-12-27 12:15:06'),
+(55, 51, 'Photo Picture', '/', 41, 1, 2, 5, '2019-12-27 05:57:12', '2019-12-27 12:15:06'),
+(56, 56, 'Репродукции', '/', 41, 1, 3, 1, '2019-12-27 05:58:01', '2019-12-27 12:15:10'),
+(57, 56, 'Reproductions', '/', 41, 1, 3, 2, '2019-12-27 05:58:01', '2019-12-27 12:15:10'),
+(58, 56, 'Reproductions', '/', 41, 1, 3, 3, '2019-12-27 05:58:01', '2019-12-27 12:15:10'),
+(59, 56, 'Reproductions', '/', 41, 1, 3, 4, '2019-12-27 05:58:01', '2019-12-27 12:15:10'),
+(60, 56, 'Reproductions', '/', 41, 1, 3, 5, '2019-12-27 05:58:01', '2019-12-27 12:15:10'),
+(61, 61, 'О ViarCanvas', '/about', 0, 1, 3, 1, '2019-12-27 05:59:14', '2019-12-27 05:59:14'),
+(62, 61, 'About ViarCanvas', '/about', 0, 1, 3, 2, '2019-12-27 05:59:14', '2019-12-27 05:59:14'),
+(63, 61, 'About ViarCanvas', '/about', 0, 1, 3, 3, '2019-12-27 05:59:14', '2019-12-27 05:59:14'),
+(64, 61, 'About ViarCanvas', '/about', 0, 1, 3, 4, '2019-12-27 05:59:14', '2019-12-27 05:59:14'),
+(65, 61, 'About ViarCanvas', '/about', 0, 1, 3, 5, '2019-12-27 05:59:14', '2019-12-27 05:59:14'),
+(66, 66, 'Подарочная карта', '/', 0, 1, 4, 1, '2019-12-27 06:03:00', '2019-12-27 12:15:15'),
+(67, 66, 'Gift card', '/', 0, 1, 4, 2, '2019-12-27 06:03:00', '2019-12-27 12:15:15'),
+(68, 66, 'Gift card', '/', 0, 1, 4, 3, '2019-12-27 06:03:00', '2019-12-27 12:15:15'),
+(69, 66, 'Gift card', '/', 0, 1, 4, 4, '2019-12-27 06:03:00', '2019-12-27 12:15:15'),
+(70, 66, 'Gift card', '/', 0, 1, 4, 5, '2019-12-27 06:03:00', '2019-12-27 12:15:15'),
+(71, 71, 'Идеи', '/blog/category/news', 0, 1, 5, 1, '2019-12-27 06:03:58', '2019-12-27 06:03:58'),
+(72, 71, 'Ideas', '/blog/category/news', 0, 1, 5, 2, '2019-12-27 06:03:58', '2019-12-27 06:03:58'),
+(73, 71, 'Ideas', '/blog/category/news', 0, 1, 5, 3, '2019-12-27 06:03:58', '2019-12-27 06:03:58'),
+(74, 71, 'Ideas', '/blog/category/news', 0, 1, 5, 4, '2019-12-27 06:03:58', '2019-12-27 06:03:58'),
+(75, 71, 'Ideas', '/blog/category/news', 0, 1, 5, 5, '2019-12-27 06:03:58', '2019-12-27 06:03:58');
 
 -- --------------------------------------------------------
 
@@ -1412,7 +1505,7 @@ ALTER TABLE `bottom_menu`
 -- AUTO_INCREMENT для таблицы `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 --
 -- AUTO_INCREMENT для таблицы `countries`
 --
@@ -1497,7 +1590,7 @@ ALTER TABLE `static_page`
 -- AUTO_INCREMENT для таблицы `top_menu`
 --
 ALTER TABLE `top_menu`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
 --
 -- AUTO_INCREMENT для таблицы `users`
 --
