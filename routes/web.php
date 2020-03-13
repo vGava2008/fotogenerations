@@ -283,7 +283,7 @@ Route::get('/partnership', 'PageController@partnership')->name('partnership');
 Route::get('/giftcard', 'PageController@giftcard')->name('giftcard');
 //END: Page 09.01.2019
 //Page 13.01.2019
-Route::get('/faq', 'PageController@pagefaq')->name('fa'q);
+Route::get('/faq', 'PageController@pagefaq')->name('faq');
 //END: Page 13.01.2019
     
 //Route::post('/sendgiftcard', 'Ajax\GiftcardController@send');
