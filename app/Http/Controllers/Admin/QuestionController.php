@@ -18,7 +18,7 @@ class QuestionController extends Controller
     {
         //
         return view('admin.questions.index', [
-            'questions' => Question::paginate(10),
+            'questions' => Question::where('language_id', '1')->paginate(10), 
             'languages' => Langs::get(),
         ]);
     }

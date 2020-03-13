@@ -6,6 +6,7 @@ use App\StaticPage;
 use App\Langs;
 use App\TopMenu;
 use App\BottomMenu;
+use App\Question;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -19,6 +20,7 @@ class PageController extends Controller
        
     	return view('page.index', [
     		'langs' => Langs::all(),
+            'page_id' => 1,
     		'page' => $page,
             'top_menu' => TopMenu::where(['status' => 1 , 'language_id' => $id_Locale->id])->get(),
             'bottom_menu' => BottomMenu::where(['status' => 1 , 'language_id' => $id_Locale->id])->get(),
@@ -34,6 +36,7 @@ class PageController extends Controller
         $page = StaticPage::where(['static_page_id' => 6, 'language_id'=>$id_Locale->id])->first();
         return view('page.index', [
             'langs' => Langs::all(),
+            'page_id' => 6,
             'page' => $page,
             'top_menu' => TopMenu::where(['status' => 1 , 'language_id' => $id_Locale->id])->get(),
             'bottom_menu' => BottomMenu::where(['status' => 1 , 'language_id' => $id_Locale->id])->get(),
@@ -49,6 +52,7 @@ class PageController extends Controller
         $page = StaticPage::where(['static_page_id' => 11, 'language_id'=>$id_Locale->id])->first();
         return view('page.index', [
             'langs' => Langs::all(),
+            'page_id' => 11,
             'page' => $page,
             'top_menu' => TopMenu::where(['status' => 1 , 'language_id' => $id_Locale->id])->get(),
             'bottom_menu' => BottomMenu::where(['status' => 1 , 'language_id' => $id_Locale->id])->get(),
@@ -62,6 +66,7 @@ class PageController extends Controller
         $page = StaticPage::where(['static_page_id' => 16, 'language_id'=>$id_Locale->id])->first();
         return view('page.index', [
             'langs' => Langs::all(),
+            'page_id' => 16,
             'page' => $page,
             'top_menu' => TopMenu::where(['status' => 1 , 'language_id' => $id_Locale->id])->get(),
             'bottom_menu' => BottomMenu::where(['status' => 1 , 'language_id' => $id_Locale->id])->get(),
@@ -75,7 +80,38 @@ class PageController extends Controller
         $page = StaticPage::where(['static_page_id' => 21, 'language_id'=>$id_Locale->id])->first();
         return view('page.index', [
             'langs' => Langs::all(),
+            'page_id' => 21,
             'page' => $page,
+            'top_menu' => TopMenu::where(['status' => 1 , 'language_id' => $id_Locale->id])->get(),
+            'bottom_menu' => BottomMenu::where(['status' => 1 , 'language_id' => $id_Locale->id])->get(),
+        ]);
+    }
+    public function giftcard()
+    {
+        $locale = App::getLocale();
+        $id_Locale = Langs::where('locale', mb_strtolower($locale))->first();
+        //print_r($id_Locale);
+        $page = StaticPage::where(['static_page_id' => 26, 'language_id'=>$id_Locale->id])->first();
+        return view('page.index', [
+            'langs' => Langs::all(),
+            'page_id' => 26,
+            'page' => $page,
+            'top_menu' => TopMenu::where(['status' => 1 , 'language_id' => $id_Locale->id])->get(),
+            'bottom_menu' => BottomMenu::where(['status' => 1 , 'language_id' => $id_Locale->id])->get(),
+        ]);
+    }
+    public function pagefaq()
+    {
+        $locale = App::getLocale();
+        $id_Locale = Langs::where('locale', mb_strtolower($locale))->first();
+        //print_r($id_Locale);
+        $questions = Question::where(['published' => 1 , 'language_id'=>$id_Locale->id])->get();
+        //$wwwww = TopMenu::where(['status' => 1 , 'language_id' => $id_Locale->id])->get();
+        //dd($page);
+        return view('page.index', [
+            'langs' => Langs::all(),
+            'page_id' => 'faq',
+            'questions' => $questions,
             'top_menu' => TopMenu::where(['status' => 1 , 'language_id' => $id_Locale->id])->get(),
             'bottom_menu' => BottomMenu::where(['status' => 1 , 'language_id' => $id_Locale->id])->get(),
         ]);

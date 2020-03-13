@@ -1,5 +1,5 @@
 <?php
-return [
+return [ 
 
 'call_russian' => 'Звонки по России бесплатно',
 'call_phone' => '88007789898',

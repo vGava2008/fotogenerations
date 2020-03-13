@@ -18,6 +18,7 @@ use App\Product;
 use App\Option;
 use App\TopMenu;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
 
 /**********************ADMIN***********************/
 
@@ -277,7 +278,27 @@ Route::get('/contacts', 'PageController@contacts')->name('contacts');
 Route::get('/terms_of_sale', 'PageController@termsofsale')->name('terms_of_sale');
 Route::get('/shipping_and_payment', 'PageController@shippingandpayment')->name('shipping_and_payment');
 Route::get('/partnership', 'PageController@partnership')->name('partnership');
-//END: About 24.12.2019
+//END: Page 24.12.2019
+//Page 09.01.2019
+Route::get('/giftcard', 'PageController@giftcard')->name('giftcard');
+//END: Page 09.01.2019
+//Page 13.01.2019
+Route::get('/faq', 'PageController@pagefaq')->name('fa'q);
+//END: Page 13.01.2019
+    
+//Route::post('/sendgiftcard', 'Ajax\GiftcardController@send');
+Route::get('/sendgiftcard{request?}', 'Ajax\GiftcardController@send')->name('send');
+
+/*Route::get('/sendgiftcard', function (Request $request){
+dd($request->all());
+});*/
+
+
+/*Route::post('/sendgiftcard/{request}', function ($request){
+dd($request->all());
+});*/
+
+//END: Page 09.01.2019
 //////////////////////
 //Переключение языков
 Route::get('setlocale/{lang}', function ($lang) {

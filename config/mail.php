@@ -4,7 +4,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Mail Driver
+    | Mail Driver 
     |--------------------------------------------------------------------------
     |
     | Laravel supports both SMTP and PHP's "mail" function as drivers for the
@@ -16,6 +16,7 @@ return [
     |
     */
 
+    //'driver' => env('MAIL_DRIVER', 'smtp'),
     'driver' => env('MAIL_DRIVER', 'smtp'),
 
     /*
@@ -29,7 +30,8 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.beget.com'),
+    //'host' => env('MAIL_HOST', 'smtp.beget.com'),
+    'host' => env('MAIL_HOST', 'smtp.gmail.com'),
 
     /*
     |--------------------------------------------------------------------------
@@ -42,7 +44,9 @@ return [
     |
     */
 
-    'port' => env('MAIL_PORT', 25),
+    //'port' => env('MAIL_PORT', 25),
+    'port' => env('MAIL_PORT', 587),
+
 
     /*
     |--------------------------------------------------------------------------
@@ -55,10 +59,16 @@ return [
     |
     */
 
-    'from' => [
+    /*'from' => [
         'address' => env('MAIL_FROM_ADDRESS', 'photo-generators@plemya-demo.ru'),
         'name' => env('MAIL_FROM_NAME', 'Support'),
+    ],*/
+    'from' => [
+        'address' => env('MAIL_FROM_ADDRESS', 'alexandr.shvets1996@gmail.com'),
+        'name' => env('MAIL_FROM_NAME', 'Support Gmail Alexandr'),
     ],
+    
+
 
     /*
     |--------------------------------------------------------------------------
@@ -71,7 +81,7 @@ return [
     |
     */
 
-    'encryption' => env('MAIL_ENCRYPTION', 'tls'),
+    'encryption' => env('MAIL_ENCRYPTION', 'TLS'),
 
     /*
     |--------------------------------------------------------------------------
@@ -84,9 +94,12 @@ return [
     |
     */
 
-    'username' => env('photo-generators@plemya-demo.ru'),
+    //'username' => env('photo-generators@plemya-demo.ru'),
+    'username' => env('MAIL_USERNAME'),
 
-    'password' => env('%dP6OyY%'),
+    //'password' => env('%dP6OyY%'),
+    'password' => env('MAIL_PASSWORD'),
+
 
     /*
     |--------------------------------------------------------------------------
@@ -100,6 +113,7 @@ return [
     */
 
     'sendmail' => '/usr/sbin/sendmail -bs',
+
 
     /*
     |--------------------------------------------------------------------------
@@ -119,5 +133,15 @@ return [
             resource_path('views/vendor/mail'),
         ],
     ],
+
+    //'driver' => env('MAIL_DRIVER', 'smtp'),
+    //'host' => env('MAIL_HOST', 'smtp.gmail.com'),
+    //'port' => env('MAIL_PORT', 587),
+    //'from' => ['address' => '<<alexandr.shvets1996@gmail.com>>', 'name' => '<<Support Gmail Alexandr>>'],
+    //'encryption' => env('MAIL_ENCRYPTION', 'tls'),
+    //'username' => env('MAIL_USERNAME'),
+    //'password' => env('MAIL_PASSWORD'),
+    //'sendmail' => '/usr/sbin/sendmail -bs',
+    //'pretend' => false,
 
 ];
