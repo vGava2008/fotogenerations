@@ -22,7 +22,7 @@ class IndexController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        //$this->middleware('auth');
     }
     /**
      * Show the application dashboard.
