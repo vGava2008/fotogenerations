@@ -837,7 +837,7 @@ class ProductController extends Controller
           'choose_discounts' => ProductDiscount::where(['product_id'=>$product['product_id']])->get(),
           'choose_specials' => ProductSpecial::where(['product_id'=>$product['product_id']])->get(),
           'customer_groups' => CustomerGroup::get(),
-
+ 
           //'product_description' => $product_description,
           'choose_product_description'   => $choose_product_description,
           'count' => $count,
@@ -1299,8 +1299,59 @@ class ProductController extends Controller
 
                 if($request->file('product_image'.$i) != null)
                 {
-                    $file_array = $request->file('product_image'.$i);
-                    $image_upload = $file_array['image']->store('uploads', 'public');
+                    //Порядок сортировки
+                $image_array = $request->file('product_image'.$i);
+                $puth_image = $image_array['image'];
+                
+                    //dd($puth_image);
+                    //dd($request->file('product_image'.$i.'[image]'));
+
+                    //$file_array = $request->file('product_image'.$i);
+                    //$image_upload = $file_array['image']->store('uploads', 'public');
+
+/*
+$request->file('image')->move(public_path('images/category'), 
+$image_upload = $request->file('image')->getClientOriginalName()); 
+*/
+// Желаемая структура папок
+$structure = 'images/products/'.$request['product_id'];
+
+// Для создания вложенной структуры необходимо указать параметр
+// $recursive в mkdir().
+if (!is_dir($structure)) {
+    mkdir($structure, 0777, true);
+
+
+
+/*$image = $request->file('image');
+            $ext = '.'.$request->image->getClientOriginalExtension();
+            $fileName = str_replace($ext, date('d-m-Y-H-i') . $ext, $request->image->getClientOriginalName());
+            $location = public_path('images/' . $fileName);
+            Image::make($image)->resize(500, 400)->save($location);
+
+           $article->image = $fileName;*/
+
+
+
+   
+    $ext = '.'.$puth_image->getClientOriginalExtension();
+    $puth_image->move(public_path('images/products/'.$request['product_id']),
+    $image_upload = str_replace($ext, date('d-m-Y-H-i') . $ext, $puth_image->getClientOriginalName()));
+
+    //$image_upload = $puth_image->date("Y-m-d H:i:s").getClientOriginalName()); 
+}
+else
+{
+    // dd($puth_image);
+ $ext = '.'.$puth_image->getClientOriginalExtension();
+    $puth_image->move(public_path('images/products/'.$request['product_id']),
+    $image_upload = str_replace($ext, date('d-m-Y-H-i') . $ext, $puth_image->getClientOriginalName()));
+                   /* $puth_image->move(public_path('images/products/'.$request['product_id']), 
+                    //$image_upload = $puth_image->date("Y-m-d H:i:s").getClientOriginalName()); 
+                     $ext = '.'.$puth_image->getClientOriginalExtension();
+    $image_upload = str_replace($ext, date('d-m-Y-H-i') . $ext, $puth_image->getClientOriginalName());*/
+}
+                   
                 }
                 else
                 {

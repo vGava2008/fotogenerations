@@ -28,6 +28,7 @@ class BlogController extends Controller
             'bottom_menu' => $bottom_menu,
     		'articles' => Blog::where(['published'=>1, 'status'=>0, 'language_id'=>$id_Locale->id])->paginate(8),
     		'ideas' => Blog::where(['published'=>1, 'status'=>1, 'language_id'=>$id_Locale->id])->paginate(100),
+            'lang' => $id_Locale->id,
     	]);
     }
 
@@ -45,6 +46,7 @@ class BlogController extends Controller
             'bottom_menu' => $bottom_menu,
             //'category' => $category,
             'article' => Blog::where(['seo_link'=>$seo_link, 'language_id'=>$id_Locale->id])->first(),
+            'lang' => $id_Locale->id,
             //'ideas' => Blog::where(['published'=>1, 'status'=>1, 'language_id'=>$id_Locale->id])->paginate(100),
         ]);
     }

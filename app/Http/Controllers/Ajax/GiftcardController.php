@@ -12,7 +12,6 @@ class GiftcardController extends Controller
     {
         //dd($request->all());
         $result = false;
-        
         if($request->ajax() && !empty($request->all()))
         {
             $sender = $request;
@@ -27,7 +26,6 @@ class GiftcardController extends Controller
                 $message->subject($sender->name_to);
                 $message->subject($sender->triumph);
                 $message->subject($sender->nominal);
-                
                	$message->subject($sender->date_send);
                 $message->subject($sender->congratulation_text);
             });

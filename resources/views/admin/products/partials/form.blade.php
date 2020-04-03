@@ -845,14 +845,18 @@ function getOptions() {
           </thead>
           <tbody>
             @php ($image_row = 1)
-            @if (isset($product_images)) 
+            @if (isset($product_images))  
             @foreach ($product_images as $product_image)
             <input type="hidden" id="image_active{{ $image_row }}" name="image_active{{ $image_row }}" value="1">
             <input type="hidden" id="product_image_id{{ $image_row }}" name="product_image_id{{ $image_row }}" value="{{$product_image->product_image_id}}">
 
               <tr id="image-row{{ $image_row }}">
                 <td class="text-left">
-                  <img src="{{asset('/storage/' . $product_image->image) }}"  style="width: 20%;" alt="" title="" data-placeholder="Изображение"/>
+
+
+
+
+                  <img src="{{asset('/images/products/'.$product->product_id.'/'.$product_image->image) }}"  style="width: 20%;" alt="" title="" data-placeholder="Изображение"/>
                   <input type="hidden" name="product_image{{ $image_row }}[image]" value="{{ $product_image->image }}" id="input-image{{ $image_row }}"/></td>
                 <td class="text-right"><input type="text" name="product_image{{ $image_row }}[sort_order]" value="{{ $product_image->sort_order }}" placeholder="Введите порядок сортировки" class="form-control"/></td>
                 <td class="text-left"><button type="button" onclick="removeImages({{ $image_row }}); " data-toggle="tooltip" title="Удалить" class="btn btn-danger"><i class="fa fa-minus-circle"></i></button></td>

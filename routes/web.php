@@ -18,7 +18,12 @@ use App\Product;
 use App\Option;
 use App\TopMenu;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
+//Заменил по просьбе Славы
+//use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Request;
+
+
+
 
 /**********************ADMIN***********************/
 
@@ -285,10 +290,11 @@ Route::get('/faq', 'PageController@pagefaq')->name('faq');
 //Route::post('/sendgiftcard', 'Ajax\GiftcardController@send');
 Route::get('/sendgiftcard{request?}', 'Ajax\GiftcardController@send')->name('send');
 
+Route::get('/stocks', 'PageController@stocks')->name('stocks');
+
 /*Route::get('/sendgiftcard', function (Request $request){
 dd($request->all());
 });*/
-
 
 /*Route::post('/sendgiftcard/{request}', function ($request){
 dd($request->all());

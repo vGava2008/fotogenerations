@@ -16,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon.png">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+{{--    <link rel="stylesheet" href="{{ asset('css/style.css') }}">--}}
     <!--<link rel="icon" type="image/png" sizes="16x16" href="../img/favicon.png">-->
     @if($page_id == 1)
     <!-- About -->
@@ -95,6 +96,22 @@
     <script src="{{ asset('/js/script.min.js') }}"></script>
     <script src="{{ asset('/js/faq.min.js') }}"></script>
     <!-- END: FAQ -->
+    @endif()
+
+@if($page_id == 'stocks')
+    <!-- stocks -->
+        <link href="{{ asset('css/stocks.css') }}" rel="stylesheet">
+
+        <script src="{{ asset('/js/jquery.min.js') }}"></script>
+        <script src="{{ asset('/js/jquery.mask.min.js') }}"></script>
+        <script src="{{ asset('/js/jquery.matchHeight.min.js') }}"></script>
+        <script src="{{ asset('/js/jquery-ui.min.js') }}"></script>
+        <script src="{{ asset('/js/jcf.min.js') }}"></script>
+        <script src="{{ asset('/js/slick.min.js') }}"></script>
+        <script src="{{ asset('/js/script.min.js') }}"></script>
+        <script src="{{ asset('/js/stocks.min.js') }}"></script>
+        <script src="{{ asset('/js/custom.js') }}"></script>
+        <!-- END: stocks -->
     @endif()
     
     

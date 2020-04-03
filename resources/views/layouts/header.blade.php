@@ -3,7 +3,7 @@
         <div class="menu-logo">
             <a href="/" class="logo"><img src="{{asset('img/logo.png')}}" alt=""></a>
             <span class="open-menu">
-        <span></span>
+                <span></span>
             </span>
             <nav>
                 <ul>
@@ -67,7 +67,7 @@
                     @endforeach
                 </ul>
             </nav>
-            <a href="javascript:void(0)" class="discount">
+            <a href="/stocks" class="discount">
                 <img src="{{asset('img/discount-img.png')}}" alt="">
                 <span><i>%</i></span>
             </a>
@@ -77,10 +77,29 @@
             <a href="javascript:void(0)" class="basket"><i class="icon-icon11"></i><strong>{{ trans('general.korzina') }}</strong><span>5</span></a>
             <ul class="transfer">
                 <li style="text-transform: capitalize;">
-                @foreach ($langs as $lang)
+                     <!--<a href="/lang/ru">RU - Test</a>
+                     <a href="/lang/en">EN - Test</a>-->
+                 @foreach ($langs as $lang_single)
+                    @if($lang_single->id==$lang)
+                    <a href="/lang/<?=$lang_single->locale ?>">
+                    <img src="{{asset('images/'.$lang_single->locale.'.png') }}" alt="">{{ $lang_single->locale}}</a>
+                    @else
+                    @endif
+                @endforeach
+                <ul>
+                @foreach ($langs as $lang_single)
+                    <li style="text-transform: capitalize;">
+                       <a href="/lang/<?=$lang_single->locale ?>">
+                       <img src="{{asset('images/'.$lang_single->locale.'.png') }}" alt="">{{ $lang_single->locale}}</a>
+                    </li>
+                @endforeach
+                <!-- Метод Димы - старый -->     
+                <!--@foreach ($langs as $lang)
                     @if($lang->id==1)
                     <a href="<?= route('setlocale', ['lang' => $lang->locale]) ?>">
                     <img src="{{asset('images/'.$lang->locale.'.png') }}" alt="">{{ $lang->locale}}</a>
+
+                  
                     @else
                     @endif
                 @endforeach
@@ -90,7 +109,8 @@
                 	   <a href="<?= route('setlocale', ['lang' => $lang->locale]) ?>">
                 	   <img src="{{asset('images/'.$lang->locale.'.png') }}" alt="">{{ $lang->locale}}</a>
                 	</li>
-        	    @endforeach
+        	    @endforeach-->
+                <!-- END: Метод Димы - старый -->    
                 </ul>
     	       </li>
             </ul>

@@ -24,9 +24,6 @@
 		@else()
 			<li><span>{{$page->title}}</span></li>
 		@endif()
-        
-        
-
     </ul>
 </div>
 @if($page_id == 26)
@@ -41,7 +38,6 @@
 @else
 {!! htmlspecialchars_decode($page->text) !!}
 @endif()
-
 
 <!--END: page/index.blade-->
 

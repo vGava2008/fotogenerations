@@ -44,5 +44,11 @@
 </footer> 
 </div>
 @yield('js_project')
-</body>
+@if($page_id == 'stocks')
+    <!-- stocks -->
+
+    <!-- END: stocks -->
+@endif()
+
+    </body>
 </html>

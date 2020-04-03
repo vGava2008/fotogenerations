@@ -24,6 +24,7 @@ class PageController extends Controller
     		'page' => $page,
             'top_menu' => TopMenu::where(['status' => 1 , 'language_id' => $id_Locale->id])->get(),
             'bottom_menu' => BottomMenu::where(['status' => 1 , 'language_id' => $id_Locale->id])->get(),
+            'lang' => $id_Locale->id,
     		//'articles' => Blog::where(['published'=>1, 'status'=>0, 'language_id'=>$id_Locale->id])->paginate(8),
     		//'ideas' => Blog::where(['published'=>1, 'status'=>1, 'language_id'=>$id_Locale->id])->paginate(100),
     	]);
@@ -40,6 +41,7 @@ class PageController extends Controller
             'page' => $page,
             'top_menu' => TopMenu::where(['status' => 1 , 'language_id' => $id_Locale->id])->get(),
             'bottom_menu' => BottomMenu::where(['status' => 1 , 'language_id' => $id_Locale->id])->get(),
+            'lang' => $id_Locale->id,
             //'articles' => Blog::where(['published'=>1, 'status'=>0, 'language_id'=>$id_Locale->id])->paginate(8),
             //'ideas' => Blog::where(['published'=>1, 'status'=>1, 'language_id'=>$id_Locale->id])->paginate(100),
         ]);
@@ -56,6 +58,7 @@ class PageController extends Controller
             'page' => $page,
             'top_menu' => TopMenu::where(['status' => 1 , 'language_id' => $id_Locale->id])->get(),
             'bottom_menu' => BottomMenu::where(['status' => 1 , 'language_id' => $id_Locale->id])->get(),
+            'lang' => $id_Locale->id,
         ]);
     }
     public function shippingandpayment()
@@ -70,6 +73,7 @@ class PageController extends Controller
             'page' => $page,
             'top_menu' => TopMenu::where(['status' => 1 , 'language_id' => $id_Locale->id])->get(),
             'bottom_menu' => BottomMenu::where(['status' => 1 , 'language_id' => $id_Locale->id])->get(),
+            'lang' => $id_Locale->id,
         ]);
     }
     public function partnership()
@@ -84,6 +88,7 @@ class PageController extends Controller
             'page' => $page,
             'top_menu' => TopMenu::where(['status' => 1 , 'language_id' => $id_Locale->id])->get(),
             'bottom_menu' => BottomMenu::where(['status' => 1 , 'language_id' => $id_Locale->id])->get(),
+            'lang' => $id_Locale->id,
         ]);
     }
     public function giftcard()
@@ -98,6 +103,7 @@ class PageController extends Controller
             'page' => $page,
             'top_menu' => TopMenu::where(['status' => 1 , 'language_id' => $id_Locale->id])->get(),
             'bottom_menu' => BottomMenu::where(['status' => 1 , 'language_id' => $id_Locale->id])->get(),
+            'lang' => $id_Locale->id,
         ]);
     }
     public function pagefaq()
@@ -114,6 +120,7 @@ class PageController extends Controller
             'questions' => $questions,
             'top_menu' => TopMenu::where(['status' => 1 , 'language_id' => $id_Locale->id])->get(),
             'bottom_menu' => BottomMenu::where(['status' => 1 , 'language_id' => $id_Locale->id])->get(),
+            'lang' => $id_Locale->id,
         ]);
     }
     /*public function article($seo_link)
@@ -129,5 +136,20 @@ class PageController extends Controller
             //'ideas' => Blog::where(['published'=>1, 'status'=>1, 'language_id'=>$id_Locale->id])->paginate(100),
         ]);
     }*/
+
+    public function stocks() {
+        $locale = App::getLocale();
+        $id_Locale = Langs::where('locale', mb_strtolower($locale))->first();
+        $page = StaticPage::where(['static_page_id' => 'stocks', 'language_id'=>$id_Locale->id])->first();
+
+        return view('page.stocks', [
+            'langs' => Langs::all(),
+            'page_id' => 'stocks',
+            'page' => $page,
+            'top_menu' => TopMenu::where(['status' => 1 , 'language_id' => $id_Locale->id])->get(),
+            'bottom_menu' => BottomMenu::where(['status' => 1 , 'language_id' => $id_Locale->id])->get(),
+            'lang' => $id_Locale->id,
+        ]);
+    }
     
 }

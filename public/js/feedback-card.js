@@ -1,10 +1,10 @@
-console.log('Feedback Card');
 $('#senderror').hide();
 $('#sendmessage').hide();
 $(document).ready(function () {
+    console.log('Feedback Card');
     $('#feedbackform').on('submit', function (e) {
         e.preventDefault();
-         
+        console.log($('#feedbackform').serialize());
         $.ajax({
             type: 'GET',
             url: '/sendgiftcard',
