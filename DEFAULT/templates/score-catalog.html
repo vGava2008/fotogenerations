@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Photographers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/score.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="container clearfix">
+                <div class="check-entrance clearfix">
+                    <a class="check" href="javasccript:void(0)"><i class="icon-icon36"></i>Вход</a>
+                    <a class="entrance" href="javasccript:void(0)"><i class="icon-icon5"></i>Регистрация</a>
+                </div>
+                <div class="menu-logo clearfix">
+                    <span class="open-menu">
+                    <span></span>
+                    </span>
+                    <a class="logo" href="index.html"><img src="../img/logo.png" alt=""></a>
+                    <form action="">
+                        <input type="search">
+                        <button><i class="icon-icon25"></i></button>
+                    </form>
+                    <nav>
+                        <ul>
+                            <li class="active"><a href="javasccript:void(0)">Специалисты</a></li>
+                            <li><a href="javasccript:void(0)">Организации</a></li>
+                            <li><a href="javasccript:void(0)">События</a></li>
+                            <li><a href="javasccript:void(0)">Магазин</a></li>
+                            <li><a href="javasccript:void(0)">Проекты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="bread-crumbs">
+        <div class="container">
+            <ul>
+                <li><a href="javacript:void(0)">Главная</a></li>
+                <li><span>Магазин</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="score">
+        <div class="container">
+            <div class="title">
+                <h2>Фототехника</h2>
+            </div>
+            <div class="page-content clearfix">
+                <div class="page-left">
+                    <div class="score-filter">
+                        <div class="filter-open">
+                            <p>Фильтры</p>
+                            <span class="open-cloze"></span>
+                        </div>
+                        <form>
+                            <div class="search">
+                                <input type="search" placeholder="Поиск....">
+                                <button><i class="icon-icon25"></i></button>
+                            </div>
+                            <div class="filter-drop">
+                                <div class="drop-item">
+                                    <ul>
+                                        <li>Фототехника<i class="icon-icon28"></i></li>
+                                    </ul>
+                                    <div class="drop-content">
+                                        <div class="drop">
+                                            <a href="javascript:void(0)">Фотоаппараты</a>
+                                            <a href="javascript:void(0)">Видеокамеры</a>
+                                            <a href="javascript:void(0)">Объективы</a>
+                                            <a href="javascript:void(0)">Фотовспышки</a>
+                                            <a href="javascript:void(0)">Аксессуары для фототехники</a>
+                                            <a href="javascript:void(0)">Видеооборудование</a>
+                                            <a href="javascript:void(0)">Студийное оборудование</a>
+                                            <a href="javascript:void(0)">Прочее</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="drop-item">
+                                    <ul>
+                                        <li>Аксессуары и атрибуты<i class="icon-icon28"></i></li>
+                                    </ul>
+                                </div>
+                                <div class="drop-item">
+                                    <ul>
+                                        <li>Одежда<i class="icon-icon28"></i></li>
+                                    </ul>
+                                </div>
+                                <div class="drop-item">
+                                    <ul>
+                                        <li>Транспорт<i class="icon-icon28"></i></li>
+                                    </ul>
+                                </div>
+                                <div class="drop-item">
+                                    <ul>
+                                        <li>Фотосессии с животными<i class="icon-icon28"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="filter-input">
+                                <div class="input">
+                                    <label>Страна</label>
+                                    <input type="input">
+                                </div>
+                            </div>
+                            <div class="filter-input">
+                                <div class="input">
+                                    <label>Город</label>
+                                    <input type="input">
+                                </div>
+                            </div>
+                            <div class="filter-input">
+                                <div class="input">
+                                    <label>Метро</label>
+                                    <input type="input">
+                                </div>
+                            </div>
+                            <div class="checkbox">
+                                <div class="checkbox-item">
+                                    <input id="q" type="checkbox" checked>
+                                    <label for="q">По дате добавления</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input id="w" type="checkbox">
+                                    <label for="w">По релевантности</label>
+                                </div>
+                            </div>
+                            <div class="checkbox">
+                                <div class="checkbox-item">
+                                    <input id="e" type="checkbox" checked>
+                                    <label for="e">Покупка / Продажа</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input id="r" type="checkbox">
+                                    <label for="r">Аренда</label>
+                                </div>
+                            </div>
+                            <div class="sum">
+                                <label>Цена</label>
+                                <div class="sum-number">
+                                    <input type="text" class="amount" id="amount" readonly>
+                                    <input type="text" class="amount2" id="amount2" readonly>
+                                </div>
+                                <div id="slider-range"></div>
+                            </div>
+                            <div class="checkbox">
+                                <p>Подбор товара</p>
+                                <div class="checkbox-item">
+                                    <input id="u" type="checkbox" checked>
+                                    <label for="u">Фотоаппараты со сменнойоптикой</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input id="i" type="checkbox">
+                                    <label for="i">Компактные фотоаппараты</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input id="o" type="checkbox">
+                                    <label for="o">Моментальные фотоаппараты</label>
+                                </div>
+                            </div>
+                            <div class="checkbox">
+                                <p>Производитель</p>
+                                <div class="checkbox-item">
+                                    <input id="qq" type="checkbox" checked>
+                                    <label for="qq">CANON 13</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input id="ww" type="checkbox">
+                                    <label for="ww">NIKON 26</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input id="ee" type="checkbox">
+                                    <label for="ee">PENTAX 19</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input id="rr" type="checkbox">
+                                    <label for="rr">SONY 5</label>
+                                </div>
+                            </div>
+                            <div class="checkbox">
+                                <p>Формат матрицы</p>
+                                <div class="checkbox-item">
+                                    <input id="uu" type="checkbox" checked>
+                                    <label for="uu">APS-C 41</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input id="yy" type="checkbox">
+                                    <label for="yy">Full frame 21</label>
+                                </div>
+                            </div>
+                            <div class="checkbox">
+                                <div class="checkbox-item">
+                                    <input id="aa" type="checkbox" checked>
+                                    <label for="aa">Байонет</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input id="ss" type="checkbox">
+                                    <label for="ss">Объектив в комплекте</label>
+                                </div>
+                            </div>
+                            <div class="checkbox">
+                                <p>Состояние</p>
+                                <div class="checkbox-item">
+                                    <input id="ff" type="checkbox" checked>
+                                    <label for="ff">Новый</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input id="gg" type="checkbox">
+                                    <label for="gg">б/у</label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="page-right">
+                    <div class="score-content">
+                        <div class="score-product clearfix">
+                            <div class="product-item">
+                                <div class="img">
+                                    <span class="vip"><i>vip</i></span>
+                                    <span class="heart"><i class="icon-icon3"></i></span>
+                                    <img src="../img/product-item-img1.png" alt="">
+                                </div>
+                                <div class="product-text">
+                                    <h3>Olympus OM-D E-M10 Mark III</h3>
+                                    <p>47 500 RUB</p>
+                                    <span>Новосибирск</span>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="img">
+                                    <span class="vip"><i>vip</i></span>
+                                    <span class="heart"><i class="icon-icon3"></i></span>
+                                    <img src="../img/product-item-img2.png" alt="">
+                                </div>
+                                <div class="product-text">
+                                    <h3>Nikon D3400</h3>
+                                    <p>26 500 RUB</p>
+                                    <span>Новосибирск</span>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="img">
+                                    <span class="vip"><i>vip</i></span>
+                                    <span class="heart"><i class="icon-icon3"></i></span>
+                                    <img src="../img/product-item-img3.png" alt="">
+                                </div>
+                                <div class="product-text">
+                                    <h3>Sony Alpha A7 III</h3>
+                                    <p>150 500 RUB</p>
+                                    <span>Новосибирск</span>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="img">
+                                    <span class="vip"><i>vip</i></span>
+                                    <span class="heart"><i class="icon-icon3"></i></span>
+                                    <img src="../img/product-item-img1.png" alt="">
+                                </div>
+                                <div class="product-text">
+                                    <h3>Olympus OM-D E-M10 Mark III</h3>
+                                    <p>47 500 RUB</p>
+                                    <span>Новосибирск</span>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="img">
+                                    <span class="vip"><i>vip</i></span>
+                                    <span class="heart"><i class="icon-icon3"></i></span>
+                                    <img src="../img/product-item-img2.png" alt="">
+                                </div>
+                                <div class="product-text">
+                                    <h3>Nikon D3400</h3>
+                                    <p>26 500 RUB</p>
+                                    <span>Новосибирск</span>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="img">
+                                    <span class="vip"><i>vip</i></span>
+                                    <span class="heart"><i class="icon-icon3"></i></span>
+                                    <img src="../img/product-item-img3.png" alt="">
+                                </div>
+                                <div class="product-text">
+                                    <h3>Sony Alpha A7 III</h3>
+                                    <p>150 500 RUB</p>
+                                    <span>Новосибирск</span>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="img">
+                                    <span class="vip"><i>vip</i></span>
+                                    <span class="heart"><i class="icon-icon3"></i></span>
+                                    <img src="../img/product-item-img1.png" alt="">
+                                </div>
+                                <div class="product-text">
+                                    <h3>Olympus OM-D E-M10 Mark III</h3>
+                                    <p>47 500 RUB</p>
+                                    <span>Новосибирск</span>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="img">
+                                    <span class="vip"><i>vip</i></span>
+                                    <span class="heart"><i class="icon-icon3"></i></span>
+                                    <img src="../img/product-item-img2.png" alt="">
+                                </div>
+                                <div class="product-text">
+                                    <h3>Nikon D3400</h3>
+                                    <p>26 500 RUB</p>
+                                    <span>Новосибирск</span>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="img">
+                                    <span class="vip"><i>vip</i></span>
+                                    <span class="heart"><i class="icon-icon3"></i></span>
+                                    <img src="../img/product-item-img3.png" alt="">
+                                </div>
+                                <div class="product-text">
+                                    <h3>Sony Alpha A7 III</h3>
+                                    <p>150 500 RUB</p>
+                                    <span>Новосибирск</span>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="img">
+                                    <span class="vip"><i>vip</i></span>
+                                    <span class="heart"><i class="icon-icon3"></i></span>
+                                    <img src="../img/product-item-img1.png" alt="">
+                                </div>
+                                <div class="product-text">
+                                    <h3>Olympus OM-D E-M10 Mark III</h3>
+                                    <p>47 500 RUB</p>
+                                    <span>Новосибирск</span>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="img">
+                                    <span class="vip"><i>vip</i></span>
+                                    <span class="heart"><i class="icon-icon3"></i></span>
+                                    <img src="../img/product-item-img2.png" alt="">
+                                </div>
+                                <div class="product-text">
+                                    <h3>Nikon D3400</h3>
+                                    <p>26 500 RUB</p>
+                                    <span>Новосибирск</span>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="img">
+                                    <span class="vip"><i>vip</i></span>
+                                    <span class="heart"><i class="icon-icon3"></i></span>
+                                    <img src="../img/product-item-img3.png" alt="">
+                                </div>
+                                <div class="product-text">
+                                    <h3>Sony Alpha A7 III</h3>
+                                    <p>150 500 RUB</p>
+                                    <span>Новосибирск</span>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="img">
+                                    <span class="vip"><i>vip</i></span>
+                                    <span class="heart"><i class="icon-icon3"></i></span>
+                                    <img src="../img/product-item-img1.png" alt="">
+                                </div>
+                                <div class="product-text">
+                                    <h3>Olympus OM-D E-M10 Mark III</h3>
+                                    <p>47 500 RUB</p>
+                                    <span>Новосибирск</span>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="img">
+                                    <span class="vip"><i>vip</i></span>
+                                    <span class="heart"><i class="icon-icon3"></i></span>
+                                    <img src="../img/product-item-img2.png" alt="">
+                                </div>
+                                <div class="product-text">
+                                    <h3>Nikon D3400</h3>
+                                    <p>26 500 RUB</p>
+                                    <span>Новосибирск</span>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="img">
+                                    <span class="vip"><i>vip</i></span>
+                                    <span class="heart"><i class="icon-icon3"></i></span>
+                                    <img src="../img/product-item-img3.png" alt="">
+                                </div>
+                                <div class="product-text">
+                                    <h3>Sony Alpha A7 III</h3>
+                                    <p>150 500 RUB</p>
+                                    <span>Новосибирск</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="container">
+                <a class="logo" href="javascript:void(0)"><img src="../img/logo.png" alt=""></a>
+                <div class="footer-content clearfix">
+                    <nav>
+                        <ul>
+                            <li><a href="javascript:void(0)">Специалисты</a></li>
+                            <li><a href="javascript:void(0)">Организации</a></li>
+                            <li><a href="javascript:void(0)">События</a></li>
+                            <li><a href="javascript:void(0)">Магазин</a></li>
+                        </ul>
+                    </nav>
+                    <ul class="sosial">
+                        <li><a href="javascript:void(0)"><i class="icon-icon12"></i></a></li>
+                        <li><a href="javascript:void(0)"><i class="icon-icon2"></i></a></li>
+                        <li><a href="javascript:void(0)"><i class="icon-icon18"></i></a></li>
+                    </ul>
+                    <p>© 2018 Все права защищены</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.matchHeight.min.js"></script>
+    <script src="../js/jcf.min.js"></script>
+    <script src="../js/jcf.checkbox.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/script.min.js"></script>
+    <script src="../js/score.min.js"></script>
+</body>
+
+</html>

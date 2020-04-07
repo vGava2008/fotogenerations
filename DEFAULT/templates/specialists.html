@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Специалисты</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/specialists.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="container clearfix">
+                <div class="check-entrance clearfix">
+                    <a class="check" href="javasccript:void(0)"><i class="icon-icon36"></i>Вход</a>
+                    <a class="entrance" href="javasccript:void(0)"><i class="icon-icon5"></i>Регистрация</a>
+                </div>
+                <div class="menu-logo clearfix">
+                    <span class="open-menu">
+                    <span></span>
+                    </span>
+                    <a class="logo" href="index.html"><img src="../img/logo.png" alt=""></a>
+                    <form action="">
+                        <input type="search">
+                        <button><i class="icon-icon25"></i></button>
+                    </form>
+                    <nav>
+                        <ul>
+                            <li class="active"><a href="javasccript:void(0)">Специалисты</a></li>
+                            <li><a href="javasccript:void(0)">Организации</a></li>
+                            <li><a href="javasccript:void(0)">События</a></li>
+                            <li><a href="javasccript:void(0)">Магазин</a></li>
+                            <li><a href="javasccript:void(0)">Проекты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="bread-crumbs">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><span>Специалисты</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="specialists">
+        <div class="container">
+            <div class="page-content clearfix">
+                <h1>Специалисты</h1>
+                <div class="top-tabs">
+                    <div class="filter-slider" id="filter-slider">
+                        <div class="filter-items active">
+                            <p>Фотографы</p>
+                        </div>
+                        <div class="filter-items">
+                            <p>Видеографы</p>
+                        </div>
+                        <div class="filter-items">
+                            <p>Модели</p>
+                        </div>
+                        <div class="filter-items">
+                            <p>Стилисты</p>
+                        </div>
+                        <div class="filter-items">
+                            <p>Свадебные специалисты</p>
+                        </div>
+                        <div class="filter-items">
+                            <p>beauty-стилисты</p>
+                        </div>
+                        <div class="filter-items">
+                            <p>Другие</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="specialists_page clearfix">
+                    <div class="page-left">
+                        <div class="specialists_page-menu">
+                            <div class="menu-heading">
+                                <button class="toggle-menu" id="leftToggle-menu">
+                                    <span class="hamburger">
+                                    <span class="sw-topper"></span>
+                                    <span class="sw-bottom"></span>
+                                    <span class="sw-footer"></span>
+                                    </span>
+                                </button>
+                                <span>Меню</span>
+                            </div>
+                            <nav>
+                                <ul>
+                                    <li class="myPage">
+                                        <a href="javascript:void(0)">Моя страницы</a>
+                                    </li>
+                                    <li class="news">
+                                        <a href="javascript:void(0)">Новости</a>
+                                    </li>
+                                    <li class="messages">
+                                        <a href="javascript:void(0)">Сообщения <span>3</span> </a>
+                                    </li>
+                                    <li class="friends">
+                                        <a href="javascript:void(0)">Друзья</a>
+                                    </li>
+                                    <li class="companies">
+                                        <a href="javascript:void(0)">Компании</a>
+                                    </li>
+                                    <li class="projects">
+                                        <a href="javascript:void(0)">Проекты</a>
+                                    </li>
+                                    <li class="photo">
+                                        <a href="javascript:void(0)">Фотографии</a>
+                                    </li>
+                                    <li class="video">
+                                        <a href="javascript:void(0)">Видео</a>
+                                    </li>
+                                    <li class="products">
+                                        <a href="javascript:void(0)">Товары</a>
+                                    </li>
+                                    <li class="marker">
+                                        <a href="javascript:void(0)">Закладки</a>
+                                    </li>
+                                    <li class="reviews">
+                                        <a href="javascript:void(0)">Отзывы</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="specialists_page-filter">
+                            <div class="filterTop">
+                                <div class="filterTop__search">
+                                    <input type="search" placeholder="Поиск....">
+                                    <button><i class="icon-icon25"></i></button>
+                                </div>
+                                <p class="openBtn">Фильтры</p>
+                                <span class="open-close"></span>
+                            </div>
+                            <form>
+                                <div class="search">
+                                    <input type="search" placeholder="Поиск....">
+                                    <button><i class="icon-icon25"></i></button>
+                                </div>
+                                <div class="filter-input">
+                                    <div class="input">
+                                        <label class="heading">Страна</label>
+                                        <input id="setCountry" type="input">
+                                    </div>
+                                </div>
+                                <div class="filter-input">
+                                    <div class="input">
+                                        <label class="heading">Город</label>
+                                        <input id="setCity" type="input">
+                                    </div>
+                                </div>
+                                <div class="filter-select">
+                                    <labet for="sortSelect" class="heading">Сортировка</labet>
+                                    <div class="selectWrap">
+                                        <select name="sort" id="sortSelect">
+                                            <option value="1">По рейтингу</option>
+                                            <option value="2">По рейтингу2</option>
+                                            <option value="3">По рейтингу3</option>
+                                        </select>
+                                        <i class="icon-icon28"></i>
+                                    </div>
+                                </div>
+                                <div class="filter-drop">
+                                    <p class="heading">Специализация</p>
+                                    <div class="drop-item active">
+                                        <div class="drop-item_heading">
+                                            <p>Фотографы<i class="icon-icon28"></i></p>
+                                        </div>
+                                        <div class="drop-item_sub">
+                                            <div class="checkbox">
+                                                <div class="checkbox-item">
+                                                    <input id="a1_1" type="checkbox" checked>
+                                                    <label for="a1_1">Все</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a1_2" type="checkbox">
+                                                    <label for="a1_2">Детская съемка</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a1_3" type="checkbox">
+                                                    <label for="a1_3">Коммерческая фотосъемка</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a1_4" type="checkbox">
+                                                    <label for="a1_4">Ню</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a1_5" type="checkbox">
+                                                    <label for="a1_5">Обработка фотографии</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a1_6" type="checkbox">
+                                                    <label for="a1_6">Портретная съемка</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a1_7" type="checkbox">
+                                                    <label for="a1_7">Предметная съемка</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a1_8" type="checkbox">
+                                                    <label for="a1_8">Репортажная съемка</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a1_9" type="checkbox">
+                                                    <label for="a1_9">Студийная съемка</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a1_10" type="checkbox">
+                                                    <label for="a1_10">Свадебная съемка</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a1_11" type="checkbox">
+                                                    <label for="a1_11">Семейная съемка</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a1_12" type="checkbox">
+                                                    <label for="a1_12"> Тематическая съемка</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a1_13" type="checkbox">
+                                                    <label for="a1_13"> Другое</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-drop">
+                                    <div class="drop-item">
+                                        <div class="drop-item_heading">
+                                            <p>Видеографы<i class="icon-icon28"></i></p>
+                                        </div>
+                                        <div class="drop-item_sub">
+                                            <div class="checkbox">
+                                                <div class="checkbox-item">
+                                                    <input id="a2_1" type="checkbox">
+                                                    <label for="a2_1">Коммерческий</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a2_2" type="checkbox">
+                                                    <label for="a2_2">Свадебный</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a2_3" type="checkbox">
+                                                    <label for="a2_3">Другой</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-drop">
+                                    <div class="drop-item">
+                                        <div class="drop-item_heading">
+                                            <p>Модель<i class="icon-icon28"></i></p>
+                                        </div>
+                                        <div class="drop-item_sub">
+                                            <div class="checkbox">
+                                                <div class="checkbox-item">
+                                                    <input id="a3_1" type="checkbox">
+                                                    <label for="a3_1">Все</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a3_2" type="checkbox">
+                                                    <label for="a3_2">Съемка в стиле ню</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-drop">
+                                    <div class="drop-item">
+                                        <div class="drop-item_heading">
+                                            <p>Свадебные специалисты<i class="icon-icon28"></i></p>
+                                        </div>
+                                        <div class="drop-item_sub">
+                                            <div class="checkbox">
+                                                <div class="checkbox-item">
+                                                    <input id="b1" type="checkbox">
+                                                    <label for="b1">Оформители</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="b2" type="checkbox">
+                                                    <label for="b2">Организаторы</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="b3" type="checkbox">
+                                                    <label for="b3">Ведущие</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="b4" type="checkbox">
+                                                    <label for="b4">Артисты</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="b5" type="checkbox">
+                                                    <label for="b5">Музыканты</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="b6" type="checkbox">
+                                                    <label for="b6">dj</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="b7" type="checkbox">
+                                                    <label for="b7">Регистраторы</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="b8" type="checkbox">
+                                                    <label for="b8">Хореографы</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-drop">
+                                    <div class="drop-item">
+                                        <div class="drop-item_heading">
+                                            <p>Beauty-стилисты <i class="icon-icon28"></i></p>
+                                        </div>
+                                        <div class="drop-item_sub">
+                                            <div class="checkbox">
+                                                <div class="checkbox-item">
+                                                    <input id="c1" type="checkbox">
+                                                    <label for="c1">Визажист</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="c2" type="checkbox">
+                                                    <label for="c2">Парикмахер</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="c3" type="checkbox">
+                                                    <label for="c3">Стилист</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="c4" type="checkbox">
+                                                    <label for="c4">nail-мастер</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="drop-item">
+                                        <div class="drop-item_heading">
+                                            <p>Другие специалисты <i class="icon-icon28"></i></p>
+                                        </div>
+                                        <div class="drop-item_sub">
+                                            <div class="checkbox">
+                                                <div class="checkbox-item">
+                                                    <input id="d1" type="checkbox">
+                                                    <label for="d1">Визажист</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="d2" type="checkbox">
+                                                    <label for="d2">Парикмахер</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="d3" type="checkbox">
+                                                    <label for="d3">Стилист</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="d4" type="checkbox">
+                                                    <label for="d4">nail-мастер</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sum">
+                                    <label class="heading">Стоимость часа работы</label>
+                                    <div class="sum-number">
+                                        <input type="text" class="amount" id="amount" readonly>
+                                        <input type="text" class="amount2" id="amount2" readonly>
+                                    </div>
+                                    <div id="slider-range"></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="page-right">
+                        <div class="specialists_page-content">
+                            <div class="performer">
+                                <div class="performer__heading">
+                                    <div class="label"><span>Pro</span></div>
+                                    <div class="performer__heading-avatar">
+                                        <a href="javascript:void(0)">
+                                            <img src="../img/search_page/publication-avatar.png" alt="avatar">
+                                        </a>
+                                    </div>
+                                    <div class="performer__heading-info">
+                                        <a href="javascript:void(0)" class="name">Иван Иванов</a>
+                                        <p class="profession">Фотограф</p>
+                                        <p class="place">Россия, Москва</p>
+                                        <p class="price">от 10 000</p>
+                                    </div>
+                                </div>
+                                <div class="performer__gallery">
+                                    <div class="performer__gallery-slider">
+                                        <div class="performer__gallery-item">
+                                            <a data-fancybox="company-gallery1" href="../img/search_page/specialists-img1.jpg"></a>
+                                            <img src="../img/search_page/specialists-img4.jpg" alt="image">
+                                        </div>
+                                        <div class="performer__gallery-item">
+                                            <a data-fancybox="company-gallery1" href="../img/search_page/specialists-img2.jpg"></a>
+                                            <img src="../img/search_page/specialists-img5.jpg" alt="image">
+                                        </div>
+                                        <div class="performer__gallery-item">
+                                            <a data-fancybox="company-gallery1" href="../img/search_page/specialists-img3.jpg"></a>
+                                            <img src="../img/search_page/specialists-img6.jpg" alt="image">
+                                        </div>
+                                        <div class="performer__gallery-item">
+                                            <a data-fancybox="company-gallery1" href="../img/search_page/specialists-img4.jpg"></a>
+                                            <img src="../img/search_page/specialists-img2.jpg" alt="image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="performer">
+                                <div class="performer__heading">
+                                    <div class="label"><span>Pro</span></div>
+                                    <div class="performer__heading-avatar">
+                                        <a href="javascript:void(0)">
+                                            <img src="../img/search_page/publication-avatar.png" alt="avatar">
+                                        </a>
+                                    </div>
+                                    <div class="performer__heading-info">
+                                        <a href="javascript:void(0)" class="name">Иван Иванов</a>
+                                        <p class="profession">Фотограф</p>
+                                        <p class="place">Россия, Москва</p>
+                                        <p class="price">от 10 000</p>
+                                    </div>
+                                </div>
+                                <div class="performer__gallery">
+                                    <div class="performer__gallery-slider">
+                                        <div class="performer__gallery-item">
+                                            <a data-fancybox="company-gallery2" href="../img/search_page/specialists-img1.jpg"></a>
+                                            <img src="../img/search_page/specialists-img4.jpg" alt="image">
+                                        </div>
+                                        <div class="performer__gallery-item">
+                                            <a data-fancybox="company-gallery2" href="../img/search_page/specialists-img2.jpg"></a>
+                                            <img src="../img/search_page/specialists-img5.jpg" alt="image">
+                                        </div>
+                                        <div class="performer__gallery-item">
+                                            <a data-fancybox="company-gallery2" href="../img/search_page/specialists-img3.jpg"></a>
+                                            <img src="../img/search_page/specialists-img6.jpg" alt="image">
+                                        </div>
+                                        <div class="performer__gallery-item">
+                                            <a data-fancybox="company-gallery2" href="../img/search_page/specialists-img4.jpg"></a>
+                                            <img src="../img/search_page/specialists-img2.jpg" alt="image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="performer">
+                                <div class="performer__heading">
+                                    <div class="label"><span>Pro</span></div>
+                                    <div class="performer__heading-avatar">
+                                        <a href="javascript:void(0)">
+                                            <img src="../img/search_page/publication-avatar.png" alt="avatar">
+                                        </a>
+                                    </div>
+                                    <div class="performer__heading-info">
+                                        <a href="javascript:void(0)" class="name">Иван Иванов</a>
+                                        <p class="profession">Фотограф</p>
+                                        <p class="place">Россия, Москва</p>
+                                        <p class="price">от 10 000</p>
+                                    </div>
+                                </div>
+                                <div class="performer__gallery">
+                                    <div class="performer__gallery-slider">
+                                        <div class="performer__gallery-item">
+                                            <a data-fancybox="company-gallery3" href="../img/search_page/specialists-img1.jpg"></a>
+                                            <img src="../img/search_page/specialists-img4.jpg" alt="image">
+                                        </div>
+                                        <div class="performer__gallery-item">
+                                            <a data-fancybox="company-gallery3" href="../img/search_page/specialists-img2.jpg"></a>
+                                            <img src="../img/search_page/specialists-img5.jpg" alt="image">
+                                        </div>
+                                        <div class="performer__gallery-item">
+                                            <a data-fancybox="company-gallery3" href="../img/search_page/specialists-img3.jpg"></a>
+                                            <img src="../img/search_page/specialists-img6.jpg" alt="image">
+                                        </div>
+                                        <div class="performer__gallery-item">
+                                            <a data-fancybox="company-gallery3" href="../img/search_page/specialists-img4.jpg"></a>
+                                            <img src="../img/search_page/specialists-img2.jpg" alt="image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="performer">
+                                <div class="performer__heading">
+                                    <div class="label"><span>Pro</span></div>
+                                    <div class="performer__heading-avatar">
+                                        <a href="javascript:void(0)">
+                                            <img src="../img/search_page/publication-avatar.png" alt="avatar">
+                                        </a>
+                                    </div>
+                                    <div class="performer__heading-info">
+                                        <a href="javascript:void(0)" class="name">Иван Иванов</a>
+                                        <p class="profession">Фотограф</p>
+                                        <p class="place">Россия, Москва</p>
+                                        <p class="price">от 10 000</p>
+                                    </div>
+                                </div>
+                                <div class="performer__gallery">
+                                    <div class="performer__gallery-slider">
+                                        <div class="performer__gallery-item">
+                                            <a data-fancybox="company-gallery4" href="../img/search_page/specialists-img1.jpg"></a>
+                                            <img src="../img/search_page/specialists-img4.jpg" alt="image">
+                                        </div>
+                                        <div class="performer__gallery-item">
+                                            <a data-fancybox="company-gallery4" href="../img/search_page/specialists-img2.jpg"></a>
+                                            <img src="../img/search_page/specialists-img5.jpg" alt="image">
+                                        </div>
+                                        <div class="performer__gallery-item">
+                                            <a data-fancybox="company-gallery4" href="../img/search_page/specialists-img3.jpg"></a>
+                                            <img src="../img/search_page/specialists-img6.jpg" alt="image">
+                                        </div>
+                                        <div class="performer__gallery-item">
+                                            <a data-fancybox="company-gallery4" href="../img/search_page/specialists-img4.jpg"></a>
+                                            <img src="../img/search_page/specialists-img2.jpg" alt="image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="performer">
+                                <div class="performer__heading">
+                                    <div class="label"><span>Pro</span></div>
+                                    <div class="performer__heading-avatar">
+                                        <a href="javascript:void(0)">
+                                            <img src="../img/search_page/publication-avatar.png" alt="avatar">
+                                        </a>
+                                    </div>
+                                    <div class="performer__heading-info">
+                                        <a href="javascript:void(0)" class="name">Иван Иванов</a>
+                                        <p class="profession">Фотограф</p>
+                                        <p class="place">Россия, Москва</p>
+                                        <p class="price">от 10 000</p>
+                                    </div>
+                                </div>
+                                <div class="performer__gallery">
+                                    <div class="performer__gallery-slider">
+                                        <div class="performer__gallery-item">
+                                            <a data-fancybox="company-gallery5" href="../img/search_page/specialists-img1.jpg"></a>
+                                            <img src="../img/search_page/specialists-img4.jpg" alt="image">
+                                        </div>
+                                        <div class="performer__gallery-item">
+                                            <a data-fancybox="company-gallery5" href="../img/search_page/specialists-img2.jpg"></a>
+                                            <img src="../img/search_page/specialists-img5.jpg" alt="image">
+                                        </div>
+                                        <div class="performer__gallery-item">
+                                            <a data-fancybox="company-gallery5" href="../img/search_page/specialists-img3.jpg"></a>
+                                            <img src="../img/search_page/specialists-img6.jpg" alt="image">
+                                        </div>
+                                        <div class="performer__gallery-item">
+                                            <a data-fancybox="company-gallery5" href="../img/search_page/specialists-img4.jpg"></a>
+                                            <img src="../img/search_page/specialists-img2.jpg" alt="image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="performer">
+                                <div class="performer__heading">
+                                    <div class="label"><span>Pro</span></div>
+                                    <div class="performer__heading-avatar">
+                                        <a href="javascript:void(0)">
+                                            <img src="../img/search_page/publication-avatar.png" alt="avatar">
+                                        </a>
+                                    </div>
+                                    <div class="performer__heading-info">
+                                        <a href="javascript:void(0)" class="name">Иван Иванов</a>
+                                        <p class="profession">Фотограф</p>
+                                        <p class="place">Россия, Москва</p>
+                                        <p class="price">от 10 000</p>
+                                    </div>
+                                </div>
+                                <div class="performer__gallery">
+                                    <div class="performer__gallery-slider">
+                                        <div class="performer__gallery-item">
+                                            <a data-fancybox="company-gallery6" href="../img/search_page/specialists-img1.jpg"></a>
+                                            <img src="../img/search_page/specialists-img4.jpg" alt="image">
+                                        </div>
+                                        <div class="performer__gallery-item">
+                                            <a data-fancybox="company-gallery6" href="../img/search_page/specialists-img2.jpg"></a>
+                                            <img src="../img/search_page/specialists-img5.jpg" alt="image">
+                                        </div>
+                                        <div class="performer__gallery-item">
+                                            <a data-fancybox="company-gallery6" href="../img/search_page/specialists-img3.jpg"></a>
+                                            <img src="../img/search_page/specialists-img6.jpg" alt="image">
+                                        </div>
+                                        <div class="performer__gallery-item">
+                                            <a data-fancybox="company-gallery6" href="../img/search_page/specialists-img4.jpg"></a>
+                                            <img src="../img/search_page/specialists-img2.jpg" alt="image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pagination">
+                                <ul class="pagination__list">
+                                    <li><a href="javascript:void(0)"><i class="icon-icon28 left"></i></a></li>
+                                    <li><a href="javascript:void(0)">1</a></li>
+                                    <li><a href="javascript:void(0)">2</a></li>
+                                    <li class="active"><span>3</span></li>
+                                    <li><a href="javascript:void(0)"><i class="icon-icon28"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="container">
+                <a class="logo" href="javascript:void(0)"><img src="../img/logo.png" alt=""></a>
+                <div class="footer-content clearfix">
+                    <nav>
+                        <ul>
+                            <li><a href="javascript:void(0)">Специалисты</a></li>
+                            <li><a href="javascript:void(0)">Организации</a></li>
+                            <li><a href="javascript:void(0)">События</a></li>
+                            <li><a href="javascript:void(0)">Магазин</a></li>
+                        </ul>
+                    </nav>
+                    <ul class="sosial">
+                        <li><a href="javascript:void(0)"><i class="icon-icon12"></i></a></li>
+                        <li><a href="javascript:void(0)"><i class="icon-icon2"></i></a></li>
+                        <li><a href="javascript:void(0)"><i class="icon-icon18"></i></a></li>
+                    </ul>
+                    <p>© 2018 Все права защищены</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/slick.min.js"></script>
+    <script src="../js/jcf.min.js"></script>
+    <script src="../js/jcf.checkbox.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/jquery-ui.autocomplete.min.js"></script>
+    <script src="../js/jquery.fancybox.min.js"></script>
+
+
+    <script src="../js/script.min.js"></script>
+    <script src="../js/specialists.min.js"></script>
+</body>
+
+</html>

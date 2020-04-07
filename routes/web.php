@@ -291,6 +291,7 @@ Route::get('/faq', 'PageController@pagefaq')->name('faq');
 Route::get('/sendgiftcard{request?}', 'Ajax\GiftcardController@send')->name('send');
 
 Route::get('/stocks', 'PageController@stocks')->name('stocks');
+Route::get('/sendStocksCelebrates{request?}', 'Ajax\StocksFormController@send')->name('send');
 
 /*Route::get('/sendgiftcard', function (Request $request){
 dd($request->all());

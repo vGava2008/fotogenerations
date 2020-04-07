@@ -16,7 +16,19 @@
 
 		@include('page.partials.stocksBody')
 
+		@include('page.partials.stocksStaticPart')
 
+		@include('layouts.foother')
 	</div>
+		<script src="{{ asset('/js/jquery.min.js') }}"></script>
+		<script src="{{ asset('/js/jquery.mask.min.js') }}"></script>
+		<script src="{{ asset('/js/jquery.matchHeight.min.js') }}"></script>
+		<script src="{{ asset('/js/jquery-ui.min.js') }}"></script>
+		<script src="{{ asset('/js/jcf.min.js') }}"></script>
+		<script src="{{ asset('/js/jcf.file.min.js') }}"></script>
+		<script src="{{ asset('/js/slick.min.js') }}"></script>
+		<script src="{{ asset('/js/script.min.js') }}"></script>
+		<script src="{{ asset('/js/stocks.min.js') }}"></script>
+		<script src="{{ asset('/js/stocks-celebrates-form.js') }}"></script>
+		<script src="{{ asset('/js/custom.js') }}"></script>
 </body>
-@include('layouts.foother')

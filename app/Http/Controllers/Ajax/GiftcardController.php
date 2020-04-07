@@ -10,6 +10,8 @@ class GiftcardController extends Controller
 {
     public function send(Request $request)
     {
+        var_dump($request);
+        die();
         //dd($request->all());
         $result = false;
         if($request->ajax() && !empty($request->all()))

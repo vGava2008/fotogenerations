@@ -20,7 +20,7 @@
                 <li><a href="{{ $menu->url }}">{{ $menu->name }}</a></li>
                 @endif
                 @endforeach
-		    </ul>
+            </ul>
         </nav>
         <div class="tel-sosial clearfix">
             <a href="javascript:void(0)" class="discount">
@@ -41,14 +41,4 @@
             </div>
         </div>
     </div>
-</footer> 
-</div>
-@yield('js_project')
-@if($page_id == 'stocks')
-    <!-- stocks -->
-
-    <!-- END: stocks -->
-@endif()
-
-    </body>
-</html>
+</footer>

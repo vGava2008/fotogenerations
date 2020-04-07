@@ -1,7 +1,7 @@
 $('#senderror').hide();
 $('#sendmessage').hide();
 $(document).ready(function () {
-    console.log('Feedback Card');
+    console.log('feedback-card.js');
     $('#feedbackform').on('submit', function (e) {
         e.preventDefault();
         console.log($('#feedbackform').serialize());

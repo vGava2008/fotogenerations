@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>События</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/events.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="container clearfix">
+                <div class="check-entrance clearfix">
+                    <a class="check" href="javasccript:void(0)"><i class="icon-icon36"></i>Вход</a>
+                    <a class="entrance" href="javasccript:void(0)"><i class="icon-icon5"></i>Регистрация</a>
+                </div>
+                <div class="menu-logo clearfix">
+                    <span class="open-menu">
+                    <span></span>
+                    </span>
+                    <a class="logo" href="index.html"><img src="../img/logo.png" alt=""></a>
+                    <form action="">
+                        <input type="search">
+                        <button><i class="icon-icon25"></i></button>
+                    </form>
+                    <nav>
+                        <ul>
+                            <li class="active"><a href="javasccript:void(0)">Специалисты</a></li>
+                            <li><a href="javasccript:void(0)">Организации</a></li>
+                            <li><a href="javasccript:void(0)">События</a></li>
+                            <li><a href="javasccript:void(0)">Магазин</a></li>
+                            <li><a href="javasccript:void(0)">Проекты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="bread-crumbs">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><span>События</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="events">
+        <div class="container">
+            <div class="page-content clearfix">
+                <h2 class="page-title">События</h2>
+                <div class="events_page clearfix">
+                    <div class="page-left">
+                        <div class="events_page-filter">
+                            <div class="filterTop">
+                                <div class="filterTop__search">
+                                    <input type="search" placeholder="Поиск....">
+                                    <button><i class="icon-icon25"></i></button>
+                                </div>
+                                <p class="openBtn">Фильтры</p>
+                                <span class="open-close"></span>
+                            </div>
+                            <form>
+                                <div class="search">
+                                    <input type="search" placeholder="Поиск....">
+                                    <button><i class="icon-icon25"></i></button>
+                                </div>
+                                <div class="filter-input">
+                                    <div class="input">
+                                        <label class="heading">Страна</label>
+                                        <input id="setCountry" type="input">
+                                    </div>
+                                </div>
+                                <div class="filter-input">
+                                    <div class="input">
+                                        <label class="heading">Город</label>
+                                        <input id="setCity" type="input">
+                                    </div>
+                                </div>
+                                <div class="filter-multiSelect">
+                                    <p class="heading">Выбор даты</p>
+                                    <div class="selectWrap">
+                                        <div class="select">
+                                            <select name="day" id="day"></select>
+                                            <i class="icon-icon28"></i>
+                                        </div>
+                                        <div class="select">
+                                            <select name="month" id="month"></select>
+                                            <i class="icon-icon28"></i>
+                                        </div>
+                                        <div class="select">
+                                            <select name="year" id="year"></select>
+                                            <i class="icon-icon28"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-drop">
+                                    <p class="heading">Тематика</p>
+                                    <div class="drop-item active">
+                                        <div class="drop-item_heading">
+                                            <p>Фотография<i class="icon-icon28"></i></p>
+                                        </div>
+                                        <div class="drop-item_sub">
+                                            <div class="checkbox">
+                                                <div class="checkbox-item">
+                                                    <input id="a1_1" type="checkbox" checked>
+                                                    <label for="a1_1">Детская съемка</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a1_2" type="checkbox">
+                                                    <label for="a1_2">Коммерческая фотосъемка</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a1_3" type="checkbox">
+                                                    <label for="a1_3">Ню</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a1_4" type="checkbox">
+                                                    <label for="a1_4">Обработка фотографии</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a1_5" type="checkbox">
+                                                    <label for="a1_5">Основы фотографии</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a1_6" type="checkbox">
+                                                    <label for="a1_6">Предметная съемка</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a1_7" type="checkbox">
+                                                    <label for="a1_7">Работа со светом</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a1_8" type="checkbox">
+                                                    <label for="a1_8">Репортажная съемка</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a1_9" type="checkbox">
+                                                    <label for="a1_9">Студийная съемка</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a1_10" type="checkbox">
+                                                    <label for="a1_10">Свадебная съемка</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a1_11" type="checkbox">
+                                                    <label for="a1_11">Тематическая съемка</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a1_12" type="checkbox">
+                                                    <label for="a1_12">Другое</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="drop-item">
+                                        <div class="drop-item_heading">
+                                            <p>Видеография<i class="icon-icon28"></i></p>
+                                        </div>
+                                        <div class="drop-item_sub">
+                                            <div class="checkbox">
+                                                <div class="checkbox-item">
+                                                    <input id="a2_1" type="checkbox">
+                                                    <label for="a2_1">Коммерческий</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a2_2" type="checkbox">
+                                                    <label for="a2_2">Свадебный</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a2_3" type="checkbox">
+                                                    <label for="a2_3">Другой</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="drop-item">
+                                        <div class="drop-item_heading">
+                                            <p>Модельные<i class="icon-icon28"></i></p>
+                                        </div>
+                                        <div class="drop-item_sub">
+                                            <div class="checkbox">
+                                                <div class="checkbox-item">
+                                                    <input id="a3_1" type="checkbox">
+                                                    <label for="a3_1">Все</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a3_2" type="checkbox">
+                                                    <label for="a3_2">Съемка в стиле ню</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="filter-simple">
+                                    <p class="heading">Вид события</p>
+                                    <div class="checkbox">
+                                        <div class="checkbox-item">
+                                            <input id="z1" type="checkbox">
+                                            <label for="z1">Мастер-класс</label>
+                                        </div>
+                                        <div class="checkbox-item">
+                                            <input id="z2" type="checkbox">
+                                            <label for="z2">Лекция</label>
+                                        </div>
+                                        <div class="checkbox-item">
+                                            <input id="z3" type="checkbox">
+                                            <label for="z3">Семинар</label>
+                                        </div>
+                                        <div class="checkbox-item">
+                                            <input id="z4" type="checkbox">
+                                            <label for="z4">Курс</label>
+                                        </div>
+                                        <div class="checkbox-item">
+                                            <input id="z5" type="checkbox">
+                                            <label for="z5">Другое</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="filter-simple">
+                                    <p class="heading">События</p>
+                                    <div class="checkbox">
+                                        <div class="checkbox-item">
+                                            <input id="y1" type="checkbox">
+                                            <label for="y1">Все события</label>
+                                        </div>
+                                        <div class="checkbox-item">
+                                            <input id="y2" type="checkbox">
+                                            <label for="y2">На кого подписан</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                    <div class="page-right">
+                        <div class="events_page-content">
+                            <div class="wrapper">
+                                <div class="events-item">
+                                    <a href="javascript:void(0)" class="link"></a>
+                                    <div class="item_img" style="background-image: url('../img/search_page/development-img1.jpg');">
+                                        <a href="javascript:void(0)" class="likeBtn"></a>
+                                    </div>
+                                    <div class="item_content">
+                                        <h4 class="item_content-title">Lorem Ipsum - это </h4>
+                                        <h4 class="item_content-title">текст-рыба</h4>
+                                        <p class="item_content-text">
+                                            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                                        </p>
+                                        <p class="item_content-time">10 ноября в 12:00</p>
+                                        <p class="item_content-place">Челябинск, Россия</p>
+                                    </div>
+                                </div>
+                                <div class="events-item">
+                                    <a href="javascript:void(0)" class="link"></a>
+                                    <div class="item_img" style="background-image: url('../img/search_page/development-img2.jpg');">
+                                        <a href="javascript:void(0)" class="likeBtn"></a>
+                                    </div>
+                                    <div class="item_content">
+                                        <h4 class="item_content-title">Lorem Ipsum - это </h4>
+                                        <h4 class="item_content-title">текст-рыба</h4>
+                                        <p class="item_content-text">
+                                            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                                        </p>
+                                        <p class="item_content-time">10 ноября в 12:00</p>
+                                        <p class="item_content-place">Челябинск, Россия</p>
+                                    </div>
+                                </div>
+                                <div class="events-item">
+                                    <a href="javascript:void(0)" class="link"></a>
+                                    <div class="item_img" style="background-image: url('../img/search_page/development-img3.jpg');">
+                                        <a href="javascript:void(0)" class="likeBtn"></a>
+                                    </div>
+                                    <div class="item_content">
+                                        <h4 class="item_content-title">Lorem Ipsum - это </h4>
+                                        <h4 class="item_content-title">текст-рыба</h4>
+                                        <p class="item_content-text">
+                                            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                                        </p>
+                                        <p class="item_content-time">10 ноября в 12:00</p>
+                                        <p class="item_content-place">Челябинск, Россия</p>
+                                    </div>
+                                </div>
+                                <div class="events-item">
+                                    <a href="javascript:void(0)" class="link"></a>
+                                    <div class="item_img" style="background-image: url('../img/search_page/development-img1.jpg');">
+                                        <a href="javascript:void(0)" class="likeBtn"></a>
+                                    </div>
+                                    <div class="item_content">
+                                        <h4 class="item_content-title">Lorem Ipsum - это </h4>
+                                        <h4 class="item_content-title">текст-рыба</h4>
+                                        <p class="item_content-text">
+                                            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                                        </p>
+                                        <p class="item_content-time">10 ноября в 12:00</p>
+                                        <p class="item_content-place">Челябинск, Россия</p>
+                                    </div>
+                                </div>
+                                <div class="events-item">
+                                    <a href="javascript:void(0)" class="link"></a>
+                                    <div class="item_img" style="background-image: url('../img/search_page/development-img2.jpg');">
+                                        <a href="javascript:void(0)" class="likeBtn"></a>
+                                    </div>
+                                    <div class="item_content">
+                                        <h4 class="item_content-title">Lorem Ipsum - это </h4>
+                                        <h4 class="item_content-title">текст-рыба</h4>
+                                        <p class="item_content-text">
+                                            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                                        </p>
+                                        <p class="item_content-time">10 ноября в 12:00</p>
+                                        <p class="item_content-place">Челябинск, Россия</p>
+                                    </div>
+                                </div>
+                                <div class="events-item">
+                                    <a href="javascript:void(0)" class="link"></a>
+                                    <div class="item_img" style="background-image: url('../img/search_page/development-img3.jpg');">
+                                        <a href="javascript:void(0)" class="likeBtn"></a>
+                                    </div>
+                                    <div class="item_content">
+                                        <h4 class="item_content-title">Lorem Ipsum - это </h4>
+                                        <h4 class="item_content-title">текст-рыба</h4>
+                                        <p class="item_content-text">
+                                            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                                        </p>
+                                        <p class="item_content-time">10 ноября в 12:00</p>
+                                        <p class="item_content-place">Челябинск, Россия</p>
+                                    </div>
+                                </div>
+                                <div class="events-item">
+                                    <a href="javascript:void(0)" class="link"></a>
+                                    <div class="item_img" style="background-image: url('../img/search_page/development-img1.jpg');">
+                                        <a href="javascript:void(0)" class="likeBtn"></a>
+                                    </div>
+                                    <div class="item_content">
+                                        <h4 class="item_content-title">Lorem Ipsum - это </h4>
+                                        <h4 class="item_content-title">текст-рыба</h4>
+                                        <p class="item_content-text">
+                                            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                                        </p>
+                                        <p class="item_content-time">10 ноября в 12:00</p>
+                                        <p class="item_content-place">Челябинск, Россия</p>
+                                    </div>
+                                </div>
+                                <div class="events-item">
+                                    <a href="javascript:void(0)" class="link"></a>
+                                    <div class="item_img" style="background-image: url('../img/search_page/development-img2.jpg');">
+                                        <a href="javascript:void(0)" class="likeBtn"></a>
+                                    </div>
+                                    <div class="item_content">
+                                        <h4 class="item_content-title">Lorem Ipsum - это </h4>
+                                        <h4 class="item_content-title">текст-рыба</h4>
+                                        <p class="item_content-text">
+                                            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                                        </p>
+                                        <p class="item_content-time">10 ноября в 12:00</p>
+                                        <p class="item_content-place">Челябинск, Россия</p>
+                                    </div>
+                                </div>
+                                <div class="events-item">
+                                    <a href="javascript:void(0)" class="link"></a>
+                                    <div class="item_img" style="background-image: url('../img/search_page/development-img3.jpg');">
+                                        <a href="javascript:void(0)" class="likeBtn"></a>
+                                    </div>
+                                    <div class="item_content">
+                                        <h4 class="item_content-title">Lorem Ipsum - это </h4>
+                                        <h4 class="item_content-title">текст-рыба</h4>
+                                        <p class="item_content-text">
+                                            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                                        </p>
+                                        <p class="item_content-time">10 ноября в 12:00</p>
+                                        <p class="item_content-place">Челябинск, Россия</p>
+                                    </div>
+                                </div>
+                                <div class="events-item">
+                                    <a href="javascript:void(0)" class="link"></a>
+                                    <div class="item_img" style="background-image: url('../img/search_page/development-img1.jpg');">
+                                        <a href="javascript:void(0)" class="likeBtn"></a>
+                                    </div>
+                                    <div class="item_content">
+                                        <h4 class="item_content-title">Lorem Ipsum - это </h4>
+                                        <h4 class="item_content-title">текст-рыба</h4>
+                                        <p class="item_content-text">
+                                            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                                        </p>
+                                        <p class="item_content-time">10 ноября в 12:00</p>
+                                        <p class="item_content-place">Челябинск, Россия</p>
+                                    </div>
+                                </div>
+                                <div class="events-item">
+                                    <a href="javascript:void(0)" class="link"></a>
+                                    <div class="item_img" style="background-image: url('../img/search_page/development-img2.jpg');">
+                                        <a href="javascript:void(0)" class="likeBtn"></a>
+                                    </div>
+                                    <div class="item_content">
+                                        <h4 class="item_content-title">Lorem Ipsum - это </h4>
+                                        <h4 class="item_content-title">текст-рыба</h4>
+                                        <p class="item_content-text">
+                                            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                                        </p>
+                                        <p class="item_content-time">10 ноября в 12:00</p>
+                                        <p class="item_content-place">Челябинск, Россия</p>
+                                    </div>
+                                </div>
+                                <div class="events-item">
+                                    <a href="javascript:void(0)" class="link"></a>
+                                    <div class="item_img" style="background-image: url('../img/search_page/development-img3.jpg');">
+                                        <a href="javascript:void(0)" class="likeBtn"></a>
+                                    </div>
+                                    <div class="item_content">
+                                        <h4 class="item_content-title">Lorem Ipsum - это </h4>
+                                        <h4 class="item_content-title">текст-рыба</h4>
+                                        <p class="item_content-text">
+                                            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                                        </p>
+                                        <p class="item_content-time">10 ноября в 12:00</p>
+                                        <p class="item_content-place">Челябинск, Россия</p>
+                                    </div>
+                                </div>
+                                <div class="events-item">
+                                    <a href="javascript:void(0)" class="link"></a>
+                                    <div class="item_img" style="background-image: url('../img/search_page/development-img1.jpg');">
+                                        <a href="javascript:void(0)" class="likeBtn"></a>
+                                    </div>
+                                    <div class="item_content">
+                                        <h4 class="item_content-title">Lorem Ipsum - это </h4>
+                                        <h4 class="item_content-title">текст-рыба</h4>
+                                        <p class="item_content-text">
+                                            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                                        </p>
+                                        <p class="item_content-time">10 ноября в 12:00</p>
+                                        <p class="item_content-place">Челябинск, Россия</p>
+                                    </div>
+                                </div>
+                                <div class="events-item">
+                                    <a href="javascript:void(0)" class="link"></a>
+                                    <div class="item_img" style="background-image: url('../img/search_page/development-img2.jpg');">
+                                        <a href="javascript:void(0)" class="likeBtn"></a>
+                                    </div>
+                                    <div class="item_content">
+                                        <h4 class="item_content-title">Lorem Ipsum - это </h4>
+                                        <h4 class="item_content-title">текст-рыба</h4>
+                                        <p class="item_content-text">
+                                            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                                        </p>
+                                        <p class="item_content-time">10 ноября в 12:00</p>
+                                        <p class="item_content-place">Челябинск, Россия</p>
+                                    </div>
+                                </div>
+                                <div class="events-item">
+                                    <a href="javascript:void(0)" class="link"></a>
+                                    <div class="item_img" style="background-image: url('../img/search_page/development-img3.jpg');">
+                                        <a href="javascript:void(0)" class="likeBtn"></a>
+                                    </div>
+                                    <div class="item_content">
+                                        <h4 class="item_content-title">Lorem Ipsum - это </h4>
+                                        <h4 class="item_content-title">текст-рыба</h4>
+                                        <p class="item_content-text">
+                                            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                                        </p>
+                                        <p class="item_content-time">10 ноября в 12:00</p>
+                                        <p class="item_content-place">Челябинск, Россия</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pagination">
+                                <ul class="pagination__list">
+                                    <li><a href="javascript:void(0)"><i class="icon-icon28 left"></i></a></li>
+                                    <li><a href="javascript:void(0)">1</a></li>
+                                    <li><a href="javascript:void(0)">2</a></li>
+                                    <li class="active"><span>3</span></li>
+                                    <li><a href="javascript:void(0)"><i class="icon-icon28"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="container">
+                <a class="logo" href="javascript:void(0)"><img src="../img/logo.png" alt=""></a>
+                <div class="footer-content clearfix">
+                    <nav>
+                        <ul>
+                            <li><a href="javascript:void(0)">Специалисты</a></li>
+                            <li><a href="javascript:void(0)">Организации</a></li>
+                            <li><a href="javascript:void(0)">События</a></li>
+                            <li><a href="javascript:void(0)">Магазин</a></li>
+                        </ul>
+                    </nav>
+                    <ul class="sosial">
+                        <li><a href="javascript:void(0)"><i class="icon-icon12"></i></a></li>
+                        <li><a href="javascript:void(0)"><i class="icon-icon2"></i></a></li>
+                        <li><a href="javascript:void(0)"><i class="icon-icon18"></i></a></li>
+                    </ul>
+                    <p>© 2018 Все права защищены</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jcf.min.js"></script>
+    <script src="../js/jcf.checkbox.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/jquery-ui.autocomplete.min.js"></script>
+
+
+    <script src="../js/script.min.js"></script>
+    <script src="../js/events.min.js"></script>
+</body>
+
+</html>

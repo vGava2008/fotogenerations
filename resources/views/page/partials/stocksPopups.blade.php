@@ -9,6 +9,7 @@
         </ul>
     </div>
 </div>
+
 <div class="popup-registration popup">
     <span class="close-popup"></span>
     <div class="popup-content">
@@ -38,6 +39,7 @@
         </form>
     </div>
 </div>
+
 <div class="popup-login popup">
     <span class="close-popup"></span>
     <div class="popup-content">
@@ -57,6 +59,7 @@
         </form>
     </div>
 </div>
+
 <div class="popup-forgotYour popup">
     <span class="close-popup"></span>
     <div class="popup-content">
@@ -79,6 +82,7 @@
         </form>
     </div>
 </div>
+
 <div class="popup-dates popup">
     <span class="close-popup"></span>
     <div class="popup-content">
@@ -101,6 +105,7 @@
         </form>
     </div>
 </div>
+
 <div class="popup-lnvite-friend popup">
     <span class="close-popup"></span>
     <div class="popup-content">
@@ -115,6 +120,7 @@
         </form>
     </div>
 </div>
+
 <div class="popup-print-screen popup">
     <span class="close-popup"></span>
     <div class="popup-content">
@@ -123,12 +129,13 @@
         <p>Публикация на Facebook о нашем сайте дает <strong>скидку 2%</strong></p>
         <form action="">
             <div class="file">
-                <span class="jcf-file"><span class="jcf-fake-input">Выбрать файл</span><span class="jcf-upload-button"><span class="jcf-button-content">Choose file</span></span><input type="file" class="jcf-real-element" style="position: absolute; opacity: 0;"></span>
+                <input type="file">
             </div>
             <button><span>загрузить</span></button>
         </form>
     </div>
 </div>
+
 <div class="popup-photo popup">
     <span class="close-popup"></span>
     <div class="popup-content">
@@ -138,7 +145,7 @@
         <strong><i>*</i>Условия акции: Акция действует один раз в год, после оформления заказа.</strong>
         <form action="">
             <div class="file">
-                <span class="jcf-file"><span class="jcf-fake-input">Выбрать файл</span><span class="jcf-upload-button"><span class="jcf-button-content">Choose file</span></span><input type="file" class="jcf-real-element" style="position: absolute; opacity: 0;"></span>
+                <input type="file">
             </div>
             <button><span>загрузить</span></button>
         </form>

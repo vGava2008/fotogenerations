@@ -1,0 +1,2471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/search.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="container clearfix">
+                <div class="check-entrance clearfix">
+                    <a class="check" href="javasccript:void(0)"><i class="icon-icon36"></i>Вход</a>
+                    <a class="entrance" href="javasccript:void(0)"><i class="icon-icon5"></i>Регистрация</a>
+                </div>
+                <div class="menu-logo clearfix">
+                    <span class="open-menu">
+                    <span></span>
+                    </span>
+                    <a class="logo" href="index.html"><img src="../img/logo.png" alt=""></a>
+                    <form action="">
+                        <input type="search">
+                        <button><i class="icon-icon25"></i></button>
+                    </form>
+                    <nav>
+                        <ul>
+                            <li class="active"><a href="javasccript:void(0)">Специалисты</a></li>
+                            <li><a href="javasccript:void(0)">Организации</a></li>
+                            <li><a href="javasccript:void(0)">События</a></li>
+                            <li><a href="javasccript:void(0)">Магазин</a></li>
+                            <li><a href="javasccript:void(0)">Проекты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="bread-crumbs">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><span>Поиск</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="search">
+        <div class="container">
+            <div class="page-content clearfix">
+                <div class="top-tabs">
+                    <div class="filter-slider" id="filter-slider">
+                        <div data-tab="tab-item1" id="tab-item1" class="filter-items active">
+                            <p>Все</p>
+                        </div>
+                        <div data-tab="tab-item2" id="tab-item2" class="filter-items">
+                            <p>Специалисты</p>
+                        </div>
+                        <div data-tab="tab-item3" id="tab-item3" class="filter-items">
+                            <p>Компании</p>
+                        </div>
+                        <div data-tab="tab-item4" id="tab-item4" class="filter-items">
+                            <p>Проекты</p>
+                        </div>
+                        <div data-tab="tab-item5" id="tab-item5" class="filter-items">
+                            <p>Товары</p>
+                        </div>
+                        <div data-tab="tab-item6" id="tab-item6" class="filter-items">
+                            <p>Публикации</p>
+                        </div>
+                        <div data-tab="tab-item7" id="tab-item7" class="filter-items">
+                            <p>События</p>
+                        </div>
+                        <div data-tab="tab-item8" id="tab-item8" class="filter-items">
+                            <p>Медиа</p>
+                        </div>
+                        <div data-tab="tab-item9" id="tab-item9" class="filter-items">
+                            <p>Медиа2</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="search_page clearfix">
+                    <div class="page-left">
+                        <div class="search_page-menu">
+                            <div class="menu-heading">
+                                <button class="toggle-menu" id="leftToggle-menu">
+                                    <span class="hamburger">
+                                    <span class="sw-topper"></span>
+                                    <span class="sw-bottom"></span>
+                                    <span class="sw-footer"></span>
+                                    </span>
+                                </button>
+                                <span>Меню</span>
+                            </div>
+                            <nav>
+                                <ul>
+                                    <li class="myPage">
+                                        <a href="javascript:void(0)">Моя страницы</a>
+                                    </li>
+                                    <li class="news">
+                                        <a href="javascript:void(0)">Новости</a>
+                                    </li>
+                                    <li class="messages">
+                                        <a href="javascript:void(0)">Сообщения <span>3</span> </a>
+                                    </li>
+                                    <li class="friends">
+                                        <a href="javascript:void(0)">Друзья</a>
+                                    </li>
+                                    <li class="companies">
+                                        <a href="javascript:void(0)">Компании</a>
+                                    </li>
+                                    <li class="projects">
+                                        <a href="javascript:void(0)">Проекты</a>
+                                    </li>
+                                    <li class="photo">
+                                        <a href="javascript:void(0)">Фотографии</a>
+                                    </li>
+                                    <li class="video">
+                                        <a href="javascript:void(0)">Видео</a>
+                                    </li>
+                                    <li class="products">
+                                        <a href="javascript:void(0)">Товары</a>
+                                    </li>
+                                    <li class="marker">
+                                        <a href="javascript:void(0)">Закладки</a>
+                                    </li>
+                                    <li class="reviews">
+                                        <a href="javascript:void(0)">Отзывы</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="search_page-filter">
+                            <div class="filterTop">
+                                <div class="filterTop__search">
+                                    <input type="search" placeholder="Поиск....">
+                                    <button><i class="icon-icon25"></i></button>
+                                </div>
+                                <p class="openBtn">Фильтры</p>
+                                <span class="open-close"></span>
+                            </div>
+                            <form>
+                                <div class="search">
+                                    <input type="search" placeholder="Поиск....">
+                                    <button><i class="icon-icon25"></i></button>
+                                </div>
+                                <div class="filter-input">
+                                    <div class="input">
+                                        <label class="heading">Страна</label>
+                                        <input id="setCountry" type="input">
+                                    </div>
+                                </div>
+                                <div class="filter-input">
+                                    <div class="input">
+                                        <label class="heading">Город</label>
+                                        <input id="setCity" type="input">
+                                    </div>
+                                </div>
+                                <div class="filter-input">
+                                    <div class="input">
+                                        <label class="heading">Метро</label>
+                                        <input id="setMetro" type="input">
+                                    </div>
+                                </div>
+                                <div class="filter-select">
+                                    <labet for="sortSelect" class="heading">Сортировка</labet>
+                                    <div class="selectWrap">
+                                        <select name="sort" id="sortSelect">
+                                            <option value="1">По рейтингу</option>
+                                            <option value="2">По рейтингу2</option>
+                                            <option value="3">По рейтингу3</option>
+                                        </select>
+                                        <i class="icon-icon28"></i>
+                                    </div>
+                                </div>
+                                <div class="filter-multiSelect">
+                                    <p class="heading">Выбор даты</p>
+                                    <div class="selectWrap">
+                                        <div class="select">
+                                            <select name="day" id="day"></select>
+                                            <i class="icon-icon28"></i>
+                                        </div>
+                                        <div class="select">
+                                            <select name="month" id="month"></select>
+                                            <i class="icon-icon28"></i>
+                                        </div>
+                                        <div class="select">
+                                            <select name="year" id="year"></select>
+                                            <i class="icon-icon28"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-drop">
+                                    <p class="heading">Специализация</p>
+                                    <div class="drop-item active">
+                                        <div class="drop-item_heading">
+                                            <p>Фотографы<i class="icon-icon28"></i></p>
+                                        </div>
+                                        <div class="drop-item_sub">
+                                            <div class="checkbox">
+                                                <div class="checkbox-item">
+                                                    <input id="a1_1" type="checkbox" checked>
+                                                    <label for="a1_1">Все</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a1_2" type="checkbox">
+                                                    <label for="a1_2">Детская съемка</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a1_3" type="checkbox">
+                                                    <label for="a1_3">Коммерческая фотосъемка</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a1_4" type="checkbox">
+                                                    <label for="a1_4">Ню</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a1_5" type="checkbox">
+                                                    <label for="a1_5">Обработка фотографии</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a1_6" type="checkbox">
+                                                    <label for="a1_6">Портретная съемка</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a1_7" type="checkbox">
+                                                    <label for="a1_7">Предметная съемка</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a1_8" type="checkbox">
+                                                    <label for="a1_8">Репортажная съемка</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a1_9" type="checkbox">
+                                                    <label for="a1_9">Студийная съемка</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a1_10" type="checkbox">
+                                                    <label for="a1_10">Свадебная съемка</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a1_11" type="checkbox">
+                                                    <label for="a1_11">Семейная съемка</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a1_12" type="checkbox">
+                                                    <label for="a1_12">Тематическая съемка</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a1_13" type="checkbox">
+                                                    <label for="a1_13">Другое</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-drop">
+                                    <div class="drop-item">
+                                        <div class="drop-item_heading">
+                                            <p>Видеографы<i class="icon-icon28"></i></p>
+                                        </div>
+                                        <div class="drop-item_sub">
+                                            <div class="checkbox">
+                                                <div class="checkbox-item">
+                                                    <input id="a2_1" type="checkbox">
+                                                    <label for="a2_1">Коммерческий</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a2_2" type="checkbox">
+                                                    <label for="a2_2">Свадебный</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a2_3" type="checkbox">
+                                                    <label for="a2_3">Другой</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-drop">
+                                    <div class="drop-item">
+                                        <div class="drop-item_heading">
+                                            <p>Модель<i class="icon-icon28"></i></p>
+                                        </div>
+                                        <div class="drop-item_sub">
+                                            <div class="checkbox">
+                                                <div class="checkbox-item">
+                                                    <input id="a3_1" type="checkbox">
+                                                    <label for="a3_1">Все</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a3_2" type="checkbox">
+                                                    <label for="a3_2">Съемка в стиле ню</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-drop">
+                                    <div class="drop-item">
+                                        <div class="drop-item_heading">
+                                            <p>Свадебные специалисты<i class="icon-icon28"></i></p>
+                                        </div>
+                                        <div class="drop-item_sub">
+                                            <div class="checkbox">
+                                                <div class="checkbox-item">
+                                                    <input id="a4_1" type="checkbox">
+                                                    <label for="a4_1">Оформители</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a4_2" type="checkbox">
+                                                    <label for="a4_2">Организаторы</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a4_3" type="checkbox">
+                                                    <label for="a4_3">Ведущие</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a4_4" type="checkbox">
+                                                    <label for="a4_4">Артисты</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a4_5" type="checkbox">
+                                                    <label for="a4_5">Музыканты</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a4_6" type="checkbox">
+                                                    <label for="a4_6">dj</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a4_7" type="checkbox">
+                                                    <label for="a4_7">Регистраторы</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a4_8" type="checkbox">
+                                                    <label for="a4_8">Хореографы</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-drop">
+                                    <div class="drop-item">
+                                        <div class="drop-item_heading">
+                                            <p>Beauty-стилисты<i class="icon-icon28"></i></p>
+                                        </div>
+                                        <div class="drop-item_sub">
+                                            <div class="checkbox">
+                                                <div class="checkbox-item">
+                                                    <input id="a5_1" type="checkbox">
+                                                    <label for="a5_1">Визажист</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a5_2" type="checkbox">
+                                                    <label for="a5_2">Парикмахер</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a5_3" type="checkbox">
+                                                    <label for="a5_3">Стилист</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a5_4" type="checkbox">
+                                                    <label for="a5_4">nail-мастер </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-drop">
+                                    <div class="drop-item">
+                                        <div class="drop-item_heading">
+                                            <p>Другие специалисты<i class="icon-icon28"></i></p>
+                                        </div>
+                                        <div class="drop-item_sub">
+                                            <div class="checkbox">
+                                                <div class="checkbox-item">
+                                                    <input id="a6_1" type="checkbox">
+                                                    <label for="a6_1">Другие специалисты</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input id="a6_2" type="checkbox">
+                                                    <label for="a6_2">Другие специалисты</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-select">
+                                    <labet for="optionsSelect" class="heading">Опции</labet>
+                                    <div class="selectWrap">
+                                        <select name="sort" id="optionsSelect">
+                                            <option value="1">Избранное</option>
+                                            <option value="2">Избранное2</option>
+                                            <option value="3">Избранное3</option>
+                                        </select>
+                                        <i class="icon-icon28"></i>
+                                    </div>
+                                </div>
+                                <div class="filter-select">
+                                    <labet for="modeSelect" class="heading">Режим работы</labet>
+                                    <div class="selectWrap">
+                                        <select name="sort" id="modeSelect">
+                                            <option value="1">Круглосуточно</option>
+                                            <option value="2">Круглосуточно2</option>
+                                            <option value="3">Круглосуточно3</option>
+                                        </select>
+                                        <i class="icon-icon28"></i>
+                                    </div>
+                                </div>
+
+                                <div class="sum">
+                                    <label class="heading">Стоимость часа работы</label>
+                                    <div class="sum-number">
+                                        <input type="text" class="amount" id="amount" readonly>
+                                        <input type="text" class="amount2" id="amount2" readonly>
+                                    </div>
+                                    <div id="slider-range"></div>
+                                </div>
+                                <div class="filter-simple">
+                                    <p class="heading">Производитель</p>
+                                    <div class="checkbox">
+                                        <div class="checkbox-item">
+                                            <input id="w1" type="checkbox" checked>
+                                            <label for="w1">CANON 13</label>
+                                        </div>
+                                        <div class="checkbox-item">
+                                            <input id="w2" type="checkbox">
+                                            <label for="w2">NIKON 26</label>
+                                        </div>
+                                        <div class="checkbox-item">
+                                            <input id="w3" type="checkbox">
+                                            <label for="w3">PENTAX 19</label>
+                                        </div>
+                                        <div class="checkbox-item">
+                                            <input id="w4" type="checkbox">
+                                            <label for="w4">SONY 5</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-simple">
+                                    <p class="heading">Формат матрицы</p>
+                                    <div class="checkbox">
+                                        <div class="checkbox-item">
+                                            <input id="r2" type="checkbox" checked>
+                                            <label for="r2">APS-C 41</label>
+                                        </div>
+                                        <div class="checkbox-item">
+                                            <input id="r3" type="checkbox">
+                                            <label for="r3">Full frame 21</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-simple">
+                                    <div class="checkbox">
+                                        <div class="checkbox-item">
+                                            <input id="t1" type="checkbox" checked>
+                                            <label for="t1">Байонет</label>
+                                        </div>
+                                        <div class="checkbox-item">
+                                            <input id="t1" type="checkbox">
+                                            <label for="t1">Объектив в комплекте</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-simple">
+                                    <p class="heading">Состояние</p>
+                                    <div class="checkbox">
+                                        <div class="checkbox-item">
+                                            <input id="x1" type="checkbox" checked>
+                                            <label for="x1">Новый</label>
+                                        </div>
+                                        <div class="checkbox-item">
+                                            <input id="x2" type="checkbox">
+                                            <label for="x2">б/у</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="page-right">
+                        <div class="search_page-content">
+                            <div class="filter-tab">
+                                <div class="tab-item tab-item1 active clearfix">
+                                    <div class="allResults">
+                                        <div class="allResults__heading">
+                                            <h3 class="title">Специалисты</h3>
+                                            <a data-tab="tab-item2" href="javascript:void(0)" class="seeAll filter-items">Смотреть все</a>
+                                        </div>
+                                        <div class="allResults__content all__performers">
+                                            <div class="all__performers-blk">
+                                                <a href="javascript:void(0)" class="link"></a>
+                                                <div class="all__performers-img" style="background-image: url('../img/search_page/spec1.jpg');"></div>
+                                                <div class="all__performers-content">
+                                                    <p class="name">Алиса Лазарева</p>
+                                                    <p class="place">Санкт-Петербург</p>
+                                                </div>
+                                            </div>
+                                            <div class="all__performers-blk pro">
+                                                <a href="javascript:void(0)" class="link"></a>
+                                                <div class="all__performers-img" style="background-image: url('../img/search_page/spec2.jpg');">
+                                                    <span>Pro</span>
+                                                </div>
+                                                <div class="all__performers-content">
+                                                    <p class="name">Алексей Назаренко</p>
+                                                    <p class="place">Москва</p>
+                                                </div>
+                                            </div>
+                                            <div class="all__performers-blk">
+                                                <a href="javascript:void(0)" class="link"></a>
+                                                <div class="all__performers-img" style="background-image: url('../img/search_page/spec3.jpg');"></div>
+                                                <div class="all__performers-content">
+                                                    <p class="name">Алексей Назаренко</p>
+                                                    <p class="place">Москва</p>
+                                                </div>
+                                            </div>
+                                            <div class="all__performers-blk">
+                                                <a href="javascript:void(0)" class="link"></a>
+                                                <div class="all__performers-img" style="background-image: url('../img/search_page/spec4.jpg');"></div>
+                                                <div class="all__performers-content">
+                                                    <p class="name">Алексей Назаренко</p>
+                                                    <p class="place">Москва</p>
+                                                </div>
+                                            </div>
+                                            <div class="all__performers-blk">
+                                                <a href="javascript:void(0)" class="link"></a>
+                                                <div class="all__performers-img" style="background-image: url('../img/search_page/spec5.jpg');"></div>
+                                                <div class="all__performers-content">
+                                                    <p class="name">Алиса Лазарева</p>
+                                                    <p class="place">Санкт-Петербург</p>
+                                                </div>
+                                            </div>
+                                            <div class="all__performers-blk">
+                                                <a href="javascript:void(0)" class="link"></a>
+                                                <div class="all__performers-img" style="background-image: url('../img/search_page/spec6.jpg');"></div>
+                                                <div class="all__performers-content">
+                                                    <p class="name">Алексей Назаренко</p>
+                                                    <p class="place">Москва</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="allResults">
+                                        <div class="allResults__heading">
+                                            <h3 class="title">Компании</h3>
+                                            <a data-tab="tab-item3" href="javascript:void(0)" class="seeAll filter-items">Смотреть все</a>
+                                        </div>
+                                        <div class="allResults__content all__performers">
+                                            <div class="all__performers-blk">
+                                                <a href="javascript:void(0)" class="link"></a>
+                                                <div class="all__performers-img" style="background-image: url('../img/search_page/spec1.jpg');"></div>
+                                                <div class="all__performers-content">
+                                                    <p class="name">Алиса Лазарева</p>
+                                                    <p class="place">Санкт-Петербург</p>
+                                                </div>
+                                            </div>
+                                            <div class="all__performers-blk pro">
+                                                <a href="javascript:void(0)" class="link"></a>
+                                                <div class="all__performers-img" style="background-image: url('../img/search_page/spec2.jpg');">
+                                                    <span>Pro</span>
+                                                </div>
+                                                <div class="all__performers-content">
+                                                    <p class="name">Алексей Назаренко</p>
+                                                    <p class="place">Москва</p>
+                                                </div>
+                                            </div>
+                                            <div class="all__performers-blk">
+                                                <a href="javascript:void(0)" class="link"></a>
+                                                <div class="all__performers-img" style="background-image: url('../img/search_page/spec3.jpg');"></div>
+                                                <div class="all__performers-content">
+                                                    <p class="name">Алексей Назаренко</p>
+                                                    <p class="place">Москва</p>
+                                                </div>
+                                            </div>
+                                            <div class="all__performers-blk">
+                                                <a href="javascript:void(0)" class="link"></a>
+                                                <div class="all__performers-img" style="background-image: url('../img/search_page/spec4.jpg');"></div>
+                                                <div class="all__performers-content">
+                                                    <p class="name">Алексей Назаренко</p>
+                                                    <p class="place">Москва</p>
+                                                </div>
+                                            </div>
+                                            <div class="all__performers-blk">
+                                                <a href="javascript:void(0)" class="link"></a>
+                                                <div class="all__performers-img" style="background-image: url('../img/search_page/spec5.jpg');"></div>
+                                                <div class="all__performers-content">
+                                                    <p class="name">Алиса Лазарева</p>
+                                                    <p class="place">Санкт-Петербург</p>
+                                                </div>
+                                            </div>
+                                            <div class="all__performers-blk">
+                                                <a href="javascript:void(0)" class="link"></a>
+                                                <div class="all__performers-img" style="background-image: url('../img/search_page/spec6.jpg');"></div>
+                                                <div class="all__performers-content">
+                                                    <p class="name">Алексей Назаренко</p>
+                                                    <p class="place">Москва</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="allResults">
+                                        <div class="allResults__heading">
+                                            <h3 class="title">Товары</h3>
+                                            <a data-tab="tab-item5" href="javascript:void(0)" class="seeAll filter-items">Смотреть все</a>
+                                        </div>
+                                        <div class="allResults__content all__products">
+                                            <div class="all__products-item">
+                                                <a href="javascript:void(0)" class="link"></a>
+                                                <div class="all__products-img">
+                                                    <img src="../img/search_page/product-img3.jpg" alt="image">
+                                                </div>
+                                                <div class="all__products-content">
+                                                    <p class="name">Nikon AF-S Nikkor </p>
+                                                    <p class="info">50mm f/1.8G (JAA015DA ) </p>
+                                                </div>
+                                            </div>
+                                            <div class="all__products-item">
+                                                <a href="javascript:void(0)" class="link"></a>
+                                                <div class="all__products-img">
+                                                    <img src="../img/search_page/product-img3.jpg" alt="image">
+                                                </div>
+                                                <div class="all__products-content">
+                                                    <p class="name">Nikon AF-S Nikkor </p>
+                                                    <p class="info">50mm f/1.8G (JAA015DA ) </p>
+                                                </div>
+                                            </div>
+                                            <div class="all__products-item">
+                                                <a href="javascript:void(0)" class="link"></a>
+                                                <div class="all__products-img">
+                                                    <img src="../img/search_page/product-img3.jpg" alt="image">
+                                                </div>
+                                                <div class="all__products-content">
+                                                    <p class="name">Nikon AF-S Nikkor </p>
+                                                    <p class="info">50mm f/1.8G (JAA015DA ) </p>
+                                                </div>
+                                            </div>
+                                            <div class="all__products-item">
+                                                <a href="javascript:void(0)" class="link"></a>
+                                                <div class="all__products-img">
+                                                    <img src="../img/search_page/product-img3.jpg" alt="image">
+                                                </div>
+                                                <div class="all__products-content">
+                                                    <p class="name">Nikon AF-S Nikkor </p>
+                                                    <p class="info">50mm f/1.8G (JAA015DA ) </p>
+                                                </div>
+                                            </div>
+                                            <div class="all__products-item">
+                                                <a href="javascript:void(0)" class="link"></a>
+                                                <div class="all__products-img">
+                                                    <img src="../img/search_page/product-img3.jpg" alt="image">
+                                                </div>
+                                                <div class="all__products-content">
+                                                    <p class="name">Nikon AF-S Nikkor </p>
+                                                    <p class="info">50mm f/1.8G (JAA015DA ) </p>
+                                                </div>
+                                            </div>
+                                            <div class="all__products-item">
+                                                <a href="javascript:void(0)" class="link"></a>
+                                                <div class="all__products-img">
+                                                    <img src="../img/search_page/product-img3.jpg" alt="image">
+                                                </div>
+                                                <div class="all__products-content">
+                                                    <p class="name">Nikon AF-S Nikkor </p>
+                                                    <p class="info">50mm f/1.8G (JAA015DA ) </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="allResults">
+                                        <div class="allResults__heading">
+                                            <h3 class="title">Проекты</h3>
+                                            <a data-tab="tab-item4" href="javascript:void(0)" class="seeAll filter-items">Смотреть все</a>
+                                        </div>
+                                        <div class="allResults__content all__projects">
+                                            <div class="all__projects-item">
+                                                <a href="project_сard.html" class="link"></a>
+                                                <div class="all__projects-top">
+                                                    <div class="avatar">
+                                                        <img src="../img/search_page/project-avatar.png" alt="avatar">
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="name">Иван Иванов</p>
+                                                        <p class="place">Новосибирск</p>
+                                                    </div>
+                                                </div>
+                                                <div class="all__projects-body">
+                                                    <p>Необходимо снять на видео 8 мероприятий</p>
+                                                    <p class="time">12.03.2019</p>
+                                                </div>
+                                            </div>
+                                            <div class="all__projects-item">
+                                                <a href="project_сard.html" class="link"></a>
+                                                <div class="all__projects-top">
+                                                    <div class="avatar">
+                                                        <img src="../img/search_page/project-avatar.png" alt="avatar">
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="name">Иван Иванов</p>
+                                                        <p class="place">Новосибирск</p>
+                                                    </div>
+                                                </div>
+                                                <div class="all__projects-body">
+                                                    <p>Необходимо снять на видео 8 мероприятий</p>
+                                                    <p class="time">12.03.2019</p>
+                                                </div>
+                                            </div>
+                                            <div class="all__projects-item">
+                                                <a href="project_сard.html" class="link"></a>
+                                                <div class="all__projects-top">
+                                                    <div class="avatar">
+                                                        <img src="../img/search_page/project-avatar.png" alt="avatar">
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="name">Иван Иванов</p>
+                                                        <p class="place">Новосибирск</p>
+                                                    </div>
+                                                </div>
+                                                <div class="all__projects-body">
+                                                    <p>Необходимо снять на видео 8 мероприятий</p>
+                                                    <p class="time">12.03.2019</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="allResults publications-result">
+                                        <div class="allResults__heading">
+                                            <h3 class="title">Публикации</h3>
+                                            <a data-tab="tab-item6" href="javascript:void(0)" class="seeAll filter-items">Смотреть все</a>
+                                        </div>
+                                        <div class="allResults__content all__publications">
+                                            <div class="publication">
+                                                <div class="publication_heading">
+                                                    <div class="publication_heading-author">
+                                                        <div class="author-avatar">
+                                                            <a href="javascript:void(0)">
+                                                                <img src="../img/search_page/publication-avatar.png" alt="avatar">
+                                                            </a>
+                                                        </div>
+                                                        <div class="author-info">
+                                                            <a href="javascript:void(0)" class="name">Анна Иванов </a>
+                                                            <p class="city">Новосибирск</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="publication_heading-btn">
+                                                        <a href="javascript:void(0)" class="arrowBtn"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="publication_content">
+                                                    <p class="publication_content-title">
+                                                        Необходимо снять на видео 8 мероприятий
+                                                    </p>
+                                                    <div class="publication_content-text">
+                                                        <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник
+                                                            создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный
+                                                            дизайн. </p>
+                                                    </div>
+                                                    <div class="publication_content-gallery">
+                                                        <figure class="gallery__img gallery__item--1">
+                                                            <a data-fancybox="allResult-publication" href="../img/search_page/publish-img1.jpg"></a>
+                                                            <img src="../img/search_page/publish-img1.jpg" alt="image">
+                                                        </figure>
+                                                        <figure class="gallery__img gallery__item--2">
+                                                            <a data-fancybox="allResult-publication" href="../img/search_page/publish-img2.jpg"></a>
+                                                            <img src="../img/search_page/publish-img2.jpg" alt="image">
+                                                        </figure>
+                                                        <figure class="gallery__img gallery__item--3">
+                                                            <a data-fancybox="allResult-publication" href="../img/search_page/publish-img3.jpg"></a>
+                                                            <img src="../img/search_page/publish-img3.jpg" alt="image">
+                                                        </figure>
+                                                        <figure class="gallery__img gallery__item--4">
+                                                            <a data-fancybox="allResult-publication" href="../img/search_page/publish-img4.jpg"></a>
+                                                            <img src="../img/search_page/publish-img4.jpg" alt="image">
+                                                        </figure>
+                                                    </div>
+                                                    <div class="publication_content-date">
+                                                        <span>12.03.2019</span>
+                                                    </div>
+                                                    <div class="publication_content-actions">
+                                                        <div class="left-group">
+                                                            <a href="javascript:void(0)" class="likeBtn">
+                                                                <span>17</span>
+                                                            </a>
+                                                            <a href="javascript:void(0)" class="commentBtn">
+                                                                <span>3</span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="right-group">
+                                                            <a href="javascript:void(0)" class="shareBtn"></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="publication">
+                                                <div class="publication_heading">
+                                                    <div class="publication_heading-author">
+                                                        <div class="author-avatar">
+                                                            <a href="javascript:void(0)">
+                                                                <img src="../img/search_page/publication-avatar.png" alt="avatar">
+                                                            </a>
+                                                        </div>
+                                                        <div class="author-info">
+                                                            <a href="javascript:void(0)" class="name">Анна Иванов </a>
+                                                            <p class="city">Новосибирск</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="publication_heading-btn">
+                                                        <a href="javascript:void(0)" class="arrowBtn"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="publication_content">
+                                                    <p class="publication_content-title">
+                                                        Необходимо снять на видео 8 мероприятий
+                                                    </p>
+                                                    <div class="publication_content-text">
+                                                        <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник
+                                                            создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный
+                                                            дизайн. </p>
+                                                    </div>
+                                                    <div class="publication_content-gallery single">
+                                                        <figure class="gallery__img">
+                                                            <a data-fancybox="allResult-publication2" href="../img/search_page/publish-img5.jpg"></a>
+                                                            <img src="../img/search_page/publish-img5.jpg" alt="image">
+                                                        </figure>
+                                                    </div>
+                                                    <div class="publication_content-date">
+                                                        <span>12.03.2019</span>
+                                                    </div>
+                                                    <div class="publication_content-actions">
+                                                        <div class="left-group">
+                                                            <a href="javascript:void(0)" class="likeBtn">
+                                                                <span>17</span>
+                                                            </a>
+                                                            <a href="javascript:void(0)" class="commentBtn">
+                                                                <span>3</span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="right-group">
+                                                            <a href="javascript:void(0)" class="shareBtn"></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-item tab-item2 clearfix">
+                                    <div class="performer">
+                                        <div class="performer__heading">
+                                            <div class="label"><span>Pro</span></div>
+                                            <div class="performer__heading-avatar">
+                                                <a href="javascript:void(0)">
+                                                    <img src="../img/search_page/specialist-avatar.png" alt="avatar">
+                                                </a>
+                                            </div>
+                                            <div class="performer__heading-info">
+                                                <a href="javascript:void(0)" class="name">Иван Иванов</a>
+                                                <p class="profession">Фотограф</p>
+                                                <p class="place">Россия, Москва</p>
+                                                <p class="price">от 10 000</p>
+                                            </div>
+                                            <div class="performer__heading-subscribe">
+                                                <a href="javascript:void(0)" class="subscribeBtn">Подписаться</a>
+                                            </div>
+                                        </div>
+                                        <div class="performer__gallery">
+                                            <div class="performer__gallery-slider">
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="specialists-gallery1" href="../img/search_page/specialists-img1.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img1.jpg" alt="image">
+                                                </div>
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="specialists-gallery1" href="../img/search_page/specialists-img2.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img2.jpg" alt="image">
+                                                </div>
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="specialists-gallery1" href="../img/search_page/specialists-img3.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img3.jpg" alt="image">
+                                                </div>
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="specialists-gallery1" href="../img/search_page/specialists-img4.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img2.jpg" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="performer">
+                                        <div class="performer__heading">
+                                            <div class="label"><span>Pro</span></div>
+                                            <div class="performer__heading-avatar">
+                                                <a href="javascript:void(0)">
+                                                    <img src="../img/search_page/specialist-avatar.png" alt="avatar">
+                                                </a>
+                                            </div>
+                                            <div class="performer__heading-info">
+                                                <a href="javascript:void(0)" class="name">Иван Иванов</a>
+                                                <p class="profession">Фотограф</p>
+                                                <p class="place">Россия, Москва</p>
+                                                <p class="price">от 10 000</p>
+                                            </div>
+                                            <div class="performer__heading-subscribe">
+                                                <a href="javascript:void(0)" class="subscribeBtn">Подписаться</a>
+                                            </div>
+                                        </div>
+                                        <div class="performer__gallery">
+                                            <div class="performer__gallery-slider">
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="specialists-gallery2" href="../img/search_page/specialists-img1.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img1.jpg" alt="image">
+                                                </div>
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="specialists-gallery2" href="../img/search_page/specialists-img2.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img2.jpg" alt="image">
+                                                </div>
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="specialists-gallery2" href="../img/search_page/specialists-img3.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img3.jpg" alt="image">
+                                                </div>
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="specialists-gallery2" href="../img/search_page/specialists-img4.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img2.jpg" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="performer">
+                                        <div class="performer__heading">
+                                            <div class="label"><span>Pro</span></div>
+                                            <div class="performer__heading-avatar">
+                                                <a href="javascript:void(0)">
+                                                    <img src="../img/search_page/specialist-avatar.png" alt="avatar">
+                                                </a>
+                                            </div>
+                                            <div class="performer__heading-info">
+                                                <a href="javascript:void(0)" class="name">Иван Иванов</a>
+                                                <p class="profession">Фотограф</p>
+                                                <p class="place">Россия, Москва</p>
+                                                <p class="price">от 10 000</p>
+                                            </div>
+                                            <div class="performer__heading-subscribe">
+                                                <a href="javascript:void(0)" class="subscribeBtn">Подписаться</a>
+                                            </div>
+                                        </div>
+                                        <div class="performer__gallery">
+                                            <div class="performer__gallery-slider">
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="specialists-gallery3" href="../img/search_page/specialists-img1.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img1.jpg" alt="image">
+                                                </div>
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="specialists-gallery3" href="../img/search_page/specialists-img2.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img2.jpg" alt="image">
+                                                </div>
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="specialists-gallery3" href="../img/search_page/specialists-img3.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img3.jpg" alt="image">
+                                                </div>
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="specialists-gallery3" href="../img/search_page/specialists-img4.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img2.jpg" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="performer">
+                                        <div class="performer__heading">
+                                            <div class="label"><span>Pro</span></div>
+                                            <div class="performer__heading-avatar">
+                                                <a href="javascript:void(0)">
+                                                    <img src="../img/search_page/specialist-avatar.png" alt="avatar">
+                                                </a>
+                                            </div>
+                                            <div class="performer__heading-info">
+                                                <a href="javascript:void(0)" class="name">Иван Иванов</a>
+                                                <p class="profession">Фотограф</p>
+                                                <p class="place">Россия, Москва</p>
+                                                <p class="price">от 10 000</p>
+                                            </div>
+                                            <div class="performer__heading-subscribe">
+                                                <a href="javascript:void(0)" class="subscribeBtn">Подписаться</a>
+                                            </div>
+                                        </div>
+                                        <div class="performer__gallery">
+                                            <div class="performer__gallery-slider">
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="specialists-gallery4" href="../img/search_page/specialists-img1.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img1.jpg" alt="image">
+                                                </div>
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="specialists-gallery4" href="../img/search_page/specialists-img2.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img2.jpg" alt="image">
+                                                </div>
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="specialists-gallery4" href="../img/search_page/specialists-img3.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img3.jpg" alt="image">
+                                                </div>
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="specialists-gallery4" href="../img/search_page/specialists-img4.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img2.jpg" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="performer">
+                                        <div class="performer__heading">
+                                            <div class="label"><span>Pro</span></div>
+                                            <div class="performer__heading-avatar">
+                                                <a href="javascript:void(0)">
+                                                    <img src="../img/search_page/specialist-avatar.png" alt="avatar">
+                                                </a>
+                                            </div>
+                                            <div class="performer__heading-info">
+                                                <a href="javascript:void(0)" class="name">Иван Иванов</a>
+                                                <p class="profession">Фотограф</p>
+                                                <p class="place">Россия, Москва</p>
+                                                <p class="price">от 10 000</p>
+                                            </div>
+                                            <div class="performer__heading-subscribe">
+                                                <a href="javascript:void(0)" class="subscribeBtn">Подписаться</a>
+                                            </div>
+                                        </div>
+                                        <div class="performer__gallery">
+                                            <div class="performer__gallery-slider">
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="specialists-gallery5" href="../img/search_page/specialists-img1.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img1.jpg" alt="image">
+                                                </div>
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="specialists-gallery5" href="../img/search_page/specialists-img2.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img2.jpg" alt="image">
+                                                </div>
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="specialists-gallery5" href="../img/search_page/specialists-img3.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img3.jpg" alt="image">
+                                                </div>
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="specialists-gallery5" href="../img/search_page/specialists-img4.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img2.jpg" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="performer">
+                                        <div class="performer__heading">
+                                            <div class="label"><span>Pro</span></div>
+                                            <div class="performer__heading-avatar">
+                                                <a href="javascript:void(0)">
+                                                    <img src="../img/search_page/specialist-avatar.png" alt="avatar">
+                                                </a>
+                                            </div>
+                                            <div class="performer__heading-info">
+                                                <a href="javascript:void(0)" class="name">Иван Иванов</a>
+                                                <p class="profession">Фотограф</p>
+                                                <p class="place">Россия, Москва</p>
+                                                <p class="price">от 10 000</p>
+                                            </div>
+                                            <div class="performer__heading-subscribe">
+                                                <a href="javascript:void(0)" class="subscribeBtn">Подписаться</a>
+                                            </div>
+                                        </div>
+                                        <div class="performer__gallery">
+                                            <div class="performer__gallery-slider">
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="specialists-gallery6" href="../img/search_page/specialists-img1.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img1.jpg" alt="image">
+                                                </div>
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="specialists-gallery6" href="../img/search_page/specialists-img2.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img2.jpg" alt="image">
+                                                </div>
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="specialists-gallery6" href="../img/search_page/specialists-img3.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img3.jpg" alt="image">
+                                                </div>
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="specialists-gallery6" href="../img/search_page/specialists-img4.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img2.jpg" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="performer">
+                                        <div class="performer__heading">
+                                            <div class="label"><span>Pro</span></div>
+                                            <div class="performer__heading-avatar">
+                                                <a href="javascript:void(0)">
+                                                    <img src="../img/search_page/specialist-avatar.png" alt="avatar">
+                                                </a>
+                                            </div>
+                                            <div class="performer__heading-info">
+                                                <a href="javascript:void(0)" class="name">Иван Иванов</a>
+                                                <p class="profession">Фотограф</p>
+                                                <p class="place">Россия, Москва</p>
+                                                <p class="price">от 10 000</p>
+                                            </div>
+                                            <div class="performer__heading-subscribe">
+                                                <a href="javascript:void(0)" class="subscribeBtn">Подписаться</a>
+                                            </div>
+                                        </div>
+                                        <div class="performer__gallery">
+                                            <div class="performer__gallery-slider">
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="specialists-gallery7" href="../img/search_page/specialists-img1.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img1.jpg" alt="image">
+                                                </div>
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="specialists-gallery7" href="../img/search_page/specialists-img2.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img2.jpg" alt="image">
+                                                </div>
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="specialists-gallery7" href="../img/search_page/specialists-img3.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img3.jpg" alt="image">
+                                                </div>
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="specialists-gallery7" href="../img/search_page/specialists-img4.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img2.jpg" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="performer">
+                                        <div class="performer__heading">
+                                            <div class="label"><span>Pro</span></div>
+                                            <div class="performer__heading-avatar">
+                                                <a href="javascript:void(0)">
+                                                    <img src="../img/search_page/specialist-avatar.png" alt="avatar">
+                                                </a>
+                                            </div>
+                                            <div class="performer__heading-info">
+                                                <a href="javascript:void(0)" class="name">Иван Иванов</a>
+                                                <p class="profession">Фотограф</p>
+                                                <p class="place">Россия, Москва</p>
+                                                <p class="price">от 10 000</p>
+                                            </div>
+                                            <div class="performer__heading-subscribe">
+                                                <a href="javascript:void(0)" class="subscribeBtn">Подписаться</a>
+                                            </div>
+                                        </div>
+                                        <div class="performer__gallery">
+                                            <div class="performer__gallery-slider">
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="specialists-gallery8" href="../img/search_page/specialists-img1.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img1.jpg" alt="image">
+                                                </div>
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="specialists-gallery8" href="../img/search_page/specialists-img2.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img2.jpg" alt="image">
+                                                </div>
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="specialists-gallery8" href="../img/search_page/specialists-img3.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img3.jpg" alt="image">
+                                                </div>
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="specialists-gallery8" href="../img/search_page/specialists-img4.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img2.jpg" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pagination">
+                                        <ul class="pagination__list">
+                                            <li><a href="javascript:void(0)"><i class="icon-icon28 left"></i></a></li>
+                                            <li><a href="javascript:void(0)">1</a></li>
+                                            <li><a href="javascript:void(0)">2</a></li>
+                                            <li class="active"><span>3</span></li>
+                                            <li><a href="javascript:void(0)"><i class="icon-icon28"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="tab-item tab-item3 clearfix">
+                                    <div class="performer">
+                                        <div class="performer__heading">
+                                            <div class="label"><span>Pro</span></div>
+                                            <div class="performer__heading-avatar">
+                                                <a href="javascript:void(0)">
+                                                    <img src="../img/search_page/specialist-avatar.png" alt="avatar">
+                                                </a>
+                                            </div>
+                                            <div class="performer__heading-info">
+                                                <a href="javascript:void(0)" class="name">Виванти</a>
+                                                <p class="profession">Фотостудия</p>
+                                                <p class="place">Россия, Москва</p>
+                                                <p class="price">от 10 000</p>
+                                            </div>
+                                            <div class="performer__heading-subscribe">
+                                                <a href="javascript:void(0)" class="subscribeBtn">Подписаться</a>
+                                            </div>
+                                        </div>
+                                        <div class="performer__gallery">
+                                            <div class="performer__gallery-slider">
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="company-gallery1" href="../img/search_page/specialists-img1.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img1.jpg" alt="image">
+                                                </div>
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="company-gallery1" href="../img/search_page/specialists-img2.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img2.jpg" alt="image">
+                                                </div>
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="company-gallery1" href="../img/search_page/specialists-img3.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img3.jpg" alt="image">
+                                                </div>
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="company-gallery1" href="../img/search_page/specialists-img4.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img2.jpg" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="performer">
+                                        <div class="performer__heading">
+                                            <div class="label"><span>Pro</span></div>
+                                            <div class="performer__heading-avatar">
+                                                <a href="javascript:void(0)">
+                                                    <img src="../img/search_page/specialist-avatar.png" alt="avatar">
+                                                </a>
+                                            </div>
+                                            <div class="performer__heading-info">
+                                                <a href="javascript:void(0)" class="name">Good Day</a>
+                                                <p class="profession">Фотограф</p>
+                                                <p class="place">Россия, Москва</p>
+                                                <p class="price">от 10 000</p>
+                                            </div>
+                                            <div class="performer__heading-subscribe">
+                                                <a href="javascript:void(0)" class="subscribeBtn">Подписаться</a>
+                                            </div>
+                                        </div>
+                                        <div class="performer__gallery">
+                                            <div class="performer__gallery-slider">
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="company-gallery2" href="../img/search_page/specialists-img1.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img1.jpg" alt="image">
+                                                </div>
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="company-gallery2" href="../img/search_page/specialists-img2.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img2.jpg" alt="image">
+                                                </div>
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="company-gallery2" href="../img/search_page/specialists-img3.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img3.jpg" alt="image">
+                                                </div>
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="company-gallery2" href="../img/search_page/specialists-img4.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img2.jpg" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="performer">
+                                        <div class="performer__heading">
+                                            <div class="label"><span>Pro</span></div>
+                                            <div class="performer__heading-avatar">
+                                                <a href="javascript:void(0)">
+                                                    <img src="../img/search_page/specialist-avatar.png" alt="avatar">
+                                                </a>
+                                            </div>
+                                            <div class="performer__heading-info">
+                                                <a href="javascript:void(0)" class="name">Виванти</a>
+                                                <p class="profession">Фотостудия</p>
+                                                <p class="place">Россия, Москва</p>
+                                                <p class="price">от 10 000</p>
+                                            </div>
+                                            <div class="performer__heading-subscribe">
+                                                <a href="javascript:void(0)" class="subscribeBtn">Подписаться</a>
+                                            </div>
+                                        </div>
+                                        <div class="performer__gallery">
+                                            <div class="performer__gallery-slider">
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="company-gallery3" href="../img/search_page/specialists-img1.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img1.jpg" alt="image">
+                                                </div>
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="company-gallery3" href="../img/search_page/specialists-img2.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img2.jpg" alt="image">
+                                                </div>
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="company-gallery3" href="../img/search_page/specialists-img3.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img3.jpg" alt="image">
+                                                </div>
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="company-gallery3" href="../img/search_page/specialists-img4.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img2.jpg" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="performer">
+                                        <div class="performer__heading">
+                                            <div class="label"><span>Pro</span></div>
+                                            <div class="performer__heading-avatar">
+                                                <a href="javascript:void(0)">
+                                                    <img src="../img/search_page/specialist-avatar.png" alt="avatar">
+                                                </a>
+                                            </div>
+                                            <div class="performer__heading-info">
+                                                <a href="javascript:void(0)" class="name">Виванти</a>
+                                                <p class="profession">Фотостудия</p>
+                                                <p class="place">Россия, Москва</p>
+                                                <p class="price">от 10 000</p>
+                                            </div>
+                                            <div class="performer__heading-subscribe">
+                                                <a href="javascript:void(0)" class="subscribeBtn">Подписаться</a>
+                                            </div>
+                                        </div>
+                                        <div class="performer__gallery">
+                                            <div class="performer__gallery-slider">
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="company-gallery4" href="../img/search_page/specialists-img1.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img1.jpg" alt="image">
+                                                </div>
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="company-gallery4" href="../img/search_page/specialists-img2.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img2.jpg" alt="image">
+                                                </div>
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="company-gallery4" href="../img/search_page/specialists-img3.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img3.jpg" alt="image">
+                                                </div>
+                                                <div class="performer__gallery-item">
+                                                    <a data-fancybox="company-gallery4" href="../img/search_page/specialists-img4.jpg"></a>
+                                                    <img src="../img/search_page/specialists-img2.jpg" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pagination">
+                                        <ul class="pagination__list">
+                                            <li><a href="javascript:void(0)"><i class="icon-icon28 left"></i></a></li>
+                                            <li><a href="javascript:void(0)">1</a></li>
+                                            <li><a href="javascript:void(0)">2</a></li>
+                                            <li class="active"><span>3</span></li>
+                                            <li><a href="javascript:void(0)"><i class="icon-icon28"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="tab-item tab-item4 clearfix">
+                                    <h2>Проекты</h2>
+                                    <div class="project">
+                                        <a href="project_сard.html" class="showProject"></a>
+                                        <div class="project__heading">
+                                            <div class="project__heading-author">
+                                                <div class="author-avatar">
+                                                    <img src="../img/search_page/project-avatar.png" alt="avatar">
+                                                </div>
+                                                <div class="author-info">
+                                                    <p class="name">Иван Иванов </p>
+                                                    <p class="city">Новосибирск</p>
+                                                </div>
+                                            </div>
+                                            <div class="project__heading-btn">
+                                                <a href="javascript:void(0)" class="offerService">Предложить услугу</a>
+                                                <a href="javascript:void(0)" class="likeBtn"></a>
+                                            </div>
+                                        </div>
+                                        <div class="project_content">
+                                            <div class="project_content-left">
+                                                <p class="project_content-title">
+                                                    Необходимо снять на видео 8 мероприятий
+                                                </p>
+                                                <div class="project_content-text">
+                                                    <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал
+                                                        большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. </p>
+                                                </div>
+                                            </div>
+                                            <div class="project_content-right">
+                                                <div class="project_content-btn">
+                                                    <a href="javascript:void(0)" class="offerService">Предложить услугу</a>
+                                                    <a href="javascript:void(0)" class="likeBtn"></a>
+                                                </div>
+                                                <div class="project_content-info">
+                                                    <div class="about-blk">
+                                                        <p class="daysOpen">Открыт 17 дней</p>
+                                                        <p class="requests">24 заявки</p>
+                                                    </div>
+                                                    <div class="price-blk">
+                                                        <p class="price">3000 RUB</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="project">
+                                        <a href="project_сard.html" class="showProject"></a>
+                                        <div class="project__heading">
+                                            <div class="project__heading-author">
+                                                <div class="author-avatar">
+                                                    <img src="../img/search_page/project-avatar.png" alt="avatar">
+                                                </div>
+                                                <div class="author-info">
+                                                    <p class="name">Иван Иванов </p>
+                                                    <p class="city">Новосибирск</p>
+                                                </div>
+                                            </div>
+                                            <div class="project__heading-btn">
+                                                <a href="javascript:void(0)" class="offerService">Предложить услугу</a>
+                                                <a href="javascript:void(0)" class="likeBtn"></a>
+                                            </div>
+                                        </div>
+                                        <div class="project_content">
+                                            <div class="project_content-left">
+                                                <p class="project_content-title">
+                                                    Необходимо снять на видео 8 мероприятий
+                                                </p>
+                                                <div class="project_content-text">
+                                                    <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал
+                                                        большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. </p>
+                                                </div>
+                                            </div>
+                                            <div class="project_content-right">
+                                                <div class="project_content-btn">
+                                                    <a href="javascript:void(0)" class="offerService">Предложить услугу</a>
+                                                    <a href="javascript:void(0)" class="likeBtn"></a>
+                                                </div>
+                                                <div class="project_content-info">
+                                                    <div class="about-blk">
+                                                        <p class="daysOpen">Открыт 17 дней</p>
+                                                        <p class="requests">24 заявки</p>
+                                                    </div>
+                                                    <div class="price-blk">
+                                                        <p class="price">3000 RUB</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="project">
+                                        <a href="project_сard.html" class="showProject"></a>
+                                        <div class="project__heading">
+                                            <div class="project__heading-author">
+                                                <div class="author-avatar">
+                                                    <img src="../img/search_page/project-avatar.png" alt="avatar">
+                                                </div>
+                                                <div class="author-info">
+                                                    <p class="name">Иван Иванов </p>
+                                                    <p class="city">Новосибирск</p>
+                                                </div>
+                                            </div>
+                                            <div class="project__heading-btn">
+                                                <a href="javascript:void(0)" class="offerService">Предложить услугу</a>
+                                                <a href="javascript:void(0)" class="likeBtn"></a>
+                                            </div>
+                                        </div>
+                                        <div class="project_content">
+                                            <div class="project_content-left">
+                                                <p class="project_content-title">
+                                                    Необходимо снять на видео 8 мероприятий
+                                                </p>
+                                                <div class="project_content-text">
+                                                    <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал
+                                                        большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. </p>
+                                                </div>
+                                            </div>
+                                            <div class="project_content-right">
+                                                <div class="project_content-btn">
+                                                    <a href="javascript:void(0)" class="offerService">Предложить услугу</a>
+                                                    <a href="javascript:void(0)" class="likeBtn"></a>
+                                                </div>
+                                                <div class="project_content-info">
+                                                    <div class="about-blk">
+                                                        <p class="daysOpen">Открыт 17 дней</p>
+                                                        <p class="requests">24 заявки</p>
+                                                    </div>
+                                                    <div class="price-blk">
+                                                        <p class="price">3000 RUB</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="project">
+                                        <a href="project_сard.html" class="showProject"></a>
+                                        <div class="project__heading">
+                                            <div class="project__heading-author">
+                                                <div class="author-avatar">
+                                                    <img src="../img/search_page/project-avatar.png" alt="avatar">
+                                                </div>
+                                                <div class="author-info">
+                                                    <p class="name">Иван Иванов </p>
+                                                    <p class="city">Новосибирск</p>
+                                                </div>
+                                            </div>
+                                            <div class="project__heading-btn">
+                                                <a href="javascript:void(0)" class="offerService">Предложить услугу</a>
+                                                <a href="javascript:void(0)" class="likeBtn"></a>
+                                            </div>
+                                        </div>
+                                        <div class="project_content">
+                                            <div class="project_content-left">
+                                                <p class="project_content-title">
+                                                    Необходимо снять на видео 8 мероприятий
+                                                </p>
+                                                <div class="project_content-text">
+                                                    <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал
+                                                        большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. </p>
+                                                </div>
+                                            </div>
+                                            <div class="project_content-right">
+                                                <div class="project_content-btn">
+                                                    <a href="javascript:void(0)" class="offerService">Предложить услугу</a>
+                                                    <a href="javascript:void(0)" class="likeBtn"></a>
+                                                </div>
+                                                <div class="project_content-info">
+                                                    <div class="about-blk">
+                                                        <p class="daysOpen">Открыт 17 дней</p>
+                                                        <p class="requests">24 заявки</p>
+                                                    </div>
+                                                    <div class="price-blk">
+                                                        <p class="price">3000 RUB</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="project">
+                                        <a href="project_сard.html" class="showProject"></a>
+                                        <div class="project__heading">
+                                            <div class="project__heading-author">
+                                                <div class="author-avatar">
+                                                    <img src="../img/search_page/project-avatar.png" alt="avatar">
+                                                </div>
+                                                <div class="author-info">
+                                                    <p class="name">Иван Иванов </p>
+                                                    <p class="city">Новосибирск</p>
+                                                </div>
+                                            </div>
+                                            <div class="project__heading-btn">
+                                                <a href="javascript:void(0)" class="offerService">Предложить услугу</a>
+                                                <a href="javascript:void(0)" class="likeBtn"></a>
+                                            </div>
+                                        </div>
+                                        <div class="project_content">
+                                            <div class="project_content-left">
+                                                <p class="project_content-title">
+                                                    Необходимо снять на видео 8 мероприятий
+                                                </p>
+                                                <div class="project_content-text">
+                                                    <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал
+                                                        большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. </p>
+                                                </div>
+                                            </div>
+                                            <div class="project_content-right">
+                                                <div class="project_content-btn">
+                                                    <a href="javascript:void(0)" class="offerService">Предложить услугу</a>
+                                                    <a href="javascript:void(0)" class="likeBtn"></a>
+                                                </div>
+                                                <div class="project_content-info">
+                                                    <div class="about-blk">
+                                                        <p class="daysOpen">Открыт 17 дней</p>
+                                                        <p class="requests">24 заявки</p>
+                                                    </div>
+                                                    <div class="price-blk">
+                                                        <p class="price">3000 RUB</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="project">
+                                        <a href="project_сard.html" class="showProject"></a>
+                                        <div class="project__heading">
+                                            <div class="project__heading-author">
+                                                <div class="author-avatar">
+                                                    <img src="../img/search_page/project-avatar.png" alt="avatar">
+                                                </div>
+                                                <div class="author-info">
+                                                    <p class="name">Иван Иванов </p>
+                                                    <p class="city">Новосибирск</p>
+                                                </div>
+                                            </div>
+                                            <div class="project__heading-btn">
+                                                <a href="javascript:void(0)" class="offerService">Предложить услугу</a>
+                                                <a href="javascript:void(0)" class="likeBtn"></a>
+                                            </div>
+                                        </div>
+                                        <div class="project_content">
+                                            <div class="project_content-left">
+                                                <p class="project_content-title">
+                                                    Необходимо снять на видео 8 мероприятий
+                                                </p>
+                                                <div class="project_content-text">
+                                                    <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал
+                                                        большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. </p>
+                                                </div>
+                                            </div>
+                                            <div class="project_content-right">
+                                                <div class="project_content-btn">
+                                                    <a href="javascript:void(0)" class="offerService">Предложить услугу</a>
+                                                    <a href="javascript:void(0)" class="likeBtn"></a>
+                                                </div>
+                                                <div class="project_content-info">
+                                                    <div class="about-blk">
+                                                        <p class="daysOpen">Открыт 17 дней</p>
+                                                        <p class="requests">24 заявки</p>
+                                                    </div>
+                                                    <div class="price-blk">
+                                                        <p class="price">3000 RUB</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pagination">
+                                        <ul class="pagination__list">
+                                            <li><a href="javascript:void(0)"><i class="icon-icon28 left"></i></a></li>
+                                            <li><a href="javascript:void(0)">1</a></li>
+                                            <li><a href="javascript:void(0)">2</a></li>
+                                            <li class="active"><span>3</span></li>
+                                            <li><a href="javascript:void(0)"><i class="icon-icon28"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="tab-item tab-item5 clearfix">
+                                    <div class="products">
+                                        <div class="products__heading">
+                                            <h2>Товары</h2>
+                                            <a href="javascript:void(0)" class="seeAll">Смотреть все</a>
+                                        </div>
+                                        <div class="products__content">
+                                            <div class="products__content-item">
+                                                <a href="javascript:void(0);" class="showProduct"></a>
+                                                <div class="item-img">
+                                                    <img src="../img/search_page/product-img4.jpg" alt="product image">
+                                                    <a href="javascript:void(0)" class="likeBtn"></a>
+                                                    <div class="label"><span>VIP</span></div>
+                                                </div>
+                                                <div class="item-content">
+                                                    <h4>Olympus OM-D E-M10 Mark III</h4>
+                                                    <p class="price">47 500 RUB</p>
+                                                    <p class="place">Новосибирск</p>
+                                                </div>
+                                            </div>
+                                            <div class="products__content-item">
+                                                <a href="javascript:void(0);" class="showProduct"></a>
+                                                <div class="item-img">
+                                                    <img src="../img/search_page/product-img2.jpg" alt="product image">
+                                                    <a href="javascript:void(0)" class="likeBtn"></a>
+                                                    <div class="label"><span>VIP</span></div>
+                                                </div>
+                                                <div class="item-content">
+                                                    <h4>Nikon D3400</h4>
+                                                    <p class="price">26 500 RUB</p>
+                                                    <p class="place">Новосибирск</p>
+                                                </div>
+                                            </div>
+                                            <div class="products__content-item">
+                                                <a href="javascript:void(0);" class="showProduct"></a>
+                                                <div class="item-img">
+                                                    <img src="../img/search_page/product-img3.jpg" alt="product image">
+                                                    <a href="javascript:void(0)" class="likeBtn"></a>
+                                                    <div class="label"><span>VIP</span></div>
+                                                </div>
+                                                <div class="item-content">
+                                                    <h4>Sony Alpha A7 III</h4>
+                                                    <p class="price">150 500 RUB</p>
+                                                    <p class="place">Новосибирск</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="products__content-item">
+                                                <a href="javascript:void(0);" class="showProduct"></a>
+                                                <div class="item-img">
+                                                    <img src="../img/search_page/product-img4.jpg" alt="product image">
+                                                    <a href="javascript:void(0)" class="likeBtn"></a>
+                                                    <div class="label"><span>VIP</span></div>
+                                                </div>
+                                                <div class="item-content">
+                                                    <h4>Olympus OM-D E-M10 Mark III</h4>
+                                                    <p class="price">47 500 RUB</p>
+                                                    <p class="place">Новосибирск</p>
+                                                </div>
+                                            </div>
+                                            <div class="products__content-item">
+                                                <a href="javascript:void(0);" class="showProduct"></a>
+                                                <div class="item-img">
+                                                    <img src="../img/search_page/product-img2.jpg" alt="product image">
+                                                    <a href="javascript:void(0)" class="likeBtn"></a>
+                                                    <div class="label"><span>VIP</span></div>
+                                                </div>
+                                                <div class="item-content">
+                                                    <h4>Nikon D3400</h4>
+                                                    <p class="price">26 500 RUB</p>
+                                                    <p class="place">Новосибирск</p>
+                                                </div>
+                                            </div>
+                                            <div class="products__content-item">
+                                                <a href="javascript:void(0);" class="showProduct"></a>
+                                                <div class="item-img">
+                                                    <img src="../img/search_page/product-img3.jpg" alt="product image">
+                                                    <a href="javascript:void(0)" class="likeBtn"></a>
+                                                    <div class="label"><span>VIP</span></div>
+                                                </div>
+                                                <div class="item-content">
+                                                    <h4>Sony Alpha A7 III</h4>
+                                                    <p class="price">150 500 RUB</p>
+                                                    <p class="place">Новосибирск</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="products__content-item">
+                                                <a href="javascript:void(0);" class="showProduct"></a>
+                                                <div class="item-img">
+                                                    <img src="../img/search_page/product-img4.jpg" alt="product image">
+                                                    <a href="javascript:void(0)" class="likeBtn"></a>
+                                                    <div class="label"><span>VIP</span></div>
+                                                </div>
+                                                <div class="item-content">
+                                                    <h4>Olympus OM-D E-M10 Mark III</h4>
+                                                    <p class="price">47 500 RUB</p>
+                                                    <p class="place">Новосибирск</p>
+                                                </div>
+                                            </div>
+                                            <div class="products__content-item">
+                                                <a href="javascript:void(0);" class="showProduct"></a>
+                                                <div class="item-img">
+                                                    <img src="../img/search_page/product-img2.jpg" alt="product image">
+                                                    <a href="javascript:void(0)" class="likeBtn"></a>
+                                                    <div class="label"><span>VIP</span></div>
+                                                </div>
+                                                <div class="item-content">
+                                                    <h4>Nikon D3400</h4>
+                                                    <p class="price">26 500 RUB</p>
+                                                    <p class="place">Новосибирск</p>
+                                                </div>
+                                            </div>
+                                            <div class="products__content-item">
+                                                <a href="javascript:void(0);" class="showProduct"></a>
+                                                <div class="item-img">
+                                                    <img src="../img/search_page/product-img3.jpg" alt="product image">
+                                                    <a href="javascript:void(0)" class="likeBtn"></a>
+                                                    <div class="label"><span>VIP</span></div>
+                                                </div>
+                                                <div class="item-content">
+                                                    <h4>Sony Alpha A7 III</h4>
+                                                    <p class="price">150 500 RUB</p>
+                                                    <p class="place">Новосибирск</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="products__content-item">
+                                                <a href="javascript:void(0);" class="showProduct"></a>
+                                                <div class="item-img">
+                                                    <img src="../img/search_page/product-img4.jpg" alt="product image">
+                                                    <a href="javascript:void(0)" class="likeBtn"></a>
+                                                    <div class="label"><span>VIP</span></div>
+                                                </div>
+                                                <div class="item-content">
+                                                    <h4>Olympus OM-D E-M10 Mark III</h4>
+                                                    <p class="price">47 500 RUB</p>
+                                                    <p class="place">Новосибирск</p>
+                                                </div>
+                                            </div>
+                                            <div class="products__content-item">
+                                                <a href="javascript:void(0);" class="showProduct"></a>
+                                                <div class="item-img">
+                                                    <img src="../img/search_page/product-img2.jpg" alt="product image">
+                                                    <a href="javascript:void(0)" class="likeBtn"></a>
+                                                    <div class="label"><span>VIP</span></div>
+                                                </div>
+                                                <div class="item-content">
+                                                    <h4>Nikon D3400</h4>
+                                                    <p class="price">26 500 RUB</p>
+                                                    <p class="place">Новосибирск</p>
+                                                </div>
+                                            </div>
+                                            <div class="products__content-item">
+                                                <a href="javascript:void(0);" class="showProduct"></a>
+                                                <div class="item-img">
+                                                    <img src="../img/search_page/product-img3.jpg" alt="product image">
+                                                    <a href="javascript:void(0)" class="likeBtn"></a>
+                                                    <div class="label"><span>VIP</span></div>
+                                                </div>
+                                                <div class="item-content">
+                                                    <h4>Sony Alpha A7 III</h4>
+                                                    <p class="price">150 500 RUB</p>
+                                                    <p class="place">Новосибирск</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="products__content-item">
+                                                <a href="javascript:void(0);" class="showProduct"></a>
+                                                <div class="item-img">
+                                                    <img src="../img/search_page/product-img4.jpg" alt="product image">
+                                                    <a href="javascript:void(0)" class="likeBtn"></a>
+                                                    <div class="label"><span>VIP</span></div>
+                                                </div>
+                                                <div class="item-content">
+                                                    <h4>Olympus OM-D E-M10 Mark III</h4>
+                                                    <p class="price">47 500 RUB</p>
+                                                    <p class="place">Новосибирск</p>
+                                                </div>
+                                            </div>
+                                            <div class="products__content-item">
+                                                <a href="javascript:void(0);" class="showProduct"></a>
+                                                <div class="item-img">
+                                                    <img src="../img/search_page/product-img2.jpg" alt="product image">
+                                                    <a href="javascript:void(0)" class="likeBtn"></a>
+                                                    <div class="label"><span>VIP</span></div>
+                                                </div>
+                                                <div class="item-content">
+                                                    <h4>Nikon D3400</h4>
+                                                    <p class="price">26 500 RUB</p>
+                                                    <p class="place">Новосибирск</p>
+                                                </div>
+                                            </div>
+                                            <div class="products__content-item">
+                                                <a href="javascript:void(0);" class="showProduct"></a>
+                                                <div class="item-img">
+                                                    <img src="../img/search_page/product-img3.jpg" alt="product image">
+                                                    <a href="javascript:void(0)" class="likeBtn"></a>
+                                                    <div class="label"><span>VIP</span></div>
+                                                </div>
+                                                <div class="item-content">
+                                                    <h4>Sony Alpha A7 III</h4>
+                                                    <p class="price">150 500 RUB</p>
+                                                    <p class="place">Новосибирск</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="pagination">
+                                            <ul class="pagination__list">
+                                                <li><a href="javascript:void(0)"><i class="icon-icon28 left"></i></a></li>
+                                                <li><a href="javascript:void(0)">1</a></li>
+                                                <li><a href="javascript:void(0)">2</a></li>
+                                                <li class="active"><span>3</span></li>
+                                                <li><a href="javascript:void(0)"><i class="icon-icon28"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-item tab-item6 clearfix">
+                                    <h2 class="title">Публикации</h2>
+                                    <div class="publication">
+                                        <div class="publication_heading">
+                                            <div class="publication_heading-author">
+                                                <div class="author-avatar">
+                                                    <a href="javascript:void(0)">
+                                                        <img src="../img/search_page/publication-avatar.png" alt="avatar">
+                                                    </a>
+                                                </div>
+                                                <div class="author-info">
+                                                    <a href="javascript:void(0)" class="name">Анна Иванов </a>
+                                                    <p class="city">Новосибирск</p>
+                                                </div>
+                                            </div>
+                                            <div class="publication_heading-btn">
+                                                <a href="javascript:void(0)" class="arrowBtn"></a>
+                                            </div>
+                                        </div>
+                                        <div class="publication_content">
+                                            <p class="publication_content-title">
+                                                Необходимо снять на видео 8 мероприятий
+                                            </p>
+                                            <div class="publication_content-text">
+                                                <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал
+                                                    большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн.
+                                                    </p>
+                                            </div>
+                                            <div class="publication_content-gallery">
+                                                <figure class="gallery__img gallery__item--1">
+                                                    <a data-fancybox="publication-gallery1" href="../img/search_page/publish-img1.jpg"></a>
+                                                    <img src="../img/search_page/publish-img1.jpg" alt="image">
+                                                </figure>
+                                                <figure class="gallery__img gallery__item--2">
+                                                    <a data-fancybox="publication-gallery1" href="../img/search_page/publish-img2.jpg"></a>
+                                                    <img src="../img/search_page/publish-img2.jpg" alt="image">
+                                                </figure>
+                                                <figure class="gallery__img gallery__item--3">
+                                                    <a data-fancybox="publication-gallery1" href="../img/search_page/publish-img3.jpg"></a>
+                                                    <img src="../img/search_page/publish-img3.jpg" alt="image">
+                                                </figure>
+                                                <figure class="gallery__img gallery__item--4">
+                                                    <a data-fancybox="publication-gallery1" href="../img/search_page/publish-img4.jpg"></a>
+                                                    <img src="../img/search_page/publish-img4.jpg" alt="image">
+                                                </figure>
+                                            </div>
+                                            <div class="publication_content-date">
+                                                <span>12.03.2019</span>
+                                            </div>
+                                            <div class="publication_content-actions">
+                                                <div class="left-group">
+                                                    <a href="javascript:void(0)" class="likeBtn">
+                                                        <span>17</span>
+                                                    </a>
+                                                    <a href="javascript:void(0)" class="commentBtn">
+                                                        <span>3</span>
+                                                    </a>
+                                                </div>
+                                                <div class="right-group">
+                                                    <a href="javascript:void(0)" class="shareBtn"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="publication">
+                                        <div class="publication_heading">
+                                            <div class="publication_heading-author">
+                                                <div class="author-avatar">
+                                                    <a href="javascript:void(0)">
+                                                        <img src="../img/search_page/publication-avatar.png" alt="avatar">
+                                                    </a>
+                                                </div>
+                                                <div class="author-info">
+                                                    <a href="javascript:void(0)" class="name">Анна Иванов </a>
+                                                    <p class="city">Новосибирск</p>
+                                                </div>
+                                            </div>
+                                            <div class="publication_heading-btn">
+                                                <a href="javascript:void(0)" class="arrowBtn"></a>
+                                            </div>
+                                        </div>
+                                        <div class="publication_content">
+                                            <p class="publication_content-title">
+                                                Необходимо снять на видео 8 мероприятий
+                                            </p>
+                                            <div class="publication_content-text">
+                                                <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал
+                                                    большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн.
+                                                    </p>
+                                            </div>
+                                            <div class="publication_content-gallery single">
+                                                <figure class="gallery__img">
+                                                    <a data-fancybox="publication-gallery2" href="../img/search_page/publish-img5.jpg"></a>
+                                                    <img src="../img/search_page/publish-img5.jpg" alt="image">
+                                                </figure>
+                                            </div>
+                                            <div class="publication_content-date">
+                                                <span>12.03.2019</span>
+                                            </div>
+                                            <div class="publication_content-actions">
+                                                <div class="left-group">
+                                                    <a href="javascript:void(0)" class="likeBtn">
+                                                        <span>17</span>
+                                                    </a>
+                                                    <a href="javascript:void(0)" class="commentBtn">
+                                                        <span>3</span>
+                                                    </a>
+                                                </div>
+                                                <div class="right-group">
+                                                    <a href="javascript:void(0)" class="shareBtn"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-item tab-item7 clearfix">
+                                    <div class="developments">
+                                        <div class="developments__heading">
+                                            <h2>События</h2>
+                                            <a href="javascript:void(0)" class="seeAll">Смотреть все</a>
+                                        </div>
+                                        <div class="developments__content">
+                                            <div class="developments__content-item">
+                                                <a href="javascript:void(0)" class="link"></a>
+                                                <div class="item_img" style="background-image: url('../img/search_page/development-img1.jpg');">
+                                                    <a href="javascript:void(0)" class="likeBtn"></a>
+                                                </div>
+                                                <div class="item_content">
+                                                    <h4 class="item_content-title">Lorem Ipsum - это </h4>
+                                                    <h4 class="item_content-title">текст-рыба</h4>
+                                                    <p class="item_content-text">
+                                                        Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                                                    </p>
+                                                    <p class="item_content-time">10 ноября в 12:00</p>
+                                                    <p class="item_content-place">Челябинск, Россия</p>
+                                                </div>
+                                            </div>
+                                            <div class="developments__content-item">
+                                                <a href="javascript:void(0)" class="link"></a>
+                                                <div class="item_img" style="background-image: url('../img/search_page/development-img2.jpg');">
+                                                    <a href="javascript:void(0)" class="likeBtn"></a>
+                                                </div>
+                                                <div class="item_content">
+                                                    <h4 class="item_content-title">Lorem Ipsum - это </h4>
+                                                    <h4 class="item_content-title">текст-рыба</h4>
+                                                    <p class="item_content-text">
+                                                        Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                                                    </p>
+                                                    <p class="item_content-time">10 ноября в 12:00</p>
+                                                    <p class="item_content-place">Челябинск, Россия</p>
+                                                </div>
+                                            </div>
+                                            <div class="developments__content-item">
+                                                <a href="javascript:void(0)" class="link"></a>
+                                                <div class="item_img" style="background-image: url('../img/search_page/development-img3.jpg');">
+                                                    <a href="javascript:void(0)" class="likeBtn"></a>
+                                                </div>
+                                                <div class="item_content">
+                                                    <h4 class="item_content-title">Lorem Ipsum - это </h4>
+                                                    <h4 class="item_content-title">текст-рыба</h4>
+                                                    <p class="item_content-text">
+                                                        Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                                                    </p>
+                                                    <p class="item_content-time">10 ноября в 12:00</p>
+                                                    <p class="item_content-place">Челябинск, Россия</p>
+                                                </div>
+                                            </div>
+                                            <div class="developments__content-item">
+                                                <a href="javascript:void(0)" class="link"></a>
+                                                <div class="item_img" style="background-image: url('../img/search_page/development-img1.jpg');">
+                                                    <a href="javascript:void(0)" class="likeBtn"></a>
+                                                </div>
+                                                <div class="item_content">
+                                                    <h4 class="item_content-title">Lorem Ipsum - это </h4>
+                                                    <h4 class="item_content-title">текст-рыба</h4>
+                                                    <p class="item_content-text">
+                                                        Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                                                    </p>
+                                                    <p class="item_content-time">10 ноября в 12:00</p>
+                                                    <p class="item_content-place">Челябинск, Россия</p>
+                                                </div>
+                                            </div>
+                                            <div class="developments__content-item">
+                                                <a href="javascript:void(0)" class="link"></a>
+                                                <div class="item_img" style="background-image: url('../img/search_page/development-img2.jpg');">
+                                                    <a href="javascript:void(0)" class="likeBtn"></a>
+                                                </div>
+                                                <div class="item_content">
+                                                    <h4 class="item_content-title">Lorem Ipsum - это </h4>
+                                                    <h4 class="item_content-title">текст-рыба</h4>
+                                                    <p class="item_content-text">
+                                                        Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                                                    </p>
+                                                    <p class="item_content-time">10 ноября в 12:00</p>
+                                                    <p class="item_content-place">Челябинск, Россия</p>
+                                                </div>
+                                            </div>
+                                            <div class="developments__content-item">
+                                                <a href="javascript:void(0)" class="link"></a>
+                                                <div class="item_img" style="background-image: url('../img/search_page/development-img3.jpg');">
+                                                    <a href="javascript:void(0)" class="likeBtn"></a>
+                                                </div>
+                                                <div class="item_content">
+                                                    <h4 class="item_content-title">Lorem Ipsum - это </h4>
+                                                    <h4 class="item_content-title">текст-рыба</h4>
+                                                    <p class="item_content-text">
+                                                        Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                                                    </p>
+                                                    <p class="item_content-time">10 ноября в 12:00</p>
+                                                    <p class="item_content-place">Челябинск, Россия</p>
+                                                </div>
+                                            </div>
+                                            <div class="developments__content-item">
+                                                <a href="javascript:void(0)" class="link"></a>
+                                                <div class="item_img" style="background-image: url('../img/search_page/development-img1.jpg');">
+                                                    <a href="javascript:void(0)" class="likeBtn"></a>
+                                                </div>
+                                                <div class="item_content">
+                                                    <h4 class="item_content-title">Lorem Ipsum - это </h4>
+                                                    <h4 class="item_content-title">текст-рыба</h4>
+                                                    <p class="item_content-text">
+                                                        Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                                                    </p>
+                                                    <p class="item_content-time">10 ноября в 12:00</p>
+                                                    <p class="item_content-place">Челябинск, Россия</p>
+                                                </div>
+                                            </div>
+                                            <div class="developments__content-item">
+                                                <a href="javascript:void(0)" class="link"></a>
+                                                <div class="item_img" style="background-image: url('../img/search_page/development-img2.jpg');">
+                                                    <a href="javascript:void(0)" class="likeBtn"></a>
+                                                </div>
+                                                <div class="item_content">
+                                                    <h4 class="item_content-title">Lorem Ipsum - это </h4>
+                                                    <h4 class="item_content-title">текст-рыба</h4>
+                                                    <p class="item_content-text">
+                                                        Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                                                    </p>
+                                                    <p class="item_content-time">10 ноября в 12:00</p>
+                                                    <p class="item_content-place">Челябинск, Россия</p>
+                                                </div>
+                                            </div>
+                                            <div class="developments__content-item">
+                                                <a href="javascript:void(0)" class="link"></a>
+                                                <div class="item_img" style="background-image: url('../img/search_page/development-img3.jpg');">
+                                                    <a href="javascript:void(0)" class="likeBtn"></a>
+                                                </div>
+                                                <div class="item_content">
+                                                    <h4 class="item_content-title">Lorem Ipsum - это </h4>
+                                                    <h4 class="item_content-title">текст-рыба</h4>
+                                                    <p class="item_content-text">
+                                                        Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                                                    </p>
+                                                    <p class="item_content-time">10 ноября в 12:00</p>
+                                                    <p class="item_content-place">Челябинск, Россия</p>
+                                                </div>
+                                            </div>
+                                            <div class="developments__content-item">
+                                                <a href="javascript:void(0)" class="link"></a>
+                                                <div class="item_img" style="background-image: url('../img/search_page/development-img1.jpg');">
+                                                    <a href="javascript:void(0)" class="likeBtn"></a>
+                                                </div>
+                                                <div class="item_content">
+                                                    <h4 class="item_content-title">Lorem Ipsum - это </h4>
+                                                    <h4 class="item_content-title">текст-рыба</h4>
+                                                    <p class="item_content-text">
+                                                        Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                                                    </p>
+                                                    <p class="item_content-time">10 ноября в 12:00</p>
+                                                    <p class="item_content-place">Челябинск, Россия</p>
+                                                </div>
+                                            </div>
+                                            <div class="developments__content-item">
+                                                <a href="javascript:void(0)" class="link"></a>
+                                                <div class="item_img" style="background-image: url('../img/search_page/development-img2.jpg');">
+                                                    <a href="javascript:void(0)" class="likeBtn"></a>
+                                                </div>
+                                                <div class="item_content">
+                                                    <h4 class="item_content-title">Lorem Ipsum - это </h4>
+                                                    <h4 class="item_content-title">текст-рыба</h4>
+                                                    <p class="item_content-text">
+                                                        Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                                                    </p>
+                                                    <p class="item_content-time">10 ноября в 12:00</p>
+                                                    <p class="item_content-place">Челябинск, Россия</p>
+                                                </div>
+                                            </div>
+                                            <div class="developments__content-item">
+                                                <a href="javascript:void(0)" class="link"></a>
+                                                <div class="item_img" style="background-image: url('../img/search_page/development-img3.jpg');">
+                                                    <a href="javascript:void(0)" class="likeBtn"></a>
+                                                </div>
+                                                <div class="item_content">
+                                                    <h4 class="item_content-title">Lorem Ipsum - это </h4>
+                                                    <h4 class="item_content-title">текст-рыба</h4>
+                                                    <p class="item_content-text">
+                                                        Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                                                    </p>
+                                                    <p class="item_content-time">10 ноября в 12:00</p>
+                                                    <p class="item_content-place">Челябинск, Россия</p>
+                                                </div>
+                                            </div>
+                                            <div class="developments__content-item">
+                                                <a href="javascript:void(0)" class="link"></a>
+                                                <div class="item_img" style="background-image: url('../img/search_page/development-img1.jpg');">
+                                                    <a href="javascript:void(0)" class="likeBtn"></a>
+                                                </div>
+                                                <div class="item_content">
+                                                    <h4 class="item_content-title">Lorem Ipsum - это </h4>
+                                                    <h4 class="item_content-title">текст-рыба</h4>
+                                                    <p class="item_content-text">
+                                                        Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                                                    </p>
+                                                    <p class="item_content-time">10 ноября в 12:00</p>
+                                                    <p class="item_content-place">Челябинск, Россия</p>
+                                                </div>
+                                            </div>
+                                            <div class="developments__content-item">
+                                                <a href="javascript:void(0)" class="link"></a>
+                                                <div class="item_img" style="background-image: url('../img/search_page/development-img2.jpg');">
+                                                    <a href="javascript:void(0)" class="likeBtn"></a>
+                                                </div>
+                                                <div class="item_content">
+                                                    <h4 class="item_content-title">Lorem Ipsum - это </h4>
+                                                    <h4 class="item_content-title">текст-рыба</h4>
+                                                    <p class="item_content-text">
+                                                        Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                                                    </p>
+                                                    <p class="item_content-time">10 ноября в 12:00</p>
+                                                    <p class="item_content-place">Челябинск, Россия</p>
+                                                </div>
+                                            </div>
+                                            <div class="developments__content-item">
+                                                <a href="javascript:void(0)" class="link"></a>
+                                                <div class="item_img" style="background-image: url('../img/search_page/development-img3.jpg');">
+                                                    <a href="javascript:void(0)" class="likeBtn"></a>
+                                                </div>
+                                                <div class="item_content">
+                                                    <h4 class="item_content-title">Lorem Ipsum - это </h4>
+                                                    <h4 class="item_content-title">текст-рыба</h4>
+                                                    <p class="item_content-text">
+                                                        Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                                                    </p>
+                                                    <p class="item_content-time">10 ноября в 12:00</p>
+                                                    <p class="item_content-place">Челябинск, Россия</p>
+                                                </div>
+                                            </div>
+                                            <div class="pagination">
+                                                <ul class="pagination__list">
+                                                    <li><a href="javascript:void(0)"><i class="icon-icon28 left"></i></a></li>
+                                                    <li><a href="javascript:void(0)">1</a></li>
+                                                    <li><a href="javascript:void(0)">2</a></li>
+                                                    <li class="active"><span>3</span></li>
+                                                    <li><a href="javascript:void(0)"><i class="icon-icon28"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-item tab-item8 clearfix">
+                                    <h2>Медиа</h2>
+                                    <div class="media">
+                                        <figure class="media-item">
+                                            <a class="imgLink" data-fancybox="media-gallery" href="../img/search_page/media-img1.jpg"></a>
+                                            <img src="../img/search_page/media-img1.jpg" alt="image">
+                                        </figure>
+                                        <figure class="media-item">
+                                            <a class="videoLink" data-fancybox="media-gallery" href="#media-video1">
+                                                <img src="../img/search_page/media-img2.jpg" />
+                                                <div class="playBtn"></div>
+                                            </a>
+                                            <div class="hideVideo">
+                                                <video width="540" height="300" class="video-js vjs-default-skin" controls id="media-video1" data-setup='{}'>
+                                                    <source src="../img/search_page/videos/video.mp4" type="video/mp4">
+                                                    <source src="../img/search_page/videos/video.mp4" type="video/webm">
+                                                    <source src="../img/search_page/videos/video.mp4" type="video/ogg">
+                                                </video>
+                                            </div>
+                                            <figcaption>
+                                                Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                                            </figcaption>
+                                        </figure>
+                                        <figure class="media-item">
+                                            <a class="imgLink" data-fancybox="media-gallery" href="../img/search_page/media-img3.jpg"></a>
+                                            <img src="../img/search_page/media-img3.jpg" alt="image">
+                                        </figure>
+
+                                        <figure class="media-item">
+                                            <a class="imgLink" data-fancybox="media-gallery" href="../img/search_page/media-img4.jpg"></a>
+                                            <img src="../img/search_page/media-img4.jpg" alt="image">
+                                        </figure>
+                                        <figure class="media-item">
+                                            <a class="videoLink" data-fancybox="media-gallery" href="#media-video2">
+                                                <img src="../img/search_page/media-img5.jpg" />
+                                                <div class="playBtn"></div>
+                                            </a>
+                                            <div class="hideVideo">
+                                                <video width="540" height="300" class="video-js vjs-default-skin" controls id="media-video2" data-setup='{}'>
+                                                    <source src="../img/search_page/videos/video.mp4" type="video/mp4">
+                                                    <source src="../img/search_page/videos/video.mp4" type="video/webm">
+                                                    <source src="../img/search_page/videos/video.mp4" type="video/ogg">
+                                                </video>
+                                            </div>
+                                            <figcaption>
+                                                Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                                            </figcaption>
+                                        </figure>
+                                        <figure class="media-item">
+                                            <a class="imgLink" data-fancybox="media-gallery" href="../img/search_page/media-img6.jpg"></a>
+                                            <img src="../img/search_page/media-img6.jpg" alt="image">
+                                        </figure>
+
+                                        <figure class="media-item">
+                                            <a class="imgLink" data-fancybox="media-gallery" href="../img/search_page/media-img1.jpg"></a>
+                                            <img src="../img/search_page/media-img1.jpg" alt="image">
+                                        </figure>
+                                        <figure class="media-item">
+                                            <a class="videoLink" data-fancybox="media-gallery" href="#media-video3">
+                                                <img src="../img/search_page/media-img2.jpg" />
+                                                <div class="playBtn"></div>
+                                            </a>
+                                            <div class="hideVideo">
+                                                <video width="540" height="300" class="video-js vjs-default-skin" controls id="media-video3" data-setup='{}'>
+                                                    <source src="../img/search_page/videos/video.mp4" type="video/mp4">
+                                                    <source src="../img/search_page/videos/video.mp4" type="video/webm">
+                                                    <source src="../img/search_page/videos/video.mp4" type="video/ogg">
+                                                </video>
+                                            </div>
+                                            <figcaption>
+                                                Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                                            </figcaption>
+                                        </figure>
+                                        <figure class="media-item">
+                                            <a class="imgLink" data-fancybox="media-gallery" href="../img/search_page/media-img3.jpg"></a>
+                                            <img src="../img/search_page/media-img3.jpg" alt="image">
+                                        </figure>
+
+                                        <figure class="media-item">
+                                            <a class="imgLink" data-fancybox="media-gallery" href="../img/search_page/media-img4.jpg"></a>
+                                            <img src="../img/search_page/media-img4.jpg" alt="image">
+                                        </figure>
+                                        <figure class="media-item">
+                                            <a class="videoLink" data-fancybox="media-gallery" href="#media-video4">
+                                                <img src="../img/search_page/media-img5.jpg" />
+                                                <div class="playBtn"></div>
+                                            </a>
+                                            <div class="hideVideo">
+                                                <video width="540" height="300" class="video-js vjs-default-skin" controls id="media-video4" data-setup='{}'>
+                                                    <source src="../img/search_page/videos/video.mp4" type="video/mp4">
+                                                    <source src="../img/search_page/videos/video.mp4" type="video/webm">
+                                                    <source src="../img/search_page/videos/video.mp4" type="video/ogg">
+                                                </video>
+                                            </div>
+                                            <figcaption>
+                                                Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                                            </figcaption>
+                                        </figure>
+                                        <figure class="media-item">
+                                            <a class="imgLink" data-fancybox="media-gallery" href="../img/search_page/media-img6.jpg"></a>
+                                            <img src="../img/search_page/media-img6.jpg" alt="image">
+                                        </figure>
+                                    </div>
+                                    <div class="pagination">
+                                        <ul class="pagination__list">
+                                            <li><a href="javascript:void(0)"><i class="icon-icon28 left"></i></a></li>
+                                            <li><a href="javascript:void(0)">1</a></li>
+                                            <li><a href="javascript:void(0)">2</a></li>
+                                            <li class="active"><span>3</span></li>
+                                            <li><a href="javascript:void(0)"><i class="icon-icon28"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="tab-item tab-item9 clearfix">
+                                    <h2>Медиа2</h2>
+                                    <div class="media style2">
+                                        <figure class="media-item">
+                                            <a class="imgLink" data-fancybox="media-gallery2" href="../img/search_page/media-img1.jpg"></a>
+                                            <img src="../img/search_page/media-img1.jpg" alt="image">
+                                        </figure>
+                                        <figure class="media-item">
+                                            <a class="videoLink" data-fancybox="media-gallery2" href="#media-video1">
+                                                <img src="../img/search_page/media-img2.jpg" />
+                                                <div class="playBtn"></div>
+                                            </a>
+                                            <div class="hideVideo">
+                                                <video width="540" height="300" class="video-js vjs-default-skin" controls id="media-video1" data-setup='{}'>
+                                                    <source src="../img/search_page/videos/video.mp4" type="video/mp4">
+                                                    <source src="../img/search_page/videos/video.mp4" type="video/webm">
+                                                    <source src="../img/search_page/videos/video.mp4" type="video/ogg">
+                                                </video>
+                                            </div>
+                                            <figcaption>
+                                                Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                                            </figcaption>
+                                        </figure>
+                                        <figure class="media-item">
+                                            <a class="imgLink" data-fancybox="media-gallery2" href="../img/search_page/media-img3.jpg"></a>
+                                            <img src="../img/search_page/media-img3.jpg" alt="image">
+                                        </figure>
+
+                                        <figure class="media-item">
+                                            <a class="imgLink" data-fancybox="media-gallery2" href="../img/search_page/media-img4.jpg"></a>
+                                            <img src="../img/search_page/media-img4.jpg" alt="image">
+                                        </figure>
+                                        <figure class="media-item">
+                                            <a class="videoLink" data-fancybox="media-gallery2" href="#media-video2">
+                                                <img src="../img/search_page/media-img5.jpg" />
+                                                <div class="playBtn"></div>
+                                            </a>
+                                            <div class="hideVideo">
+                                                <video width="540" height="300" class="video-js vjs-default-skin" controls id="media-video2" data-setup='{}'>
+                                                    <source src="../img/search_page/videos/video.mp4" type="video/mp4">
+                                                    <source src="../img/search_page/videos/video.mp4" type="video/webm">
+                                                    <source src="../img/search_page/videos/video.mp4" type="video/ogg">
+                                                </video>
+                                            </div>
+                                            <figcaption>
+                                                Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                                            </figcaption>
+                                        </figure>
+                                        <figure class="media-item">
+                                            <a class="imgLink" data-fancybox="media-gallery2" href="../img/search_page/media-img6.jpg"></a>
+                                            <img src="../img/search_page/media-img6.jpg" alt="image">
+                                        </figure>
+
+                                        <figure class="media-item">
+                                            <a class="imgLink" data-fancybox="media-gallery2" href="../img/search_page/media-img1.jpg"></a>
+                                            <img src="../img/search_page/media-img1.jpg" alt="image">
+                                        </figure>
+                                        <figure class="media-item">
+                                            <a class="videoLink" data-fancybox="media-gallery2" href="#media-video3">
+                                                <img src="../img/search_page/media-img2.jpg" />
+                                                <div class="playBtn"></div>
+                                            </a>
+                                            <div class="hideVideo">
+                                                <video width="540" height="300" class="video-js vjs-default-skin" controls id="media-video3" data-setup='{}'>
+                                                    <source src="../img/search_page/videos/video.mp4" type="video/mp4">
+                                                    <source src="../img/search_page/videos/video.mp4" type="video/webm">
+                                                    <source src="../img/search_page/videos/video.mp4" type="video/ogg">
+                                                </video>
+                                            </div>
+                                            <figcaption>
+                                                Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                                            </figcaption>
+                                        </figure>
+                                        <figure class="media-item">
+                                            <a class="imgLink" data-fancybox="media-gallery2" href="../img/search_page/media-img3.jpg"></a>
+                                            <img src="../img/search_page/media-img3.jpg" alt="image">
+                                        </figure>
+
+                                        <figure class="media-item">
+                                            <a class="imgLink" data-fancybox="media-gallery2" href="../img/search_page/media-img4.jpg"></a>
+                                            <img src="../img/search_page/media-img4.jpg" alt="image">
+                                        </figure>
+                                        <figure class="media-item">
+                                            <a class="videoLink" data-fancybox="media-gallery2" href="#media-video4">
+                                                <img src="../img/search_page/media-img5.jpg" />
+                                                <div class="playBtn"></div>
+                                            </a>
+                                            <div class="hideVideo">
+                                                <video width="540" height="300" class="video-js vjs-default-skin" controls id="media-video4" data-setup='{}'>
+                                                    <source src="../img/search_page/videos/video.mp4" type="video/mp4">
+                                                    <source src="../img/search_page/videos/video.mp4" type="video/webm">
+                                                    <source src="../img/search_page/videos/video.mp4" type="video/ogg">
+                                                </video>
+                                            </div>
+                                            <figcaption>
+                                                Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                                            </figcaption>
+                                        </figure>
+                                        <figure class="media-item">
+                                            <a class="imgLink" data-fancybox="media-gallery2" href="../img/search_page/media-img6.jpg"></a>
+                                            <img src="../img/search_page/media-img6.jpg" alt="image">
+                                        </figure>
+                                    </div>
+                                    <div class="pagination">
+                                        <ul class="pagination__list">
+                                            <li><a href="javascript:void(0)"><i class="icon-icon28 left"></i></a></li>
+                                            <li><a href="javascript:void(0)">1</a></li>
+                                            <li><a href="javascript:void(0)">2</a></li>
+                                            <li class="active"><span>3</span></li>
+                                            <li><a href="javascript:void(0)"><i class="icon-icon28"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="container">
+                <a class="logo" href="javascript:void(0)"><img src="../img/logo.png" alt=""></a>
+                <div class="footer-content clearfix">
+                    <nav>
+                        <ul>
+                            <li><a href="javascript:void(0)">Специалисты</a></li>
+                            <li><a href="javascript:void(0)">Организации</a></li>
+                            <li><a href="javascript:void(0)">События</a></li>
+                            <li><a href="javascript:void(0)">Магазин</a></li>
+                        </ul>
+                    </nav>
+                    <ul class="sosial">
+                        <li><a href="javascript:void(0)"><i class="icon-icon12"></i></a></li>
+                        <li><a href="javascript:void(0)"><i class="icon-icon2"></i></a></li>
+                        <li><a href="javascript:void(0)"><i class="icon-icon18"></i></a></li>
+                    </ul>
+                    <p>© 2018 Все права защищены</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/slick.min.js"></script>
+    <script src="../js/jcf.min.js"></script>
+    <script src="../js/jcf.checkbox.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/jquery.fancybox.min.js"></script>
+    <script src="../js/video-js.min.js"></script>
+    <script src="../js/jquery-ui.autocomplete.min.js"></script>
+
+
+
+    <script src="../js/script.min.js"></script>
+    <script src="../js/search.min.js"></script>
+</body>
+
+</html>
